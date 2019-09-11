@@ -2,56 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://godweiyang.com/friends/index.html</loc>
+    <loc>https://hualin.online/contact/index.html</loc>
     
-    <lastmod>2019-08-19T05:40:11.286Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://godweiyang.com/contact/index.html</loc>
-    
-    <lastmod>2019-08-17T12:42:36.599Z</lastmod>
+    <lastmod>2019-09-11T14:25:12.184Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://godweiyang.com/about/index.html</loc>
+    <loc>https://hualin.online/friends/index.html</loc>
     
-    <lastmod>2019-08-17T05:55:56.641Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://godweiyang.com/2018/01/22/2017-conclusion/</loc>
-    
-    <lastmod>2019-08-10T06:15:08.642Z</lastmod>
+    <lastmod>2019-09-11T14:17:34.658Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://godweiyang.com/404.html</loc>
+    <loc>https://hualin.online/about/index.html</loc>
+    
+    <lastmod>2019-09-11T14:15:59.741Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/11/install-opencv-on-linux/</loc>
+    
+    <lastmod>2019-09-11T14:02:42.292Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/11/use-nvm/</loc>
+    
+    <lastmod>2019-09-11T13:59:05.491Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/10/using-hexo/</loc>
+    
+    <lastmod>2019-09-10T13:49:32.338Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/10/apache-php-config/</loc>
+    
+    <lastmod>2019-09-10T13:24:52.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/10/install-nodebb/</loc>
+    
+    <lastmod>2019-09-10T06:54:19.229Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/08/telnet-usage/</loc>
+    
+    <lastmod>2019-09-10T01:53:02.759Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/06/atom-usage/</loc>
+    
+    <lastmod>2019-09-10T01:53:02.759Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/08/dockermailserver/</loc>
+    
+    <lastmod>2019-09-10T01:53:02.759Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/2019/09/08/docker-command-translation/</loc>
+    
+    <lastmod>2019-09-10T01:53:02.759Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/404.html</loc>
     
     <lastmod>2019-07-20T08:11:26.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://godweiyang.com/categories/index.html</loc>
+    <loc>https://hualin.online/categories/index.html</loc>
     
     <lastmod>2019-07-20T06:27:04.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://godweiyang.com/tags/index.html</loc>
+    <loc>https://hualin.online/tags/index.html</loc>
     
     <lastmod>2019-07-20T06:20:16.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://godweiyang.com/archives/index.html</loc>
+    <loc>https://hualin.online/archives/index.html</loc>
     
     <lastmod>2019-07-20T06:20:04.000Z</lastmod>
     

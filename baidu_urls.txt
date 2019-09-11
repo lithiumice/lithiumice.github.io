@@ -1,1 +1,9 @@
-https://godweiyang.com/2018/01/22/2017-conclusion/
+https://hualin.online/2019/09/11/use-nvm/
+https://hualin.online/2019/09/11/install-opencv-on-linux/
+https://hualin.online/2019/09/10/apache-php-config/
+https://hualin.online/2019/09/10/install-nodebb/
+https://hualin.online/2019/09/10/using-hexo/
+https://hualin.online/2019/09/08/docker-command-translation/
+https://hualin.online/2019/09/08/dockermailserver/
+https://hualin.online/2019/09/08/telnet-usage/
+https://hualin.online/2019/09/06/atom-usage/

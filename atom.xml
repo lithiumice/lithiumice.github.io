@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>韦阳的博客</title>
+  <title>Codes of huaring</title>
   
-  <subtitle>godweiyang</subtitle>
+  <subtitle>lithiumice</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://godweiyang.com/"/>
-  <updated>2019-08-10T06:15:08.642Z</updated>
-  <id>https://godweiyang.com/</id>
+  <link href="https://hualin.online/"/>
+  <updated>2019-09-11T13:59:05.491Z</updated>
+  <id>https://hualin.online/</id>
   
   <author>
-    <name>韦阳</name>
+    <name>lithiumice</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>二零一七年终总结</title>
-    <link href="https://godweiyang.com/2018/01/22/2017-conclusion/"/>
-    <id>https://godweiyang.com/2018/01/22/2017-conclusion/</id>
-    <published>2018-01-22T04:32:09.000Z</published>
-    <updated>2019-08-10T06:15:08.642Z</updated>
+    <title>use nvm</title>
+    <link href="https://hualin.online/2019/09/11/use-nvm/"/>
+    <id>https://hualin.online/2019/09/11/use-nvm/</id>
+    <published>2019-09-11T13:59:05.000Z</published>
+    <updated>2019-09-11T13:59:05.491Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>install opencv on linux</title>
+    <link href="https://hualin.online/2019/09/11/install-opencv-on-linux/"/>
+    <id>https://hualin.online/2019/09/11/install-opencv-on-linux/</id>
+    <published>2019-09-11T13:57:53.000Z</published>
+    <updated>2019-09-11T14:02:42.292Z</updated>
     
     <summary type="html">
     
@@ -29,16 +43,182 @@
       
         
         
-          &lt;div align=&quot;middle&quot;&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+          &lt;h1 id=&quot;simple-guide-to-install-opencv-on-ubuntu&quot;&gt;&lt;a href=&quot;#simple-guide-to-install-opencv-on-ubuntu&quot; class=&quot;headerlink&quot; title=&quot;simple
         
       
     
     </summary>
     
-      <category term="随笔" scheme="https://godweiyang.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>apache-php-config</title>
+    <link href="https://hualin.online/2019/09/10/apache-php-config/"/>
+    <id>https://hualin.online/2019/09/10/apache-php-config/</id>
+    <published>2019-09-10T13:12:03.000Z</published>
+    <updated>2019-09-10T13:24:52.531Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;vim /usr/local/apache2/conf/httpd.conf&lt;br&gt;&lt;directory&gt;&lt;br&gt;    Options FollowSymLinks&lt;br&gt;    AllowOverride None&lt;br&gt;    Order
+        
+      
+    
+    </summary>
     
     
-      <category term="随笔" scheme="https://godweiyang.com/tags/%E9%9A%8F%E7%AC%94/"/>
+  </entry>
+  
+  <entry>
+    <title>install nodebb</title>
+    <link href="https://hualin.online/2019/09/10/install-nodebb/"/>
+    <id>https://hualin.online/2019/09/10/install-nodebb/</id>
+    <published>2019-09-10T06:12:31.000Z</published>
+    <updated>2019-09-10T06:54:19.229Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;For-Centos&quot;&gt;&lt;a href=&quot;#For-Centos&quot; class=&quot;headerlink&quot; title=&quot;For Centos&quot;&gt;&lt;/a&gt;For Centos&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;yum -y install epel-release
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>using hexo</title>
+    <link href="https://hualin.online/2019/09/10/using-hexo/"/>
+    <id>https://hualin.online/2019/09/10/using-hexo/</id>
+    <published>2019-09-10T04:57:01.000Z</published>
+    <updated>2019-09-10T13:49:32.338Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;test-flarum&quot;&gt;&lt;a href=&quot;#test-flarum&quot; class=&quot;headerlink&quot; title=&quot;test flarum&quot;&gt;&lt;/a&gt;test flarum&lt;/h2&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Codes" scheme="https://hualin.online/tags/Codes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker command translation</title>
+    <link href="https://hualin.online/2019/09/08/docker-command-translation/"/>
+    <id>https://hualin.online/2019/09/08/docker-command-translation/</id>
+    <published>2019-09-08T14:06:28.000Z</published>
+    <updated>2019-09-10T01:53:02.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;docker run -d -p 5000:5000 training/webapp python app.py
+docker logs -f bf08b7f2cd89(ID)
+docker run -it ubuntu:15.10
+        
+      
+    
+    </summary>
+    
+      <category term="翻译Wiki" scheme="https://hualin.online/categories/%E7%BF%BB%E8%AF%91Wiki/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>docker+mailserver</title>
+    <link href="https://hualin.online/2019/09/08/dockermailserver/"/>
+    <id>https://hualin.online/2019/09/08/dockermailserver/</id>
+    <published>2019-09-08T13:04:33.000Z</published>
+    <updated>2019-09-10T01:53:02.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;使用Ewomail搭建邮件服务器(需要纯洁系统环境) &lt;a href=&quot;https://gitee.com/laowu5/EwoMail&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="https://hualin.online/categories/docker/"/>
+    
+      <category term="Linux" scheme="https://hualin.online/categories/docker/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>telnet usage</title>
+    <link href="https://hualin.online/2019/09/08/telnet-usage/"/>
+    <id>https://hualin.online/2019/09/08/telnet-usage/</id>
+    <published>2019-09-08T04:36:07.000Z</published>
+    <updated>2019-09-10T01:53:02.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;yum -y install telnet login dovecot: telnet 104.225.233.249 110 USER xxx：输入用户名 PASS xxx：输入密码 LIST：显示信箱 RETR n：打开第n封信 exit telnet： ctl+]
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://hualin.online/categories/Linux/"/>
+    
+      <category term="未分类" scheme="https://hualin.online/categories/Linux/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Atom 使用技巧</title>
+    <link href="https://hualin.online/2019/09/06/atom-usage/"/>
+    <id>https://hualin.online/2019/09/06/atom-usage/</id>
+    <published>2019-09-06T13:43:57.000Z</published>
+    <updated>2019-09-10T01:53:02.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;# Atom ## 常用快捷键 + Crtl+Shift+M 开启Markdown实时预览 + Command+Shift+P 打开命令窗口，可以运行各种菜单功能 + Command + T 快速多文件切换 + Command + F 文件内查找和替换 + Command
+        
+      
+    
+    </summary>
+    
+      <category term="Codes" scheme="https://hualin.online/categories/Codes/"/>
+    
     
   </entry>
   
