@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/tags/index.html</loc>
+    
+    <lastmod>2019-09-11T15:47:55.386Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/contact/index.html</loc>
     
     <lastmod>2019-09-11T14:25:12.185Z</lastmod>
@@ -23,63 +30,63 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/11/install-opencv-on-linux/</loc>
+    <loc>https://hualin.online/install-opencv-on-linux/</loc>
     
     <lastmod>2019-09-11T14:02:42.292Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/11/use-nvm/</loc>
+    <loc>https://hualin.online/use-nvm/</loc>
     
     <lastmod>2019-09-11T13:59:05.492Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/10/using-hexo/</loc>
+    <loc>https://hualin.online/using-hexo/</loc>
     
     <lastmod>2019-09-10T13:49:32.338Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/10/apache-php-config/</loc>
+    <loc>https://hualin.online/apache-php-config/</loc>
     
     <lastmod>2019-09-10T13:24:52.532Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/10/install-nodebb/</loc>
+    <loc>https://hualin.online/install-nodebb/</loc>
     
     <lastmod>2019-09-10T06:54:19.229Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/06/atom-usage/</loc>
+    <loc>https://hualin.online/atom-usage/</loc>
     
     <lastmod>2019-09-10T01:53:02.760Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/08/dockermailserver/</loc>
+    <loc>https://hualin.online/docker-command-translation/</loc>
     
     <lastmod>2019-09-10T01:53:02.760Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/08/docker-command-translation/</loc>
+    <loc>https://hualin.online/dockermailserver/</loc>
     
     <lastmod>2019-09-10T01:53:02.760Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/2019/09/08/telnet-usage/</loc>
+    <loc>https://hualin.online/telnet-usage/</loc>
     
     <lastmod>2019-09-10T01:53:02.760Z</lastmod>
     
@@ -93,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/categories/index.html</loc>
-    
-    <lastmod>2019-09-09T16:31:01.403Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/archives/index.html</loc>
     
     <lastmod>2019-09-09T16:31:01.403Z</lastmod>
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/tags/index.html</loc>
+    <loc>https://hualin.online/categories/index.html</loc>
     
     <lastmod>2019-09-09T16:31:01.403Z</lastmod>
     

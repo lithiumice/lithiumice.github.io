@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hualin.online/2019/09/11/install-opencv-on-linux/</loc>
+    <loc>https://hualin.online/install-opencv-on-linux/</loc>
     <lastmod>2019-09-11</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/2019/09/11/use-nvm/</loc>
+    <loc>https://hualin.online/use-nvm/</loc>
     <lastmod>2019-09-11</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/2019/09/10/using-hexo/</loc>
+    <loc>https://hualin.online/using-hexo/</loc>
     <lastmod>2019-09-10</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/2019/09/10/apache-php-config/</loc>
+    <loc>https://hualin.online/apache-php-config/</loc>
     <lastmod>2019-09-10</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/2019/09/10/install-nodebb/</loc>
+    <loc>https://hualin.online/install-nodebb/</loc>
     <lastmod>2019-09-10</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/2019/09/06/atom-usage/</loc>
+    <loc>https://hualin.online/atom-usage/</loc>
     <lastmod>2019-09-10</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/2019/09/08/dockermailserver/</loc>
+    <loc>https://hualin.online/docker-command-translation/</loc>
     <lastmod>2019-09-10</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/2019/09/08/docker-command-translation/</loc>
+    <loc>https://hualin.online/dockermailserver/</loc>
     <lastmod>2019-09-10</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/2019/09/08/telnet-usage/</loc>
+    <loc>https://hualin.online/telnet-usage/</loc>
     <lastmod>2019-09-10</lastmod>
   </url>
 </urlset>

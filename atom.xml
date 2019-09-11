@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Codes of huaring</title>
   
-  <subtitle>lithiumice</subtitle>
+  <subtitle>LITHIUMICE | 人间失格</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>use nvm</title>
-    <link href="https://hualin.online/2019/09/11/use-nvm/"/>
-    <id>https://hualin.online/2019/09/11/use-nvm/</id>
+    <link href="https://hualin.online/use-nvm/"/>
+    <id>https://hualin.online/use-nvm/</id>
     <published>2019-09-11T13:59:05.000Z</published>
     <updated>2019-09-11T13:59:05.492Z</updated>
     
@@ -32,8 +32,8 @@
   
   <entry>
     <title>install opencv on linux</title>
-    <link href="https://hualin.online/2019/09/11/install-opencv-on-linux/"/>
-    <id>https://hualin.online/2019/09/11/install-opencv-on-linux/</id>
+    <link href="https://hualin.online/install-opencv-on-linux/"/>
+    <id>https://hualin.online/install-opencv-on-linux/</id>
     <published>2019-09-11T13:57:53.000Z</published>
     <updated>2019-09-11T14:02:42.292Z</updated>
     
@@ -54,8 +54,8 @@
   
   <entry>
     <title>apache-php-config</title>
-    <link href="https://hualin.online/2019/09/10/apache-php-config/"/>
-    <id>https://hualin.online/2019/09/10/apache-php-config/</id>
+    <link href="https://hualin.online/apache-php-config/"/>
+    <id>https://hualin.online/apache-php-config/</id>
     <published>2019-09-10T13:12:03.000Z</published>
     <updated>2019-09-10T13:24:52.532Z</updated>
     
@@ -76,8 +76,8 @@
   
   <entry>
     <title>install nodebb</title>
-    <link href="https://hualin.online/2019/09/10/install-nodebb/"/>
-    <id>https://hualin.online/2019/09/10/install-nodebb/</id>
+    <link href="https://hualin.online/install-nodebb/"/>
+    <id>https://hualin.online/install-nodebb/</id>
     <published>2019-09-10T06:12:31.000Z</published>
     <updated>2019-09-10T06:54:19.229Z</updated>
     
@@ -98,8 +98,8 @@
   
   <entry>
     <title>using hexo</title>
-    <link href="https://hualin.online/2019/09/10/using-hexo/"/>
-    <id>https://hualin.online/2019/09/10/using-hexo/</id>
+    <link href="https://hualin.online/using-hexo/"/>
+    <id>https://hualin.online/using-hexo/</id>
     <published>2019-09-10T04:57:01.000Z</published>
     <updated>2019-09-10T13:49:32.338Z</updated>
     
@@ -122,8 +122,8 @@
   
   <entry>
     <title>docker command translation</title>
-    <link href="https://hualin.online/2019/09/08/docker-command-translation/"/>
-    <id>https://hualin.online/2019/09/08/docker-command-translation/</id>
+    <link href="https://hualin.online/docker-command-translation/"/>
+    <id>https://hualin.online/docker-command-translation/</id>
     <published>2019-09-08T14:06:28.000Z</published>
     <updated>2019-09-10T01:53:02.760Z</updated>
     
@@ -148,8 +148,8 @@ docker run -it ubuntu:15.10
   
   <entry>
     <title>docker+mailserver</title>
-    <link href="https://hualin.online/2019/09/08/dockermailserver/"/>
-    <id>https://hualin.online/2019/09/08/dockermailserver/</id>
+    <link href="https://hualin.online/dockermailserver/"/>
+    <id>https://hualin.online/dockermailserver/</id>
     <published>2019-09-08T13:04:33.000Z</published>
     <updated>2019-09-10T01:53:02.760Z</updated>
     
@@ -174,8 +174,8 @@ docker run -it ubuntu:15.10
   
   <entry>
     <title>telnet usage</title>
-    <link href="https://hualin.online/2019/09/08/telnet-usage/"/>
-    <id>https://hualin.online/2019/09/08/telnet-usage/</id>
+    <link href="https://hualin.online/telnet-usage/"/>
+    <id>https://hualin.online/telnet-usage/</id>
     <published>2019-09-08T04:36:07.000Z</published>
     <updated>2019-09-10T01:53:02.760Z</updated>
     
@@ -200,8 +200,8 @@ docker run -it ubuntu:15.10
   
   <entry>
     <title>Atom 使用技巧</title>
-    <link href="https://hualin.online/2019/09/06/atom-usage/"/>
-    <id>https://hualin.online/2019/09/06/atom-usage/</id>
+    <link href="https://hualin.online/atom-usage/"/>
+    <id>https://hualin.online/atom-usage/</id>
     <published>2019-09-06T13:43:57.000Z</published>
     <updated>2019-09-10T01:53:02.760Z</updated>
     
