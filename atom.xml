@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
-  <updated>2019-09-11T13:59:05.492Z</updated>
+  <updated>2019-09-12T14:45:52.147Z</updated>
   <id>https://hualin.online/</id>
   
   <author>
@@ -15,6 +15,143 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>some informations</title>
+    <link href="https://hualin.online/some-informations/"/>
+    <id>https://hualin.online/some-informations/</id>
+    <published>2019-09-12T14:44:56.000Z</published>
+    <updated>2019-09-12T14:45:52.147Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;个人整理的编程、大学资料、文学等的书籍&lt;br&gt;存在百度云里，可自行转存&lt;br&gt;&lt;a href=&quot;https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="资料" scheme="https://hualin.online/tags/%E8%B5%84%E6%96%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>some thoughts</title>
+    <link href="https://hualin.online/some-thoughts/"/>
+    <id>https://hualin.online/some-thoughts/</id>
+    <published>2019-09-12T14:44:37.000Z</published>
+    <updated>2019-09-12T14:45:37.004Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;从很久以前开始，看完了一本书，一部动漫，一部电影，无论它的结局是喜悦还是悲伤的，我总会感到怅然若失，就像告别了一个挚友，经历了一段波澜起伏的人生，因而突发一种沧桑感，经历了一个不愿醒来的梦境，梦醒时却发觉自己仍在原地。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随感 杂感" scheme="https://hualin.online/tags/%E9%9A%8F%E6%84%9F-%E6%9D%82%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux skills</title>
+    <link href="https://hualin.online/linux-skills/"/>
+    <id>https://hualin.online/linux-skills/</id>
+    <published>2019-09-12T14:31:18.000Z</published>
+    <updated>2019-09-12T14:46:52.384Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;使用命令压缩图片&quot;&gt;&lt;a href=&quot;#使用命令压缩图片&quot; class=&quot;headerlink&quot; title=&quot;使用命令压缩图片&quot;&gt;&lt;/a&gt;使用命令压缩图片&lt;/h2&gt;&lt;p&gt;安装&lt;code&gt;sudo pacman -S
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>watermark</title>
+    <link href="https://hualin.online/watermark/"/>
+    <id>https://hualin.online/watermark/</id>
+    <published>2019-09-12T14:30:25.000Z</published>
+    <updated>2019-09-12T14:31:02.423Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre class=&quot;line-numbers language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;# -*- coding: utf-8
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>install flarum</title>
+    <link href="https://hualin.online/install-flarum/"/>
+    <id>https://hualin.online/install-flarum/</id>
+    <published>2019-09-12T14:19:30.000Z</published>
+    <updated>2019-09-12T14:19:44.556Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;test-flarum&quot;&gt;&lt;a href=&quot;#test-flarum&quot; class=&quot;headerlink&quot; title=&quot;test flarum&quot;&gt;&lt;/a&gt;test flarum&lt;/h2&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sqmap simple intro</title>
+    <link href="https://hualin.online/sqmap-simple-intro/"/>
+    <id>https://hualin.online/sqmap-simple-intro/</id>
+    <published>2019-09-12T14:14:36.000Z</published>
+    <updated>2019-09-12T14:15:35.439Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;./sqlmap.py -u
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>use nvm</title>
@@ -101,7 +238,7 @@
     <link href="https://hualin.online/using-hexo/"/>
     <id>https://hualin.online/using-hexo/</id>
     <published>2019-09-10T04:57:01.000Z</published>
-    <updated>2019-09-10T13:49:32.338Z</updated>
+    <updated>2019-09-12T14:22:34.628Z</updated>
     
     <summary type="html">
     
@@ -109,7 +246,9 @@
       
         
         
-          &lt;h2 id=&quot;test-flarum&quot;&gt;&lt;a href=&quot;#test-flarum&quot; class=&quot;headerlink&quot; title=&quot;test flarum&quot;&gt;&lt;/a&gt;test flarum&lt;/h2&gt;&lt;p&gt;&lt;a
+          &lt;ul&gt;
+&lt;li&gt;&lt;h2 id=&quot;在本机上安装&quot;&gt;&lt;a href=&quot;#在本机上安装&quot; class=&quot;headerlink&quot; title=&quot;在本机上安装&quot;&gt;&lt;/a&gt;在本机上安装&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;sudo pacman -S gem bundle
+sudo gem
         
       
     
@@ -125,7 +264,7 @@
     <link href="https://hualin.online/docker-command-translation/"/>
     <id>https://hualin.online/docker-command-translation/</id>
     <published>2019-09-08T14:06:28.000Z</published>
-    <updated>2019-09-10T01:53:02.760Z</updated>
+    <updated>2019-09-12T14:14:02.797Z</updated>
     
     <summary type="html">
     
@@ -133,9 +272,7 @@
       
         
         
-          &lt;pre&gt;&lt;code&gt;docker run -d -p 5000:5000 training/webapp python app.py
-docker logs -f bf08b7f2cd89(ID)
-docker run -it ubuntu:15.10
+          &lt;h2 id=&quot;useful-command&quot;&gt;&lt;a href=&quot;#useful-command&quot; class=&quot;headerlink&quot; title=&quot;useful command&quot;&gt;&lt;/a&gt;useful command&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;  docker run
         
       
     

@@ -1,3 +1,9 @@
+https://hualin.online/some-informations/
+https://hualin.online/some-thoughts/
+https://hualin.online/linux-skills/
+https://hualin.online/watermark/
+https://hualin.online/install-flarum/
+https://hualin.online/sqmap-simple-intro/
 https://hualin.online/use-nvm/
 https://hualin.online/install-opencv-on-linux/
 https://hualin.online/apache-php-config/

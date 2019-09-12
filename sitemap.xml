@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/linux-skills/</loc>
+    
+    <lastmod>2019-09-12T14:46:52.384Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/some-informations/</loc>
+    
+    <lastmod>2019-09-12T14:45:52.147Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/some-thoughts/</loc>
+    
+    <lastmod>2019-09-12T14:45:37.004Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/watermark/</loc>
+    
+    <lastmod>2019-09-12T14:31:02.423Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/using-hexo/</loc>
+    
+    <lastmod>2019-09-12T14:22:34.628Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/install-flarum/</loc>
+    
+    <lastmod>2019-09-12T14:19:44.556Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/sqmap-simple-intro/</loc>
+    
+    <lastmod>2019-09-12T14:15:35.439Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/docker-command-translation/</loc>
+    
+    <lastmod>2019-09-12T14:14:02.797Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/contact/index.html</loc>
     
     <lastmod>2019-09-12T11:26:14.058Z</lastmod>
@@ -58,13 +114,6 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/using-hexo/</loc>
-    
-    <lastmod>2019-09-10T13:49:32.338Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/apache-php-config/</loc>
     
     <lastmod>2019-09-10T13:24:52.532Z</lastmod>
@@ -80,13 +129,6 @@
   
   <url>
     <loc>https://hualin.online/atom-usage/</loc>
-    
-    <lastmod>2019-09-10T01:53:02.760Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/docker-command-translation/</loc>
     
     <lastmod>2019-09-10T01:53:02.760Z</lastmod>
     

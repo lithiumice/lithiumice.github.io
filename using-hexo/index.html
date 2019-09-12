@@ -7,9 +7,12 @@
     <meta name="keywords" content="using hexo, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="test flarumgithub
-1.install composer:composer create-project flarum/flarum . --stability=beta2.in order to use php
-sudo ">
+    <meta name="description" content="
+在本机上安装sudo pacman -S gem bundle
+sudo gem install bundler jekyll
+bundle exec jekyll serve
+npm install hexo
+hexo init blo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -375,7 +378,7 @@ sudo ">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    289
+                    396
                 </div>
                 
 
@@ -398,14 +401,21 @@ sudo ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="test-flarum"><a href="#test-flarum" class="headerlink" title="test flarum"></a>test flarum</h2><p><a href="https://github.com/flarum/flarum.git" target="_blank" rel="noopener">github</a></p>
-<p>1.install composer:<br><code>composer create-project flarum/flarum . --stability=beta</code><br>2.in order to use php</p>
-<pre><code>sudo apt-get -y install gcc make autoconf libc-dev pkg-config
-sudo apt-get -y install php7.2-dev
-sudo apt-get -y install libmcrypt-dev
-sudo pecl install mcrypt-1.0.2 //for php&gt;7.3</code></pre><p>3.for arch<br><code>extra/php-sodium</code><br><code>php-set = extension=sodium</code>in /etc/php/php.ini</p>
-<h2 id="git-and-hexo"><a href="#git-and-hexo" class="headerlink" title="git and hexo"></a>git and hexo</h2><p><code>git config --global core.autocrlf false</code></p>
-<pre><code>useradd git
+                <ul>
+<li><h2 id="在本机上安装"><a href="#在本机上安装" class="headerlink" title="在本机上安装"></a>在本机上安装</h2><pre><code>sudo pacman -S gem bundle
+sudo gem install bundler jekyll
+bundle exec jekyll serve
+npm install hexo
+hexo init blog &amp;amp;&amp;amp; cd blog
+npm i hexo-generator-json-content --save &amp;amp;&amp;amp; npm i hexo-wordcount --save</code></pre></li>
+<li><h2 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h2><p>获取 Archer 主题：<br>git clone “<a href="https://github.com/fi3ework/hexo-theme-archer.git&quot;" target="_blank" rel="noopener">https://github.com/fi3ework/hexo-theme-archer.git&quot;</a> themes/archer<br>覆盖 Hexo 默认配置文件：<br>cp ../hexo.config.yml _config.yml<br>覆盖 Archer 主题默认配置文件：<br>cp ../hexo.config-theme.archer.yml themes/archer/_config.yml<br>加入定制的页面布局：<br>cp ../post-footer.ejs themes/archer/layout/_partial/post-footer.ejs</p>
+</li>
+<li><h2 id="安装-Hexo-站点："><a href="#安装-Hexo-站点：" class="headerlink" title="安装 Hexo 站点："></a>安装 Hexo 站点：</h2><p>npm install<br>使用hexo new [layout] &lt;title&gt;命令来创建一个文章，也可以手动把写好的文章拷贝到源目录(/docs/_posts/)中。<br>执行 hexo generate</p>
+</li>
+</ul>
+<ul>
+<li><h2 id="git-and-hexo"><a href="#git-and-hexo" class="headerlink" title="git and hexo"></a>git and hexo</h2><pre><code>git config --global core.autocrlf false
+useradd git
 passwd git // 设置密码
 su git // 这步很重要，不切换用户后面会很麻烦
 cd /home/git/
@@ -416,7 +426,6 @@ cd blog.git/hooks
 vi post-receive // 创建hook钩子函数，输入了内容如下（原理可以参考上面的链接）
 #!/bin/sh
 git --work-tree=/home/git/projects/blog --git-dir=/home/git/repos/blog.git checkout -f
-
 chmod +x post-receive
 exit // 退出到 root 登录
 chown -R git:git /home/git/repos/blog.git // 添加权限
@@ -424,7 +433,9 @@ cat /etc/shells // 查看`git-shell`是否在登录方式里面，有则跳过
 which git-shell // 查看是否安装
 vi /etc/shells</code></pre><pre><code>git clone git@47.102.85.59:/home/git/repos/blog.git
 ssh-copy-id -i /home/lithium/.ssh/id_rsa.pub git@47.102.85.59
-ssh git@47.102.85.59</code></pre><h2 id="动漫图片"><a href="#动漫图片" class="headerlink" title="动漫图片"></a>动漫图片</h2><p>npm install –save hexo-helper-live2d<br>npm install –save live2d-widget-model-shizuku</p>
+ssh git@47.102.85.59</code></pre></li>
+<li><h2 id="动漫图片"><a href="#动漫图片" class="headerlink" title="动漫图片"></a>动漫图片</h2>npm install –save hexo-helper-live2d<br>npm install –save live2d-widget-model-shizuku</li>
+</ul>
 
             </div>
             <hr />
@@ -449,6 +460,28 @@ ssh git@47.102.85.59</code></pre><h2 id="动漫图片"><a href="#动漫图片" c
 
     
 
+    
+    <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div id="gitment-content" class="card-content"></div>
+</div>
+
+<script src="/libs/gitment/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+    id: 'Tue Sep 10 2019 12:57:01 GMT+0800',
+    owner: 'lithiumice',
+    repo: 'lithiumice.github.io',
+    oauth: {
+        client_id: '8b6a8e00e781fe6b3506',
+        client_secret: 'ae17156fce2fd87870306ba1a45980fd62db4e7e'
+    }
+});
+
+gitment.render('gitment-content');
+</script>
     
 
     
@@ -514,9 +547,9 @@ yum -y install gi
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            docker run -d -p 5000:5000 training/webapp python app.py
-docker logs -f bf08b7f2cd89(ID)
-docker run -it ubuntu:15.10 /bi
+                            useful command  docker run -d -p 5000:5000 training/webapp python app.py
+  docker logs -f bf08b7f2cd89(ID)
+  docker run 
                         
                     </div>
                     <div class="publish-info">
@@ -685,7 +718,7 @@ docker run -it ubuntu:15.10 /bi
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.8k</span>
+            <span class="white-color">3.9k</span>
             
 
             <br>
