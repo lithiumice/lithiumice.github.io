@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/README.html</loc>
+    
+    <lastmod>2019-09-12T11:04:01.435Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/about/index.html</loc>
     
     <lastmod>2019-09-12T10:43:31.151Z</lastmod>
@@ -79,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/docker-command-translation/</loc>
+    <loc>https://hualin.online/dockermailserver/</loc>
     
     <lastmod>2019-09-10T01:53:02.760Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/dockermailserver/</loc>
+    <loc>https://hualin.online/docker-command-translation/</loc>
     
     <lastmod>2019-09-10T01:53:02.760Z</lastmod>
     
