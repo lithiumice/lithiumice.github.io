@@ -125,6 +125,7 @@ yum -y install gi">
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
+        <!-- <div class="logo-name">Codes</div> -->
         <div class="logo-name">Codes of huaring</div>
         <div class="logo-desc">
             
@@ -134,7 +135,7 @@ yum -y install gi">
     </div>
 
     
-
+    <li><div class="divider"></div></li>
     <ul class="menu-list mobile-menu-list">
         
         <li>
@@ -196,7 +197,7 @@ yum -y install gi">
                 
                 <i class="fa fa-fw fa-link"></i>
                 
-                留言板
+                留言
             </a>
         </li>
         
@@ -371,14 +372,14 @@ yum -y install gi">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    265
+                    384
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -399,10 +400,15 @@ yum -y groupinstall &quot;Development Tools&quot;
 yum -y install git redis ImageMagick npm
 
 curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
+$ export NVM_DIR=&quot;$HOME/.nvm&quot;
+[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;
 source ~/.bash_profile
 nvm list-remote
 nvm install v0.12.7 # as of this writing check the result of the list-remote to see all choices
 //use v6.9.5 as stable
+$ export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
+$ export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
+sudo npm config set registry http://registry.npm.taobao.org/
 
 systemctl start redis
 systemctl enable redis
@@ -437,14 +443,39 @@ ServerName 127.0.0.1
 
 sudo apache2ctl -k stop
 sudo apache2ctl -k start</code></pre><h2 id="nginx-ProxyPassReverse"><a href="#nginx-ProxyPassReverse" class="headerlink" title="nginx ProxyPassReverse"></a>nginx ProxyPassReverse</h2><pre><code>Insert the below lines into the location / {} segment:
+  ##########################################
+  server {
+      listen 80;
 
-    proxy_pass http://127.0.0.1:4567;
-    proxy_http_version 1.1;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header Host $host;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection &#39;upgrade&#39;;
-    proxy_cache_bypass $http_upgrade;</code></pre>
+      server_name www.xxx.com; # 你的域名
+
+     location / {
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+          proxy_set_header Host $http_host;
+          proxy_set_header X-NginX-Proxy true;
+
+          proxy_pass http://127.0.0.1:4567;
+          proxy_http_version 1.1;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header Host $host;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection &#39;upgrade&#39;;
+          proxy_cache_bypass $http_upgrade;
+          proxy_redirect off;
+
+          # Socket.IO Support
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection &quot;upgrade&quot;;
+      }
+
+      # 配置 502 页? 参考: 高级 - 配置 Nginx
+  }
+  ##########################################
+</code></pre><h2 id="use-forever-to-manage-NodeBB"><a href="#use-forever-to-manage-NodeBB" class="headerlink" title="use forever to manage NodeBB"></a>use <strong>forever</strong> to manage NodeBB</h2><p>npm install forever -g<br> forever start app.js</p>
+
             </div>
             <hr />
 
@@ -728,7 +759,7 @@ hexo init blo
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">3.9k</span>
+            <span class="white-color">4.1k</span>
             
 
             <br>

@@ -169,7 +169,7 @@ mark {
 }
 
 .text-color {
-    color: #3f51b5 !important;
+    color: #bfbfbf !important;
 }
 
 .white-color {
@@ -221,6 +221,7 @@ header .brand-logo .logo-img {
 
 header .brand-logo .logo-span {
     font-size: 2rem;
+
 }
 
 header .button-collapse i {
@@ -240,7 +241,7 @@ header .side-nav .mobile-head img {
 header .side-nav .mobile-head .logo-name {
     margin-top: -30px;
     padding-left: 10px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 header .side-nav .mobile-head .logo-desc {
@@ -795,6 +796,7 @@ article .article-tags .chip {
 
 .prev-next .left-badge {
     border-radius: 0 0px 0px 0;
+    right: 10px;
 }
 
 .prev-next .right-badge {
