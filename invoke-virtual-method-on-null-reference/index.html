@@ -4,12 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Install Flarum, lithiumice huaring cquer github blog">
+    <meta name="keywords" content="Invoke Virtual Method ... on Null Reference, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="test flarumgithub
-1.install composer:composer create-project flarum/flarum . --stability=beta2.in order to use php
-1234s">
+    <meta name="description" content="在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:
+12345View v = inflater.inflate(R.layout.fragment, container, false)">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Install Flarum | Codes of huaring</title>
+    <title>Invoke Virtual Method ... on Null Reference | Codes of huaring</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -230,13 +229,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/09.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Install Flarum
+                        Invoke Virtual Method ... on Null Reference
                     </div>
                 </div>
             </div>
@@ -358,7 +357,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-12
+                    2019-09-14
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -372,7 +371,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    65
+                    50
                 </div>
                 
 
@@ -395,11 +394,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="test-flarum"><a href="#test-flarum" class="headerlink" title="test flarum"></a>test flarum</h2><p><a href="https://github.com/flarum/flarum.git" target="_blank" rel="noopener">github</a></p>
-<p>1.install composer:<br><code>composer create-project flarum/flarum . --stability=beta</code><br>2.in order to use php</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> -y install gcc make autoconf libc-<span class="built_in">dev</span> pkg-config</span><br><span class="line">sudo apt-<span class="built_in">get</span> -y install php7<span class="number">.2</span>-<span class="built_in">dev</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> -y install libmcrypt-<span class="built_in">dev</span></span><br><span class="line">sudo pecl install mcrypt<span class="number">-1.0</span><span class="number">.2</span> <span class="comment">//for php&gt;7.3</span></span><br></pre></td></tr></table></figure>
+                <p>在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">View <span class="attr">v</span> = inflater.inflate(R.layout.fragment, container, <span class="literal">false</span>);</span><br><span class="line"><span class="attr">listView</span> = v.findViewById(R.id.list_view);</span><br><span class="line"></span><br><span class="line">MyDialog <span class="attr">myDialog</span> = new MyDialog(getContext());</span><br><span class="line">myDialog.show();</span><br></pre></td></tr></table></figure>
 
-<p>3.for arch<br><code>extra/php-sodium</code><br><code>php-set = extension=sodium</code>in /etc/php/php.ini</p>
 
             </div>
             <hr />
@@ -435,7 +432,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Thu Sep 12 2019 22:19:30 GMT+0800',
+    id: 'Sat Sep 14 2019 14:59:23 GMT+0800',
     owner: 'lithiumice',
     repo: 'lithiumice.github.io',
     oauth: {
@@ -459,34 +456,37 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/watermark/">
+                <a href="/invoke-virtual-method-on-null-reference/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/30.jpg" class="responsive-img" alt="Watermark">
+                        <img src="/medias/featureimages/09.jpg" class="responsive-img" alt="Invoke Virtual Method ... on Null Reference">
                         
-                        <span class="card-title">Watermark</span>
+                        <span class="card-title">Invoke Virtual Method ... on Null Reference</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1234567891011121314151617181920212223242526272829# -*- coding: utf-8 -*-import sysimport globfrom PIL import Imagefrom P
+                            在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:
+12345View v = inflater.inflate(R.layout.fragment, container, false)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
+                            </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -497,29 +497,37 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/sqmap-simple-intro/">
+                <a href="/docker-pei-zhi-jing-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/31.jpg" class="responsive-img" alt="Sqmap Simple Intro">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Docker 配置镜像">
                         
-                        <span class="card-title">Sqmap Simple Intro</span>
+                        <span class="card-title">Docker 配置镜像</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用命令12345678./sqlmap.py -u "http://localhost:88/vulnerabilities/sqli/?id=1&amp;Submit=Submit#" –cookie=mycookice.txt –ba
+                            常用的加速地址http://f1361db2.m.daocloud.iohttps://hub.daocloud.io/https://c.163.com/hub#/m/home/https://registry.docker-cn.com
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-12
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
                             </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/docker-linux/" target="_blank">
+                        <span class="chip bg-color">docker linux</span>
+                    </a>
+                    
                 </div>
                 
             </div>

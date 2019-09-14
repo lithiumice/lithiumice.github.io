@@ -4,12 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="install nodebb, lithiumice huaring cquer github blog">
+    <meta name="keywords" content="Install Nodebb, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="For Centosyum -y install epel-release //for centos 7
-yum -y groupinstall &amp;quot;Development Tools&amp;quot;
-yum -y install gi">
+    <meta name="description" content="For Centos1234567891011121314151617181920212223242526yum -y install epel-release //for centos 7yum -y groupinstall &#34;Deve">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +15,7 @@ yum -y install gi">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>install nodebb | Codes of huaring</title>
+    <title>Install Nodebb | Codes of huaring</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -230,13 +228,13 @@ yum -y install gi">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/05.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        install nodebb
+                        Install Nodebb
                     </div>
                 </div>
             </div>
@@ -372,7 +370,7 @@ yum -y install gi">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    384
+                    361
                 </div>
                 
 
@@ -395,86 +393,18 @@ yum -y install gi">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="For-Centos"><a href="#For-Centos" class="headerlink" title="For Centos"></a>For Centos</h2><pre><code>yum -y install epel-release //for centos 7
-yum -y groupinstall &quot;Development Tools&quot;
-yum -y install git redis ImageMagick npm
+                <h2 id="For-Centos"><a href="#For-Centos" class="headerlink" title="For Centos"></a>For Centos</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">yum -y <span class="keyword">install</span> epel-<span class="keyword">release</span> //<span class="keyword">for</span> centos <span class="number">7</span></span><br><span class="line">yum -y groupinstall <span class="string">"Development Tools"</span></span><br><span class="line">yum -y <span class="keyword">install</span> git redis ImageMagick npm</span><br><span class="line"></span><br><span class="line">curl https://raw.githubusercontent.com/creationix/nvm/v0<span class="number">.13</span><span class="number">.1</span>/install.sh | bash</span><br><span class="line">$ <span class="keyword">export</span> NVM_DIR=<span class="string">"$HOME/.nvm"</span></span><br><span class="line">[ -s <span class="string">"$NVM_DIR/nvm.sh"</span> ] &amp;&amp; . <span class="string">"$NVM_DIR/nvm.sh"</span></span><br><span class="line"><span class="keyword">source</span> ~/.bash_profile</span><br><span class="line">nvm <span class="keyword">list</span>-remote</span><br><span class="line">nvm <span class="keyword">install</span> v0<span class="number">.12</span><span class="number">.7</span> <span class="comment"># as of this writing check the result of the list-remote to see all choices</span></span><br><span class="line">//<span class="keyword">use</span> v6<span class="number">.9</span><span class="number">.5</span> <span class="keyword">as</span> stable</span><br><span class="line">$ <span class="keyword">export</span> NVM_NODEJS_ORG_MIRROR=<span class="keyword">http</span>://npm.taobao.org/mirrors/node</span><br><span class="line">$ <span class="keyword">export</span> NVM_IOJS_ORG_MIRROR=<span class="keyword">http</span>://npm.taobao.org/mirrors/iojs</span><br><span class="line">sudo npm config <span class="keyword">set</span> registry <span class="keyword">http</span>://registry.npm.taobao.org/</span><br><span class="line"></span><br><span class="line">systemctl <span class="keyword">start</span> redis</span><br><span class="line">systemctl <span class="keyword">enable</span> redis</span><br><span class="line"></span><br><span class="line">cd /<span class="keyword">path</span>/<span class="keyword">to</span>/nodebb/<span class="keyword">install</span>/location</span><br><span class="line">git <span class="keyword">clone</span> -b v1<span class="number">.10</span>.x https://github.com/NodeBB/NodeBB nodebb</span><br><span class="line">cd nodebb</span><br><span class="line">./nodebb setup</span><br><span class="line">firewall-cmd <span class="comment">--zone=public --add-port=4567/tcp --permanent</span></span><br><span class="line">//<span class="keyword">or</span>  <span class="comment">--add-service=http</span></span><br><span class="line">firewall-cmd <span class="comment">--reload</span></span><br><span class="line">./nodebb <span class="keyword">start</span></span><br></pre></td></tr></table></figure>
 
-curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
-$ export NVM_DIR=&quot;$HOME/.nvm&quot;
-[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;
-source ~/.bash_profile
-nvm list-remote
-nvm install v0.12.7 # as of this writing check the result of the list-remote to see all choices
-//use v6.9.5 as stable
-$ export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
-$ export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojs
-sudo npm config set registry http://registry.npm.taobao.org/
+<p>if you come across <strong>open ‘/opt/nodebb/node_modules/sharp/</strong>,then try:</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">./nodebb <span class="built_in">setup</span></span><br></pre></td></tr></table></figure>
 
-systemctl start redis
-systemctl enable redis
+<h2 id="For-arch"><a href="#For-arch" class="headerlink" title="For arch"></a>For arch</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S git nodejs npm redis imagemagick icu</span><br><span class="line">git clone -<span class="selector-tag">b</span> v1.<span class="number">10</span><span class="selector-class">.x</span> https:<span class="comment">//github.com/NodeBB/NodeBB.git nodebb</span></span><br><span class="line">cd nodebb</span><br><span class="line">./nodebb setup</span><br><span class="line">./nodebb start</span><br></pre></td></tr></table></figure>
 
-cd /path/to/nodebb/install/location
-git clone -b v1.10.x https://github.com/NodeBB/NodeBB nodebb
-cd nodebb
-./nodebb setup
-firewall-cmd --zone=public --add-port=4567/tcp --permanent
-//or  --add-service=http
-firewall-cmd --reload
-./nodebb start</code></pre><p>if you come across <strong>open ‘/opt/nodebb/node_modules/sharp/</strong>,then try:</p>
-<pre><code>npm install
-./nodebb setup</code></pre><h2 id="For-arch"><a href="#For-arch" class="headerlink" title="For arch"></a>For arch</h2><pre><code> sudo pacman -S git nodejs npm redis imagemagick icu
- git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git nodebb
- cd nodebb
- ./nodebb setup
- ./nodebb start</code></pre><h2 id="proxy-reverse"><a href="#proxy-reverse" class="headerlink" title="proxy reverse"></a>proxy reverse</h2><pre><code>in httd.conf
-LoadModule proxy_module /usr/lib/apache2/modules/mod_proxy.so
-LoadModule proxy_http_module /usr/lib/apache2/modules/mod_proxy_http.so
-&lt;VirtualHost *:80&gt;     
-        DocumentRoot &quot;/home/test/tomcat/webapps/ROOT”     
-        ServerName test.test.test     
-        ProxyPass /    http://127.0.0.1:8080/
-        ProxyPassReverse /   http://127.0.0.1:8080/
-&lt;/VirtualHost&gt;
+<h2 id="proxy-reverse"><a href="#proxy-reverse" class="headerlink" title="proxy reverse"></a>proxy reverse</h2> <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">in httd.conf</span><br><span class="line">LoadModule proxy_module /usr/<span class="class"><span class="keyword">lib</span>/<span class="title">apache2</span>/<span class="title">modules</span>/<span class="title">mod_proxy</span>.<span class="title">so</span></span></span><br><span class="line">LoadModule proxy_http_module /usr/<span class="class"><span class="keyword">lib</span>/<span class="title">apache2</span>/<span class="title">modules</span>/<span class="title">mod_proxy_http</span>.<span class="title">so</span></span></span><br><span class="line">&lt;VirtualHost *:<span class="number">80</span>&gt;     </span><br><span class="line">        DocumentRoot <span class="string">"/home/test/tomcat/webapps/ROOT”     </span></span><br><span class="line"><span class="string">        ServerName test.test.test     </span></span><br><span class="line"><span class="string">        ProxyPass /    http://127.0.0.1:8080/</span></span><br><span class="line"><span class="string">        ProxyPassReverse /   http://127.0.0.1:8080/</span></span><br><span class="line"><span class="string">&lt;/VirtualHost&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">in apache2.configuration</span></span><br><span class="line"><span class="string">Include ports.conf</span></span><br><span class="line"><span class="string">Include httpd.conf</span></span><br><span class="line"><span class="string">ServerName 127.0.0.1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">sudo apache2ctl -k stop</span></span><br><span class="line"><span class="string">sudo apache2ctl -k start</span></span><br></pre></td></tr></table></figure>
 
-in apache2.configuration
-Include ports.conf
-Include httpd.conf
-ServerName 127.0.0.1
+<h2 id="nginx-ProxyPassReverse"><a href="#nginx-ProxyPassReverse" class="headerlink" title="nginx ProxyPassReverse"></a>nginx ProxyPassReverse</h2><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">Insert the below lines into the location / &#123;&#125; segment:</span><br><span class="line">  ##########################################</span><br><span class="line">  server &#123;</span><br><span class="line">      listen <span class="number">80</span>;</span><br><span class="line"></span><br><span class="line">      server_name www.xxx.com; # 你的域名</span><br><span class="line"></span><br><span class="line">     location / &#123;</span><br><span class="line">          proxy_set_header X-<span class="built_in">Real</span>-IP $remote_addr;</span><br><span class="line">          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">          proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">          proxy_set_header Host $http_host;</span><br><span class="line">          proxy_set_header X-NginX-Proxy true;</span><br><span class="line"></span><br><span class="line">          proxy_pass http:<span class="comment">//127.0.0.1:4567;</span></span><br><span class="line">          proxy_http_version <span class="number">1.1</span>;</span><br><span class="line">          proxy_set_header X-<span class="built_in">Real</span>-IP $remote_addr;</span><br><span class="line">          proxy_set_header Host $host;</span><br><span class="line">          proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">          proxy_set_header Connection <span class="string">'upgrade'</span>;</span><br><span class="line">          proxy_cache_bypass $http_upgrade;</span><br><span class="line">          proxy_redirect off;</span><br><span class="line"></span><br><span class="line">          # Socket.IO Support</span><br><span class="line">          proxy_http_version <span class="number">1.1</span>;</span><br><span class="line">          proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">          proxy_set_header Connection <span class="string">"upgrade"</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      # 配置 <span class="number">502</span> 页? 参考: 高级 - 配置 Nginx</span><br><span class="line">  &#125;</span><br><span class="line">  ##########################################</span><br></pre></td></tr></table></figure>
 
-sudo apache2ctl -k stop
-sudo apache2ctl -k start</code></pre><h2 id="nginx-ProxyPassReverse"><a href="#nginx-ProxyPassReverse" class="headerlink" title="nginx ProxyPassReverse"></a>nginx ProxyPassReverse</h2><pre><code>Insert the below lines into the location / {} segment:
-  ##########################################
-  server {
-      listen 80;
-
-      server_name www.xxx.com; # 你的域名
-
-     location / {
-          proxy_set_header X-Real-IP $remote_addr;
-          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-          proxy_set_header X-Forwarded-Proto $scheme;
-          proxy_set_header Host $http_host;
-          proxy_set_header X-NginX-Proxy true;
-
-          proxy_pass http://127.0.0.1:4567;
-          proxy_http_version 1.1;
-          proxy_set_header X-Real-IP $remote_addr;
-          proxy_set_header Host $host;
-          proxy_set_header Upgrade $http_upgrade;
-          proxy_set_header Connection &#39;upgrade&#39;;
-          proxy_cache_bypass $http_upgrade;
-          proxy_redirect off;
-
-          # Socket.IO Support
-          proxy_http_version 1.1;
-          proxy_set_header Upgrade $http_upgrade;
-          proxy_set_header Connection &quot;upgrade&quot;;
-      }
-
-      # 配置 502 页? 参考: 高级 - 配置 Nginx
-  }
-  ##########################################
-</code></pre><h2 id="use-forever-to-manage-NodeBB"><a href="#use-forever-to-manage-NodeBB" class="headerlink" title="use forever to manage NodeBB"></a>use <strong>forever</strong> to manage NodeBB</h2><p>npm install forever -g<br> forever start app.js</p>
+<h2 id="use-forever-to-manage-NodeBB"><a href="#use-forever-to-manage-NodeBB" class="headerlink" title="use forever to manage NodeBB"></a>use <strong>forever</strong> to manage NodeBB</h2><p>npm install forever -g<br> forever start app.js</p>
 
             </div>
             <hr />
@@ -542,9 +472,9 @@ gitment.render('gitment-content');
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="apache-php-config">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Apache-Php-Config">
                         
-                        <span class="card-title">apache-php-config</span>
+                        <span class="card-title">Apache-Php-Config</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -576,20 +506,16 @@ gitment.render('gitment-content');
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/04.jpg" class="responsive-img" alt="using hexo">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Using Hexo">
                         
-                        <span class="card-title">using hexo</span>
+                        <span class="card-title">Using Hexo</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-在本机上安装sudo pacman -S gem bundle
-sudo gem install bundler jekyll
-bundle exec jekyll serve
-npm install hexo
-hexo init blo
+在本机上安装123456sudo pacman -S gem bundlesudo gem install bundler jekyllbundle exec jekyll servenpm install hexohexo init b
                         
                     </div>
                     <div class="publish-info">
@@ -759,7 +685,7 @@ hexo init blo
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.1k</span>
+            <span class="white-color">4.5k</span>
             
 
             <br>

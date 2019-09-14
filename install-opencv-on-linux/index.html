@@ -4,11 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="install opencv on linux, lithiumice huaring cquer github blog">
+    <meta name="keywords" content="Install Opencv on Linux, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="simple guide to install opencv on ubuntusystem depandenciessudo apt-get install build-essential
-sudo apt-get install cma">
+    <meta name="description" content="simple guide to install opencv on ubuntusystem depandencies123sudo apt-get install build-essentialsudo apt-get install c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +15,7 @@ sudo apt-get install cma">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>install opencv on linux | Codes of huaring</title>
+    <title>Install Opencv on Linux | Codes of huaring</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -229,13 +228,13 @@ sudo apt-get install cma">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/07.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/03.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        install opencv on linux
+                        Install Opencv on Linux
                     </div>
                 </div>
             </div>
@@ -371,7 +370,7 @@ sudo apt-get install cma">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    362
+                    343
                 </div>
                 
 
@@ -394,55 +393,17 @@ sudo apt-get install cma">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="simple-guide-to-install-opencv-on-ubuntu"><a href="#simple-guide-to-install-opencv-on-ubuntu" class="headerlink" title="simple guide to install opencv on ubuntu"></a>simple guide to install opencv on ubuntu</h1><h2 id="system-depandencies"><a href="#system-depandencies" class="headerlink" title="system depandencies"></a>system depandencies</h2><pre><code>sudo apt-get install build-essential
-sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</code></pre><h2 id="build-opencv"><a href="#build-opencv" class="headerlink" title="build opencv"></a>build opencv</h2><pre><code>git clone https://github.com/opencv/opencv.git
-git clone https://github.com/opencv/opencv_contrib.git
-cd opencv
-mkdir build &amp;&amp; cd build
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
-cmake -DCMAKE_INSTALL_PREFIX=/usr
--DCMAKE_BUILD_TYPE=Release
--DENABLE_CXX11=ON
--DBUILD_PERF_TESTS=OFF
--DWITH_XINE=ON
--DBUILD_TESTS=OFF
--DENABLE_PRECOMPILED_HEADERS=OFF
--DCMAKE_SKIP_RPATH=ON
--DBUILD_WITH_DEBUG_INFO=OFF
--DBUILD_SHARED_LIBS=OFF
--Wno-dev .. &amp;&amp; make
+                <h1 id="simple-guide-to-install-opencv-on-ubuntu"><a href="#simple-guide-to-install-opencv-on-ubuntu" class="headerlink" title="simple guide to install opencv on ubuntu"></a>simple guide to install opencv on ubuntu</h1><h2 id="system-depandencies"><a href="#system-depandencies" class="headerlink" title="system depandencies"></a>system depandencies</h2><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install build-essential</span><br><span class="line">sudo apt-<span class="built_in">get</span> install cmake git libgtk2<span class="number">.0</span>-<span class="built_in">dev</span> pkg-config libavcodec-<span class="built_in">dev</span> libavformat-<span class="built_in">dev</span> libswscale-<span class="built_in">dev</span></span><br><span class="line">sudo apt-<span class="built_in">get</span> install python-<span class="built_in">dev</span> python-numpy libtbb2 libtbb-<span class="built_in">dev</span> libjpeg-<span class="built_in">dev</span> libpng-<span class="built_in">dev</span> libtiff-<span class="built_in">dev</span> libjasper-<span class="built_in">dev</span> libdc1394<span class="number">-22</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
 
-cd opencv/build/doc/
-make -j7 html_docs
-sudo make install
-git clone https://github.com/opencv/opencv_extra.git
-pkg-config –modversion opencv</code></pre><pre><code>## Description of some parameters
-build type: CMAKE_BUILD_TYPE=ReleaseDebug
-to build with modules from opencv_contrib set OPENCV_EXTRA_MODULES_PATH to &lt;path to opencv_contrib/modules/&gt;
-set BUILD_DOCS for building documents
-set BUILD_EXAMPLES to build all examples
-[optional] Building python. Set the following python parameters:
-PYTHON2(3)_EXECUTABLE = &lt;path to python&gt;
-PYTHON_INCLUDE_DIR = /usr/include/python&lt;version&gt;
-PYTHON_INCLUDE_DIR2 = /usr/include/x86_64-linux-gnu/python&lt;version&gt;
-PYTHON_LIBRARY = /usr/lib/x86_64-linux-gnu/libpython&lt;version&gt;.so
-PYTHON2(3)_NUMPY_INCLUDE_DIRS = /usr/lib/python&lt;version&gt;/dist-packages/numpy/core/include/
-[optional] Building java.
-Unset parameter: BUILD_SHARED_LIBS
-It is useful also to unset BUILD_EXAMPLES, BUILD_TESTS, BUILD_PERF_TESTS – as they all will be statically linked with OpenCV and can take a lot of memory.</code></pre><h2 id="test-your-opencv"><a href="#test-your-opencv" class="headerlink" title="test your opencv"></a>test your opencv</h2><pre><code>g++ -o main /home/lithium/Documents/opencv-lena.cpp `pkg-config opencv –cflags –libs`
-sudo apt-get install libopencv-dev
+<h2 id="build-opencv"><a href="#build-opencv" class="headerlink" title="build opencv"></a>build opencv</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/opencv/opencv.git</span><br><span class="line">git clone https://github.com/opencv/opencv_contrib.git</span><br><span class="line">cd opencv</span><br><span class="line">mkdir build &amp;&amp; cd build</span><br><span class="line">cmake -D CMAKE_BUILD_TYPE=<span class="keyword">Release</span> -D CMAKE_INSTALL_PREFIX=/usr/<span class="keyword">local</span> ..</span><br><span class="line">cmake -DCMAKE_INSTALL_PREFIX=/usr</span><br><span class="line">-DCMAKE_BUILD_TYPE=<span class="keyword">Release</span></span><br><span class="line">-DENABLE_CXX11=<span class="keyword">ON</span></span><br><span class="line">-DBUILD_PERF_TESTS=<span class="keyword">OFF</span></span><br><span class="line">-DWITH_XINE=<span class="keyword">ON</span></span><br><span class="line">-DBUILD_TESTS=<span class="keyword">OFF</span></span><br><span class="line">-DENABLE_PRECOMPILED_HEADERS=<span class="keyword">OFF</span></span><br><span class="line">-DCMAKE_SKIP_RPATH=<span class="keyword">ON</span></span><br><span class="line">-DBUILD_WITH_DEBUG_INFO=<span class="keyword">OFF</span></span><br><span class="line">-DBUILD_SHARED_LIBS=<span class="keyword">OFF</span></span><br><span class="line">-Wno-dev .. &amp;&amp; make</span><br><span class="line"></span><br><span class="line">cd opencv/<span class="keyword">build</span>/doc/</span><br><span class="line">make -j7 html_docs</span><br><span class="line">sudo make <span class="keyword">install</span></span><br><span class="line">git <span class="keyword">clone</span> https://github.com/opencv/opencv_extra.git</span><br><span class="line">pkg-config –modversion opencv</span><br></pre></td></tr></table></figure>
 
-## uninstall opencv
-sudo rm -r /usr/local/include/opencv2 /usr/local/include/opencv /usr/include/opencv /usr/include/opencv2 /usr/local/share/opencv /usr/local/share/OpenCV /usr/share/opencv /usr/share/OpenCV /usr/local/bin/opencv* /usr/local/lib/libopencv*
-sudo apt-get –purge remove opencv-doc opencv-data python-opencv</code></pre><h2 id="config-PATH"><a href="#config-PATH" class="headerlink" title="config PATH"></a>config PATH</h2><pre><code>CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/libxml2:/usr/local/include/opencv4/opencv2
-export CPLUS_INCLUDE_PATH
-C_INCLUDE_PATH=/usr/include/libxml2:/usr/local/include/opencv4/opencv2/
-export C_INCLUDE_PATH
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/MyLib
-export LD_LIBRARY_PATH
-LIBRARY_PATH=$LIBRARY_PATH:/MyLib
-export LIBRARY_PATH</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Description of some parameters</span></span><br><span class="line">build type: CMAKE_BUILD_TYPE=ReleaseDebug</span><br><span class="line">to build <span class="keyword">with</span> modules <span class="keyword">from</span> opencv_contrib <span class="keyword">set</span> OPENCV_EXTRA_MODULES_PATH <span class="keyword">to</span> &lt;<span class="keyword">path</span> <span class="keyword">to</span> opencv_contrib/modules/&gt;</span><br><span class="line"><span class="keyword">set</span> BUILD_DOCS <span class="keyword">for</span> building documents</span><br><span class="line"><span class="keyword">set</span> BUILD_EXAMPLES <span class="keyword">to</span> <span class="keyword">build</span> <span class="keyword">all</span> examples</span><br><span class="line">[optional] Building python. <span class="keyword">Set</span> the <span class="keyword">following</span> python <span class="keyword">parameters</span>:</span><br><span class="line">PYTHON2(<span class="number">3</span>)_EXECUTABLE = &lt;<span class="keyword">path</span> <span class="keyword">to</span> python&gt;</span><br><span class="line">PYTHON_INCLUDE_DIR = /usr/<span class="keyword">include</span>/python&lt;<span class="keyword">version</span>&gt;</span><br><span class="line">PYTHON_INCLUDE_DIR2 = /usr/<span class="keyword">include</span>/x86_64-linux-gnu/python&lt;<span class="keyword">version</span>&gt;</span><br><span class="line">PYTHON_LIBRARY = /usr/lib/x86_64-linux-gnu/libpython&lt;<span class="keyword">version</span>&gt;.so</span><br><span class="line">PYTHON2(<span class="number">3</span>)_NUMPY_INCLUDE_DIRS = /usr/lib/python&lt;<span class="keyword">version</span>&gt;/dist-packages/numpy/core/<span class="keyword">include</span>/</span><br><span class="line">[optional] Building java.</span><br><span class="line">Unset parameter: BUILD_SHARED_LIBS</span><br><span class="line">It <span class="keyword">is</span> useful also <span class="keyword">to</span> unset BUILD_EXAMPLES, BUILD_TESTS, BUILD_PERF_TESTS – <span class="keyword">as</span> they <span class="keyword">all</span> will be statically linked <span class="keyword">with</span> OpenCV <span class="keyword">and</span> can take a lot <span class="keyword">of</span> memory.</span><br></pre></td></tr></table></figure>
+
+<h2 id="test-your-opencv"><a href="#test-your-opencv" class="headerlink" title="test your opencv"></a>test your opencv</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">g++ -o main <span class="regexp">/home/</span>lithium<span class="regexp">/Documents/</span>opencv-lena.cpp `pkg-config opencv –cflags –libs`</span><br><span class="line">sudo apt-get install libopencv-dev</span><br><span class="line"></span><br><span class="line"><span class="comment">## uninstall opencv</span></span><br><span class="line">sudo rm -r <span class="regexp">/usr/</span>local<span class="regexp">/include/</span>opencv2 <span class="regexp">/usr/</span>local<span class="regexp">/include/</span>opencv <span class="regexp">/usr/i</span>nclude<span class="regexp">/opencv /u</span>sr<span class="regexp">/include/</span>opencv2 <span class="regexp">/usr/</span>local<span class="regexp">/share/</span>opencv <span class="regexp">/usr/</span>local<span class="regexp">/share/</span>OpenCV <span class="regexp">/usr/</span>share<span class="regexp">/opencv /u</span>sr<span class="regexp">/share/</span>OpenCV <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>opencv* <span class="regexp">/usr/</span>local<span class="regexp">/lib/</span>libopencv*</span><br><span class="line">sudo apt-get –purge remove opencv-doc opencv-data python-opencv</span><br></pre></td></tr></table></figure>
+
+<h2 id="config-PATH"><a href="#config-PATH" class="headerlink" title="config PATH"></a>config PATH</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CPLUS_INCLUDE_PATH=<span class="variable">$CPLUS_INCLUDE_PATH</span><span class="symbol">:/usr/include/libxml2</span><span class="symbol">:/usr/local/include/opencv4/opencv2</span></span><br><span class="line">export CPLUS_INCLUDE_PATH</span><br><span class="line">C_INCLUDE_PATH=<span class="regexp">/usr/include</span><span class="regexp">/libxml2:/usr</span><span class="regexp">/local/include</span><span class="regexp">/opencv4/opencv</span>2/</span><br><span class="line">export C_INCLUDE_PATH</span><br><span class="line">LD_LIBRARY_PATH=<span class="variable">$LD_LIBRARY_PATH</span><span class="symbol">:/MyLib</span></span><br><span class="line">export LD_LIBRARY_PATH</span><br><span class="line">LIBRARY_PATH=<span class="variable">$LIBRARY_PATH</span><span class="symbol">:/MyLib</span></span><br><span class="line">export LIBRARY_PATH</span><br></pre></td></tr></table></figure>
+
+
             </div>
             <hr />
 
@@ -509,15 +470,15 @@ gitment.render('gitment-content');
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="use nvm">
+                        <img src="/medias/featureimages/07.jpg" class="responsive-img" alt="Use Nvm">
                         
-                        <span class="card-title">use nvm</span>
+                        <span class="card-title">Use Nvm</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            先卸载系统的node12345678sudo rm /usr/local/bin/npmsudo rm /usr/local/share/man/man1/node.1sudo rm /usr/local/lib/dtrace/node.d
                         
                     </div>
                     <div class="publish-info">
@@ -543,9 +504,9 @@ gitment.render('gitment-content');
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="apache-php-config">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Apache-Php-Config">
                         
-                        <span class="card-title">apache-php-config</span>
+                        <span class="card-title">Apache-Php-Config</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -713,7 +674,7 @@ gitment.render('gitment-content');
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.1k</span>
+            <span class="white-color">4.5k</span>
             
 
             <br>
