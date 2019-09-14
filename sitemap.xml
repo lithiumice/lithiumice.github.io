@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/about/index.html</loc>
+    
+    <lastmod>2019-09-14T15:32:32.914Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/learn-markdown/</loc>
+    
+    <lastmod>2019-09-14T15:07:23.338Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/compress-pic-shell-pi-liang-ya-suo-tu-pian-jiao-ben/</loc>
+    
+    <lastmod>2019-09-14T15:07:20.258Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/invoke-virtual-method-on-null-reference/</loc>
+    
+    <lastmod>2019-09-14T15:01:42.959Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/shell-intro/</loc>
+    
+    <lastmod>2019-09-14T10:31:46.687Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/telnet-usage/</loc>
     
     <lastmod>2019-09-14T09:59:15.483Z</lastmod>
@@ -19,13 +54,6 @@
     <loc>https://hualin.online/atom-usage/</loc>
     
     <lastmod>2019-09-14T09:59:10.200Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/invoke-virtual-method-on-null-reference/</loc>
-    
-    <lastmod>2019-09-14T07:01:51.038Z</lastmod>
     
   </url>
   
@@ -110,13 +138,6 @@
     <loc>https://hualin.online/README.html</loc>
     
     <lastmod>2019-09-12T11:04:01.435Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/about/index.html</loc>
-    
-    <lastmod>2019-09-12T10:43:31.151Z</lastmod>
     
   </url>
   

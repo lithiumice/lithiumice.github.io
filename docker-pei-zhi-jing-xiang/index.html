@@ -398,7 +398,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="常用的加速地址"><a href="#常用的加速地址" class="headerlink" title="常用的加速地址"></a>常用的加速地址</h2><p><a href="http://f1361db2.m.daocloud.io" target="_blank" rel="noopener">http://f1361db2.m.daocloud.io</a><br><a href="https://hub.daocloud.io/" target="_blank" rel="noopener">https://hub.daocloud.io/</a><br><a href="https://c.163.com/hub#/m/home/" target="_blank" rel="noopener">https://c.163.com/hub#/m/home/</a><br><a href="https://registry.docker-cn.com" target="_blank" rel="noopener">https://registry.docker-cn.com</a><br><a href="http://hub-mirror.c.163.com" target="_blank" rel="noopener">http://hub-mirror.c.163.com</a><br><a href="https://3laho3y3.mirror.aliyuncs.com" target="_blank" rel="noopener">https://3laho3y3.mirror.aliyuncs.com</a><br><a href="http://f1361db2.m.daocloud.io" target="_blank" rel="noopener">http://f1361db2.m.daocloud.io</a><br><a href="https://mirror.ccs.tencentyun.com" target="_blank" rel="noopener">https://mirror.ccs.tencentyun.com</a></p>
-<h2 id="使用shell命令配置"><a href="#使用shell命令配置" class="headerlink" title="使用shell命令配置"></a>使用shell命令配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'</span><br><span class="line">&#123;</span><br><span class="line">  "registry-mirrors"["https://wl4i5g2z.mirror.aliyuncs.com"]</span><br><span class="line">"live-restore": true</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+<h2 id="使用shell命令配置"><a href="#使用shell命令配置" class="headerlink" title="使用shell命令配置"></a>使用shell命令配置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-'EOF'</span><br><span class="line">&#123;</span><br><span class="line">  "registry-mirrors"["https://wl4i5g2z.mirror.aliyuncs.com"]</span><br><span class="line">"live-restore": true</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
 
 <h2 id="直接修改service文件"><a href="#直接修改service文件" class="headerlink" title="直接修改service文件"></a>直接修改service文件</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/<span class="class"><span class="keyword">lib</span>/<span class="title">systemd</span>/<span class="title">system</span>/<span class="title">docker</span>.<span class="title">service</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在dockerd后面加参数</span></span><br><span class="line">ExecStart=<span class="regexp">/usr/bin</span><span class="regexp">/dockerd --registry-mirror=&lt;your accelerate address&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">sudo systemctl daemon-reload</span></span><br><span class="line"><span class="regexp">sudo systemctl restart docker</span></span><br></pre></td></tr></table></figure>
 
@@ -478,7 +478,7 @@ gitment.render('gitment-content');
                     <div class="summary block-with-text">
                         
                             在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:
-12345View v = inflater.inflate(R.layout.fragment, container, false)
+1234View v = inflater.inflate(R.layout.fragment, container, false);
                         
                     </div>
                     <div class="publish-info">
@@ -689,7 +689,7 @@ gitment.render('gitment-content');
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.5k</span>
+            <span class="white-color">4.9k</span>
             
 
             <br>
@@ -854,5 +854,5 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
 
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
 </html>

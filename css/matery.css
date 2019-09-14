@@ -1116,7 +1116,7 @@ table tr:nth-child(2n), thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #276d16 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to right, #2a414c 0%, #795548 100%) !important;
 }
 
 .chip .tag-length {
@@ -1439,8 +1439,8 @@ table tr:nth-child(2n), thead {
     margin: 0 0.5rem;
     padding: 0;
     color: #fff;
-    border: 1px solid #0f9d58;
-    background: radial-gradient(#276d16, #0f9d58);;
+    border: 1px solid #795548;
+    background: radial-gradient(#2a414c, #795548);;
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1615,8 +1615,8 @@ table tr:nth-child(2n), thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #276d16 0%, #0f9d58 100%);;
-    border: 1px solid #276d16;
+    background: linear-gradient(to right, #2a414c 0%, #795548 100%);;
+    border: 1px solid #2a414c;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
