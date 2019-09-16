@@ -7,8 +7,12 @@
     <meta name="keywords" content="Compress PIC Shell 批量压缩图片脚本, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="在写博客的时候需要将图片上传到服务器,很显然如果一张图片未经压缩有时会达到2-3M,严重影响访问者的加载速度. 所以我写了一个脚本放在博客根目录,能够历遍文件夹下的所以图片并将大于指定大小的图片进行压缩.
-12345678910111213">
+    <meta name="description" content="
+
+在写博客的时候需要将图片上传到服务器,很显然如果一张图片未经压缩有时会达到2-3M,严重影响访问者的加载速度. 所以我写了一个脚本放在博客根目录,能够历遍文件夹下的所以图片并将大于指定大小的图片进行压缩.
+#!/bin/bash
+
+SP">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -371,7 +375,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    179
+                    170
                 </div>
                 
 
@@ -394,9 +398,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在写博客的时候需要将图片上传到服务器,很显然如果一张图片未经压缩有时会达到2-3M,严重影响访问者的加载速度. 所以我写了一个脚本放在博客根目录,能够历遍文件夹下的所以图片并将大于指定大小的图片进行压缩.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"></span><br><span class="line">SPATH=./</span><br><span class="line">maxsize=921600 #900KB</span><br><span class="line">AFTERFIX=""</span><br><span class="line"></span><br><span class="line">COMPRESS () &#123;</span><br><span class="line">        imgpath=$1</span><br><span class="line">        filesize=`ls -l $imgpath | awk '&#123; print $5 &#125;'`</span><br><span class="line">        echo $filesize</span><br><span class="line">        if [ $filesize -ge $maxsize ]</span><br><span class="line">            then</span><br><span class="line">              echo compressing $file</span><br><span class="line">              afterfix=$&#123;filename##*.&#125;</span><br><span class="line">              name=$&#123;filename%.*&#125;</span><br><span class="line">              convert -quality 80% $imgpath $imgpath</span><br><span class="line">              # convert -quality 80% $imgpath "$&#123;name&#125;s.$&#123;afterfix&#125;"</span><br><span class="line">              echo compressed $imgpath</span><br><span class="line">            else</span><br><span class="line">              echo skiped $imgpath</span><br><span class="line">        fi</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo "begin"</span><br><span class="line">filelist=`find $1 -regex ".*/.*.jpg" -o -regex ".*/.*.png"`</span><br><span class="line">for file in $filelist</span><br><span class="line"> do</span><br><span class="line">  if [ -f $file ]</span><br><span class="line">   then</span><br><span class="line">    COMPRESS $file</span><br><span class="line">  fi</span><br><span class="line">done</span><br><span class="line">echo "finished"</span><br></pre></td></tr></table></figure>
+                <!-- col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text -->
+<!-- coverPostsCount > 0 && theme.cover.showPrevNext -->
+<p>在写博客的时候需要将图片上传到服务器,很显然如果一张图片未经压缩有时会达到2-3M,严重影响访问者的加载速度. 所以我写了一个脚本放在博客根目录,能够历遍文件夹下的所以图片并将大于指定大小的图片进行压缩.</p>
+<pre class="line-numbers language-shell"><code class="language-shell">#!/bin/bash
 
+SPATH=./
+maxsize=921600 #900KB
+AFTERFIX=""
+
+COMPRESS () {
+        imgpath=$1
+        filesize=`ls -l $imgpath | awk '{ print $5 }'`
+        echo $filesize
+        if [ $filesize -ge $maxsize ]
+            then
+              echo compressing $file
+              afterfix=${filename##*.}
+              name=${filename%.*}
+              convert -quality 80% $imgpath $imgpath
+              # convert -quality 80% $imgpath "${name}s.${afterfix}"
+              echo compressed $imgpath
+            else
+              echo skiped $imgpath
+        fi
+      }
+
+
+echo "begin"
+filelist=`find $1 -regex ".*/.*.jpg" -o -regex ".*/.*.png"`
+for file in $filelist
+ do
+  if [ -f $file ]
+   then
+    COMPRESS $file
+  fi
+done
+echo "finished"
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -456,37 +495,35 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/compress-pic-shell-pi-liang-ya-suo-tu-pian-jiao-ben/">
+                <a href="/qt5-issues/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Compress PIC Shell 批量压缩图片脚本">
+                        <img src="/medias/featureimages/03.jpg" class="responsive-img" alt="QT5 Issues">
                         
-                        <span class="card-title">Compress PIC Shell 批量压缩图片脚本</span>
+                        <span class="card-title">QT5 Issues</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在写博客的时候需要将图片上传到服务器,很显然如果一张图片未经压缩有时会达到2-3M,严重影响访问者的加载速度. 所以我写了一个脚本放在博客根目录,能够历遍文件夹下的所以图片并将大于指定大小的图片进行压缩.
-12345678910111213
+                            qt6 libraries errorsstrings /usr/lib64/libstdc++.so.6 | grep GLIBC
+echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
+                        </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -678,7 +715,7 @@ gitment.render('gitment-content');
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.9k</span>
+            <span class="white-color">6.6k</span>
             
 
             <br>

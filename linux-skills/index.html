@@ -371,7 +371,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    131
+                    136
                 </div>
                 
 
@@ -397,9 +397,13 @@
                 <h2 id="使用命令压缩图片"><a href="#使用命令压缩图片" class="headerlink" title="使用命令压缩图片"></a>使用命令压缩图片</h2><p>安装<code>sudo pacman -S imagemagick</code><br>支持JPG, BMP, PCX, GIF, PNG, TIFF, XPM和XWD等</p>
 <p>1.转换格式<code>convert 1.jpg 1.png</code><br>2.-resize 1080x780<br>3.-sample 50%x50%<br>4.-rotate 272<br>5.-fill black -pointsize 60 -front helvetica -draw ‘hello’ //front use Ghostscript<br>5.-quality 0-100</p>
 <h3 id="批量转换"><a href="#批量转换" class="headerlink" title="批量转换"></a>批量转换</h3><p><code>for %f in (*.jpg) do convert &quot;%f&quot; &quot;%~nf.png&quot;</code><br><code>for %f in (*.jpg) do convertv -quality 70 &quot;%f&quot; &quot;%~nf.jpg&quot;</code><br><code>convert -quality 70 *.jpg</code><br>composite加水印</p>
-<h2 id="Linux-设置swap分区"><a href="#Linux-设置swap分区" class="headerlink" title="Linux 设置swap分区"></a>Linux 设置swap分区</h2><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">dd </span><span class="string">if=</span>/<span class="string">dev/</span><span class="string">zero </span><span class="string">of=</span>/<span class="string">mnt/</span><span class="string">swap </span><span class="string">bs=</span><span class="string">1m </span><span class="string">count=</span><span class="string">1024 </span><span class="comment">#1G</span></span><br><span class="line"><span class="string">mkswap </span>/<span class="string">mnt/</span><span class="string">swap</span></span><br><span class="line"><span class="string">swapon </span>/<span class="string">mnt/</span><span class="string">swap</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">hostnamectl </span><span class="built_in">set-hostname</span> <span class="string">mail.</span><span class="string">ewomail.</span><span class="string">cn</span></span><br><span class="line"><span class="string">https:</span>//<span class="string">github.</span><span class="string">com/</span><span class="string">gyxuehu/</span><span class="string">EwoMail.</span><span class="string">git</span></span><br><span class="line"><span class="string">sh </span>./<span class="string">start.</span><span class="string">sh </span><span class="string">ewomail.</span><span class="string">cn </span>-f</span><br></pre></td></tr></table></figure>
+<h2 id="Linux-设置swap分区"><a href="#Linux-设置swap分区" class="headerlink" title="Linux 设置swap分区"></a>Linux 设置swap分区</h2><pre><code>dd if=/dev/zero of=/mnt/swap bs=1m count=1024 #1G
+mkswap /mnt/swap
+swapon /mnt/swap
 
-
+hostnamectl set-hostname mail.ewomail.cn
+https://github.com/gyxuehu/EwoMail.git
+sh ./start.sh ewomail.cn -f</code></pre>
             </div>
             <hr />
 
@@ -517,7 +521,12 @@ gitment.render('gitment-content');
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1234567891011121314151617181920212223242526272829# -*- coding: utf-8 -*-import sysimport globfrom PIL import Imagefrom P
+                            # -*- coding: utf-8 -*-
+import sys
+import glob
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
                         
                     </div>
                     <div class="publish-info">
@@ -686,7 +695,7 @@ gitment.render('gitment-content');
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.9k</span>
+            <span class="white-color">6.6k</span>
             
 
             <br>

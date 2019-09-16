@@ -1,4 +1,25 @@
 /* Here is your custom css styles. */
+#recommend-sections {
+    margin-top: -30px;
+    padding-top: 30px;
+    margin-bottom: -20px;
+}
+
+.index-card {
+    margin-top: -10px;
+    padding-top: 20px;
+}
+
+.dream {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.music-player, .video-player {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .tooltipped {
   color: #2a414c;
 }

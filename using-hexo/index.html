@@ -8,7 +8,11 @@
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="description" content="
-在本机上安装123456sudo pacman -S gem bundlesudo gem install bundler jekyllbundle exec jekyll servenpm install hexohexo init b">
+在本机上安装sudo pacman -S gem bundle
+sudo gem install bundler jekyll
+bundle exec jekyll serve
+npm install hexo
+hexo init blo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -375,7 +379,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    383
+                    396
                 </div>
                 
 
@@ -399,21 +403,38 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ul>
-<li><h2 id="在本机上安装"><a href="#在本机上安装" class="headerlink" title="在本机上安装"></a>在本机上安装</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S gem <span class="keyword">bundle</span></span><br><span class="line"><span class="keyword">sudo </span>gem <span class="keyword">install </span><span class="keyword">bundler </span><span class="keyword">jekyll</span></span><br><span class="line"><span class="keyword">bundle </span>exec <span class="keyword">jekyll </span>serve</span><br><span class="line">npm <span class="keyword">install </span>hexo</span><br><span class="line">hexo init <span class="keyword">blog </span>&amp;amp<span class="comment">;&amp;amp; cd blog</span></span><br><span class="line">npm i hexo-generator-<span class="keyword">json-content </span>--save &amp;amp<span class="comment">;&amp;amp; npm i hexo-wordcount --save</span></span><br></pre></td></tr></table></figure>
-</li>
+<li><h2 id="在本机上安装"><a href="#在本机上安装" class="headerlink" title="在本机上安装"></a>在本机上安装</h2><pre><code>sudo pacman -S gem bundle
+sudo gem install bundler jekyll
+bundle exec jekyll serve
+npm install hexo
+hexo init blog &amp;amp;&amp;amp; cd blog
+npm i hexo-generator-json-content --save &amp;amp;&amp;amp; npm i hexo-wordcount --save</code></pre></li>
 <li><h2 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h2><p>获取 Archer 主题：<br>git clone “<a href="https://github.com/fi3ework/hexo-theme-archer.git&quot;" target="_blank" rel="noopener">https://github.com/fi3ework/hexo-theme-archer.git&quot;</a> themes/archer<br>覆盖 Hexo 默认配置文件：<br>cp ../hexo.config.yml _config.yml<br>覆盖 Archer 主题默认配置文件：<br>cp ../hexo.config-theme.archer.yml themes/archer/_config.yml<br>加入定制的页面布局：<br>cp ../post-footer.ejs themes/archer/layout/_partial/post-footer.ejs</p>
 </li>
 <li><h2 id="安装-Hexo-站点："><a href="#安装-Hexo-站点：" class="headerlink" title="安装 Hexo 站点："></a>安装 Hexo 站点：</h2><p>npm install<br>使用hexo new [layout] &lt;title&gt;命令来创建一个文章，也可以手动把写好的文章拷贝到源目录(/docs/_posts/)中。<br>执行 hexo generate</p>
 </li>
 </ul>
 <ul>
-<li><h2 id="git-and-hexo"><a href="#git-and-hexo" class="headerlink" title="git and hexo"></a>git and hexo</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> core.autocrlf false</span><br><span class="line">useradd git</span><br><span class="line">passwd git <span class="comment">// 设置密码</span></span><br><span class="line"><span class="keyword">su</span> git <span class="comment">// 这步很重要，不切换用户后面会很麻烦</span></span><br><span class="line"><span class="keyword">cd</span> /home/git/</span><br><span class="line"><span class="keyword">mkdir</span> -p projects/blog <span class="comment">// 项目存在的真实目录</span></span><br><span class="line"><span class="keyword">mkdir</span> repos &amp;&amp; <span class="keyword">cd</span> repos</span><br><span class="line">git init --bare blog.git <span class="comment">// 创建一个裸露的仓库</span></span><br><span class="line"><span class="keyword">cd</span> blog.git/hooks</span><br><span class="line">vi <span class="keyword">post</span>-receive <span class="comment">// 创建hook钩子函数，输入了内容如下（原理可以参考上面的链接）</span></span><br><span class="line">#!/bin/<span class="keyword">sh</span></span><br><span class="line">git --work-tree=/home/git/projects/blog --git-<span class="keyword">dir</span>=/home/git/repos/blog.git checkout -<span class="built_in">f</span></span><br><span class="line">chmod +x <span class="keyword">post</span>-receive</span><br><span class="line"><span class="keyword">exit</span> <span class="comment">// 退出到 root 登录</span></span><br><span class="line">chown -R git:git /home/git/repos/blog.git <span class="comment">// 添加权限</span></span><br><span class="line"><span class="keyword">cat</span> /etc/shells <span class="comment">// 查看`git-shell`是否在登录方式里面，有则跳过</span></span><br><span class="line"><span class="keyword">which</span> git-<span class="keyword">shell</span> <span class="comment">// 查看是否安装</span></span><br><span class="line">vi /etc/shells</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git<span class="variable">@47</span>.<span class="number">102.85</span>.<span class="number">59</span><span class="symbol">:/home/git/repos/blog</span>.git</span><br><span class="line">ssh-copy-id -i /home/lithium/.ssh/id_rsa.pub git<span class="variable">@47</span>.<span class="number">102.85</span>.<span class="number">59</span></span><br><span class="line">ssh git<span class="variable">@47</span>.<span class="number">102.85</span>.<span class="number">59</span></span><br></pre></td></tr></table></figure>
-
-<ul>
+<li><h2 id="git-and-hexo"><a href="#git-and-hexo" class="headerlink" title="git and hexo"></a>git and hexo</h2><pre><code>git config --global core.autocrlf false
+useradd git
+passwd git // 设置密码
+su git // 这步很重要，不切换用户后面会很麻烦
+cd /home/git/
+mkdir -p projects/blog // 项目存在的真实目录
+mkdir repos &amp;&amp; cd repos
+git init --bare blog.git // 创建一个裸露的仓库
+cd blog.git/hooks
+vi post-receive // 创建hook钩子函数，输入了内容如下（原理可以参考上面的链接）
+#!/bin/sh
+git --work-tree=/home/git/projects/blog --git-dir=/home/git/repos/blog.git checkout -f
+chmod +x post-receive
+exit // 退出到 root 登录
+chown -R git:git /home/git/repos/blog.git // 添加权限
+cat /etc/shells // 查看`git-shell`是否在登录方式里面，有则跳过
+which git-shell // 查看是否安装
+vi /etc/shells</code></pre><pre><code>git clone git@47.102.85.59:/home/git/repos/blog.git
+ssh-copy-id -i /home/lithium/.ssh/id_rsa.pub git@47.102.85.59
+ssh git@47.102.85.59</code></pre></li>
 <li><h2 id="动漫图片"><a href="#动漫图片" class="headerlink" title="动漫图片"></a>动漫图片</h2>npm install –save hexo-helper-live2d<br>npm install –save live2d-widget-model-shizuku</li>
 </ul>
 
@@ -491,7 +512,9 @@ gitment.render('gitment-content');
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            For Centos1234567891011121314151617181920212223242526yum -y install epel-release //for centos 7yum -y groupinstall "Deve
+                            For Centosyum -y install epel-release //for centos 7
+yum -y groupinstall &quot;Development Tools&quot;
+yum -y install gi
                         
                     </div>
                     <div class="publish-info">
@@ -525,7 +548,9 @@ gitment.render('gitment-content');
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            useful command12345678910111213141516171819docker run -d -p 5000:5000 training/webapp python app.pydocker logs -f bf08b7
+                            useful command  docker run -d -p 5000:5000 training/webapp python app.py
+  docker logs -f bf08b7f2cd89(ID)
+  docker run 
                         
                     </div>
                     <div class="publish-info">
@@ -694,7 +719,7 @@ gitment.render('gitment-content');
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.9k</span>
+            <span class="white-color">6.6k</span>
             
 
             <br>
