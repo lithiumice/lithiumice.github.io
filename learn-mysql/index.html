@@ -7,9 +7,7 @@
     <meta name="keywords" content="Learn Mysql, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="SELECT * FROM `table` AS t1 JOIN(SELECT ROUND
-RAND() * (SELECT MAX(id) FROM `table`)) AS id) AS t2
-WHERE t1.id &amp;gt;= t2.">
+    <meta name="description" content="show variables like port;set name utf8;source test.sqlmysqldump -u dbuser -p dbname &amp;gt; dbname.sqlmysql -uabc_f -p abc ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -372,7 +370,7 @@ WHERE t1.id &amp;gt;= t2.">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    138
+                    288
                 </div>
                 
 
@@ -395,8 +393,9 @@ WHERE t1.id &amp;gt;= t2.">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code>SELECT * FROM `table` AS t1 JOIN(SELECT ROUND
-RAND() * (SELECT MAX(id) FROM `table`)) AS id) AS t2
+                <p>show variables like port;<br>set name utf8;<br>source test.sql<br>mysqldump -u dbuser -p dbname &gt; dbname.sql<br>mysql -uabc_f -p abc &lt; abc.sql<br>mysqldump -u用户名 -p密码 -d 数据库名<br><code>title</code>, <code>author</code>, <code>content</code><br>mysqldump -u用户名 -p database<br>SELECT COUNT(*) FROM database<br>sed -i ‘s/tb_poems/poems/g’ chinese-poetry-3.sql<br>ALTER TABLE poems DROP id;<br>ALTER TABLE poems ADD id int not null auto_increment,ADD primary key(id);</p>
+<pre><code>SELECT * FROM poems AS t1 JOIN(SELECT ROUND
+RAND() * (SELECT MAX(id) FROM poems)) AS id) AS t2
 WHERE t1.id &gt;= t2.id
 ORDER BY t1.id ASC LIMIT 5;
 
@@ -407,7 +406,16 @@ ORDER BY id LIMIT 1;
 SELECT *
 FROM `table` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `table`)-(SELECT MIN(id) FROM `table`))+(SELECT MIN(id) FROM `table`)) AS id) AS t2
 WHERE t1.id &gt;= t2.id
-ORDER BY t1.id LIMIT 1;</code></pre><p>SELECT <em><br>FROM poems AS t1 JOIN (SELECT ROUND(RAND() </em> ((SELECT MAX(id) FROM poems)-(SELECT MIN(id) FROM poems))+(SELECT MIN(id) FROM poems)) AS id) AS t2<br>WHERE t1.id &gt;= t2.id<br>ORDER BY t1.id LIMIT 1;</p>
+ORDER BY t1.id LIMIT 1;
+
+SELECT * FROM poems as u JOIN (SELECT ROUND(RAND() * (SELECT MAX(id) FROM poems)) AS id ) AS u2 WHERE u.id &gt;= u2.id ORDER BY u.id DESC LIMIT 1;
+
+explain select * from poems order by RAND() limit 1\G</code></pre><ol>
+<li><p>best method<br>SELECT <em><br>FROM poems AS t1 JOIN (SELECT ROUND(RAND() </em> ((SELECT MAX(id) FROM poems)-(SELECT MIN(id) FROM poems))+(SELECT MIN(id) FROM poems)) AS id) AS t2<br>WHERE t1.id &gt;= t2.id<br>ORDER BY t1.id LIMIT 1;</p>
+</li>
+<li><p>second rank method<br>SELECT <em> FROM poems<br>WHERE t1.id &gt;= (SELECT floor( RAND() </em> ((SELECT MAX(t1.id) FROM poems)-(SELECT MIN(t1.id) FROM poems)) + (SELECT MIN(t1.id) FROM poems)))<br>ORDER BY t1.id LIMIT 1;</p>
+</li>
+</ol>
 
             </div>
             <hr />
@@ -688,7 +696,7 @@ yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">6.6k</span>
+            <span class="white-color">6.8k</span>
             
 
             <br>

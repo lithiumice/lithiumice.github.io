@@ -372,7 +372,7 @@ extension=sodium.so &amp;gt;&amp;gt;">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    280
+                    302
                 </div>
                 
 
@@ -398,18 +398,26 @@ extension=sodium.so &amp;gt;&amp;gt;">
                 <h3 id="for-php-gt-7-2"><a href="#for-php-gt-7-2" class="headerlink" title="for php &gt; 7.2"></a>for php &gt; 7.2</h3><pre><code>pecl install libsodium
 extension=sodium.so</code></pre><h2 id="install-php"><a href="#install-php" class="headerlink" title="install php"></a>install php</h2><pre><code>pecl install libsodium
 extension=sodium.so &gt;&gt; php.ini
-php -a //interactive shell
-show variables like port;
-set name utf8;
-source test.sql
-mysqldump -u dbuser -p dbname &gt; dbname.sql
-mysql -uabc_f -p abc &lt; abc.sql
-mysqldump -u用户名 -p密码 -d 数据库名
-`title`, `author`, `content`
-mysqldump -u用户名 -p database
-SELECT COUNT(*) FROM database
-sed -i &#39;s/tb_poems/poems/g&#39; chinese-poetry-3.sql
-</code></pre><h3 id="mysql-command"><a href="#mysql-command" class="headerlink" title="mysql command"></a>mysql command</h3><pre><code>&#39;;&#39;
+php -a //interactive shell</code></pre><h2 id="don’t-show-error-information"><a href="#don’t-show-error-information" class="headerlink" title="don’t show error information"></a>don’t show error information</h2><pre><code>vim /etc/php.ini
+error_reporting = E_ALL
+display_errors = On
+
+error_reporting(-1);
+ini_set(&#39;display_errors&#39;, 1);</code></pre><h2 id="prevent-SQL-inject"><a href="#prevent-SQL-inject" class="headerlink" title="prevent SQL inject"></a>prevent SQL inject</h2><p>just use code like below:</p>
+<pre><code>$mysqli=new mysqli(&quot;localhost&quot;,&quot;mysql_user&quot;,&quot;mysql_pwd&quot;);
+if (mysqli_connect_errno())
+{
+  printf(&quot;Connect failed: %s\n&quot;, mysqli_connect_error());
+  exit();
+}
+$username = $_POST[&#39;user&#39;];
+$password = $_POST[&#39;pwd&#39;];
+if ($stmt = $mysqli-&gt;prepare(&quot;SELECT * FROM Person WHERE username=? AND password=?&quot;))
+{
+  $stmt-&gt;bind_param(&quot;ss&quot;,$username,$password);
+  $stmt-&gt;execute();
+}
+$mysqli-&gt;close();</code></pre><h3 id="mysql-command"><a href="#mysql-command" class="headerlink" title="mysql command"></a>mysql command</h3><pre><code>&#39;;&#39;
 ?         (\?) Synonym for `help&#39;.
 clear     (\c) Clear the current input statement.
 connect   (\r) Reconnect to the server. Optional arguments are db and host.
@@ -712,7 +720,7 @@ yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">6.6k</span>
+            <span class="white-color">6.8k</span>
             
 
             <br>

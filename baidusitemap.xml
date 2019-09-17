@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hualin.online/get-random-poems-from-phpserver/</loc>
-    <lastmod>2019-09-16</lastmod>
-  </url>  <url>
     <loc>https://hualin.online/learn-mysql/</loc>
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/qt5-issues/</loc>
+    <loc>https://hualin.online/learn-php/</loc>
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/learn-php/</loc>
+    <loc>https://hualin.online/get-random-poems-from-phpserver/</loc>
+    <lastmod>2019-09-16</lastmod>
+  </url>  <url>
+    <loc>https://hualin.online/qt5-issues/</loc>
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
     <loc>https://hualin.online/bt-linux/</loc>
@@ -34,10 +34,10 @@
     <loc>https://hualin.online/shell-intro/</loc>
     <lastmod>2019-09-14</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/use-nvm/</loc>
+    <loc>https://hualin.online/telnet-usage/</loc>
     <lastmod>2019-09-14</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/telnet-usage/</loc>
+    <loc>https://hualin.online/use-nvm/</loc>
     <lastmod>2019-09-14</lastmod>
   </url>  <url>
     <loc>https://hualin.online/atom-usage/</loc>

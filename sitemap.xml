@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/learn-mysql/</loc>
+    
+    <lastmod>2019-09-16T15:43:43.820Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/learn-php/</loc>
+    
+    <lastmod>2019-09-16T15:36:18.118Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/get-random-poems-from-phpserver/</loc>
     
     <lastmod>2019-09-16T15:11:38.060Z</lastmod>
@@ -9,23 +23,9 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/learn-mysql/</loc>
-    
-    <lastmod>2019-09-16T15:01:37.868Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/qt5-issues/</loc>
     
     <lastmod>2019-09-16T14:32:58.027Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/learn-php/</loc>
-    
-    <lastmod>2019-09-16T14:14:57.375Z</lastmod>
     
   </url>
   
@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/use-nvm/</loc>
+    <loc>https://hualin.online/telnet-usage/</loc>
     
     <lastmod>2019-09-14T09:59:15.483Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/telnet-usage/</loc>
+    <loc>https://hualin.online/use-nvm/</loc>
     
     <lastmod>2019-09-14T09:59:15.483Z</lastmod>
     
