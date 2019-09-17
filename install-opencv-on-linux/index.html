@@ -7,8 +7,11 @@
     <meta name="keywords" content="Install Opencv on Linux, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="simple guide to install opencv on ubuntusystem depandenciessudo apt-get install build-essential
-sudo apt-get install cma">
+    <meta name="description" content="Linux 安装编译 opencv对于Arch Linuxsudo pacman -Sy
+sudo pacman -S cmake
+sudo pacman -S opencv
+set(OpenCV_DIR PATH_TO_BUILD)
+sy">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -371,7 +374,7 @@ sudo apt-get install cma">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    362
+                    472
                 </div>
                 
 
@@ -394,31 +397,48 @@ sudo apt-get install cma">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="simple-guide-to-install-opencv-on-ubuntu"><a href="#simple-guide-to-install-opencv-on-ubuntu" class="headerlink" title="simple guide to install opencv on ubuntu"></a>simple guide to install opencv on ubuntu</h1><h2 id="system-depandencies"><a href="#system-depandencies" class="headerlink" title="system depandencies"></a>system depandencies</h2><pre><code>sudo apt-get install build-essential
+                <h1 id="Linux-安装编译-opencv"><a href="#Linux-安装编译-opencv" class="headerlink" title="Linux 安装编译 opencv"></a>Linux 安装编译 opencv</h1><h2 id="对于Arch-Linux"><a href="#对于Arch-Linux" class="headerlink" title="对于Arch Linux"></a>对于Arch Linux</h2><p><code>sudo pacman -Sy
+sudo pacman -S cmake
+sudo pacman -S opencv
+set(OpenCV_DIR PATH_TO_BUILD)</code></p>
+<h2 id="system-depandencies"><a href="#system-depandencies" class="headerlink" title="system depandencies"></a>system depandencies</h2><pre><code>sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</code></pre><h2 id="build-opencv"><a href="#build-opencv" class="headerlink" title="build opencv"></a>build opencv</h2><pre><code>git clone https://github.com/opencv/opencv.git
+sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</code></pre><h2 id="build-opencv-with-opencv-contrib"><a href="#build-opencv-with-opencv-contrib" class="headerlink" title="build opencv with opencv_contrib"></a>build opencv with opencv_contrib</h2><p>(nproc 查看可用编译CPU核数)</p>
+<pre><code>
+git clone https://github.com/opencv/opencv.git
 git clone https://github.com/opencv/opencv_contrib.git
 cd opencv
 mkdir build &amp;&amp; cd build
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
-cmake -DCMAKE_INSTALL_PREFIX=/usr
--DCMAKE_BUILD_TYPE=Release
--DENABLE_CXX11=ON
--DBUILD_PERF_TESTS=OFF
--DWITH_XINE=ON
--DBUILD_TESTS=OFF
--DENABLE_PRECOMPILED_HEADERS=OFF
--DCMAKE_SKIP_RPATH=ON
--DBUILD_WITH_DEBUG_INFO=OFF
--DBUILD_SHARED_LIBS=OFF
--Wno-dev .. &amp;&amp; make
 
-cd opencv/build/doc/
+cmake \
+-DCMAKE_INSTALL_PREFIX=/usr/local \
+-DCMAKE_BUILD_TYPE=Release \
+-D OPENCV_EXTRA_MODULES_PATH=~/Documents/opencv_contrib/modules \
+-D INSTALL_C_EXAMPLES=ON \
+-D INSTALL_PYTHON_EXAMPLES=OFF \
+-D BUILD_EXAMPLES=ON .. \
+-D ENABLE_CXX11=ON \
+-D BUILD_PERF_TESTS=OFF \
+-D WITH_XINE=ON \
+-D BUILD_TESTS=OFF \
+-D ENABLE_PRECOMPILED_HEADERS=OFF \
+-D CMAKE_SKIP_RPATH=ON \
+-D BUILD_WITH_DEBUG_INFO=OFF \
+-D BUILD_SHARED_LIBS=OFF \
+-Wno-dev .. &amp;&amp; make -j7 &amp;&amp; make install
+
+cd /etc/ld.so.conf.d/
+sudo touch opencv4.conf
+sudo sh -c &#39;echo &quot;/usr/local/lib&quot; &gt; opencv4.conf&#39;
+sudo ldconfig
+sudo cp -f /usr/local/lib64/pkgconfig/opencv4.pc  /usr/lib/pkgconfig/
+
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/lib/pkgconfig
+export PKG_CONFIG_PATH</code></pre><h2 id="可选的安装包"><a href="#可选的安装包" class="headerlink" title="可选的安装包"></a>可选的安装包</h2><pre><code>cd opencv/build/doc/
 make -j7 html_docs
 sudo make install
 git clone https://github.com/opencv/opencv_extra.git
-pkg-config –modversion opencv</code></pre><pre><code>## Description of some parameters
-build type: CMAKE_BUILD_TYPE=ReleaseDebug
+pkg-config –modversion opencv</code></pre><h2 id="Description-of-some-parameters"><a href="#Description-of-some-parameters" class="headerlink" title="Description of some parameters"></a>Description of some parameters</h2><pre><code>build type: CMAKE_BUILD_TYPE=ReleaseDebug
 to build with modules from opencv_contrib set OPENCV_EXTRA_MODULES_PATH to &lt;path to opencv_contrib/modules/&gt;
 set BUILD_DOCS for building documents
 set BUILD_EXAMPLES to build all examples
@@ -430,12 +450,14 @@ PYTHON_LIBRARY = /usr/lib/x86_64-linux-gnu/libpython&lt;version&gt;.so
 PYTHON2(3)_NUMPY_INCLUDE_DIRS = /usr/lib/python&lt;version&gt;/dist-packages/numpy/core/include/
 [optional] Building java.
 Unset parameter: BUILD_SHARED_LIBS
-It is useful also to unset BUILD_EXAMPLES, BUILD_TESTS, BUILD_PERF_TESTS – as they all will be statically linked with OpenCV and can take a lot of memory.</code></pre><h2 id="test-your-opencv"><a href="#test-your-opencv" class="headerlink" title="test your opencv"></a>test your opencv</h2><pre><code>g++ -o main /home/lithium/Documents/opencv-lena.cpp `pkg-config opencv –cflags –libs`
-sudo apt-get install libopencv-dev
+It is useful also to unset BUILD_EXAMPLES, BUILD_TESTS, BUILD_PERF_TESTS – as they all will be statically linked with OpenCV and can take a lot of memory.</code></pre><h2 id="test-your-opencv"><a href="#test-your-opencv" class="headerlink" title="test your opencv"></a>test your opencv</h2><pre><code>pkg-config --libs opencv4
+pkg-config --cflags opencv4
+pkg-config --modversion opencv4
 
-## uninstall opencv
-sudo rm -r /usr/local/include/opencv2 /usr/local/include/opencv /usr/include/opencv /usr/include/opencv2 /usr/local/share/opencv /usr/local/share/OpenCV /usr/share/opencv /usr/share/OpenCV /usr/local/bin/opencv* /usr/local/lib/libopencv*
-sudo apt-get –purge remove opencv-doc opencv-data python-opencv</code></pre><h2 id="config-PATH"><a href="#config-PATH" class="headerlink" title="config PATH"></a>config PATH</h2><pre><code>CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/libxml2:/usr/local/include/opencv4/opencv2
+g++ -o main /home/lithium/Documents/opencv-lena.cpp `pkg-config opencv –cflags –libs`
+sudo apt-get install libopencv-dev</code></pre><h2 id="uninstall-opencv"><a href="#uninstall-opencv" class="headerlink" title="uninstall opencv"></a>uninstall opencv</h2><pre><code>sudo rm -r /usr/local/include/opencv2 /usr/local/include/opencv /usr/include/opencv /usr/include/opencv2 /usr/local/share/opencv /usr/local/share/OpenCV /usr/share/opencv /usr/share/OpenCV /usr/local/bin/opencv* /usr/local/lib/libopencv*
+sudo apt-get –purge remove opencv-doc opencv-data python-opencv</code></pre><p>or<br><code>sudo make uinstall</code></p>
+<h2 id="config-PATH"><a href="#config-PATH" class="headerlink" title="config PATH"></a>config PATH</h2><pre><code>CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/libxml2:/usr/local/include/opencv4/opencv2
 export CPLUS_INCLUDE_PATH
 C_INCLUDE_PATH=/usr/include/libxml2:/usr/local/include/opencv4/opencv2/
 export C_INCLUDE_PATH
@@ -716,7 +738,7 @@ sudo
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">6.8k</span>
+            <span class="white-color">7.8k</span>
             
 
             <br>

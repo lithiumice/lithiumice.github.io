@@ -371,7 +371,7 @@ echo &amp;#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    290
+                    310
                 </div>
                 
 
@@ -398,9 +398,9 @@ echo &amp;#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/">
 echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.bashrc
 echo &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/bin&#39; &gt;&gt; sudo tee ~/.bashrc
 source ~/.bashrc</code></pre><p>or</p>
-<pre><code>echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; | sudo tee /etc/profile
-echo &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; | sudo tee /etc/profile
-source /etc/profile</code></pre><p>cp /etc/skel/.profile </p>
+<pre><code>echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; | sudo tee -a /etc/profile
+echo &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; | sudo tee -a /etc/profile
+source /etc/profile</code></pre><p>cp /etc/skel/.profile</p>
 <h2 id="as-for-zsh-bash"><a href="#as-for-zsh-bash" class="headerlink" title="as for zsh bash"></a>as for zsh bash</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBC
 echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.zshrc
 echo &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; &gt;&gt; sudo tee ~/.zshrc
@@ -415,7 +415,11 @@ sudo ln -s /usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so
 export LD_PRELOAD=/usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so
 </code></pre><h2 id="lib-errors"><a href="#lib-errors" class="headerlink" title="lib errors"></a>lib errors</h2><pre><code>cat /etc/ld.so.conf
 echo &quot;/usr/local/lib&quot; | sudo tee /etc/ld.so.conf
-sudo ldconfig</code></pre>
+sudo ldconfig</code></pre><p>or</p>
+<pre><code>$libfiles=`find /usr/local/qt5.13.0/5.13.0/gcc_64/`
+for libfile in $libfiles
+  do
+    filename=${$libfile}</code></pre>
             </div>
             <hr />
 
@@ -490,7 +494,8 @@ gitment.render('gitment-content');
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录一下我使用Linux遇到的有用或者无用但是美妙的软件sublime-text-dev-3code vscodevmwarevirtualboxremminaoctopideepin.qq.officedeepin-thunderspee
+                            Arch Linuxdeepin.qq.officedeepin-thunderspeeddeepin-boot-makeroctopicode
+记录一下我使用Linux遇到的有用或者无用但是美妙的软件sublime-text-dev-3v
                         
                     </div>
                     <div class="publish-info">
@@ -512,7 +517,7 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/compress-pic-shell-pi-liang-ya-suo-tu-pian-jiao-ben/">
+                <a href="/compress-pic-patch-shell/">
                     <div class="card-image">
                         
                         
@@ -698,7 +703,7 @@ SP
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">6.8k</span>
+            <span class="white-color">7.8k</span>
             
 
             <br>

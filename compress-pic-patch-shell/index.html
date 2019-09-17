@@ -4,15 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Using Hexo, lithiumice huaring cquer github blog">
+    <meta name="keywords" content="Compress PIC Shell 批量压缩图片脚本, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="description" content="
-在本机上安装sudo pacman -S gem bundle
-sudo gem install bundler jekyll
-bundle exec jekyll serve
-npm install hexo
-hexo init blo">
+
+在写博客的时候需要将图片上传到服务器,很显然如果一张图片未经压缩有时会达到2-3M,严重影响访问者的加载速度. 所以我写了一个脚本放在博客根目录,能够历遍文件夹下的所以图片并将大于指定大小的图片进行压缩.
+#!/bin/bash
+
+SP">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +20,7 @@ hexo init blo">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Using Hexo | Codes of huaring</title>
+    <title>Compress PIC Shell 批量压缩图片脚本 | Codes of huaring</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -239,7 +239,7 @@ hexo init blo">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Using Hexo
+                        Compress PIC Shell 批量压缩图片脚本
                     </div>
                 </div>
             </div>
@@ -349,11 +349,7 @@ hexo init blo">
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/Codes/" target="_blank">
-                            <span class="chip bg-color">Codes</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
@@ -365,7 +361,7 @@ hexo init blo">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-10
+                    2019-09-14
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -379,14 +375,14 @@ hexo init blo">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    494
+                    170
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
                 
@@ -402,59 +398,44 @@ hexo init blo">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <ul>
-<li><h2 id="在本机上安装"><a href="#在本机上安装" class="headerlink" title="在本机上安装"></a>在本机上安装</h2><pre><code>sudo pacman -S gem bundle
-sudo gem install bundler jekyll
-bundle exec jekyll serve
-npm install hexo
-hexo init blog &amp;amp;&amp;amp; cd blog
-npm i hexo-generator-json-content --save &amp;amp;&amp;amp; npm i hexo-wordcount --save</code></pre></li>
-<li><h2 id="typecho"><a href="#typecho" class="headerlink" title="typecho"></a>typecho</h2><p><code>http://typecho.org/downloads/1.1-17.10.30-release.tar.gz</code></p>
-</li>
-<li><h2 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h2><p>获取 Archer 主题：<br><code>git clone https://github.com/fi3ework/hexo-theme-archer.git</code> themes/archer<br>覆盖 Hexo 默认配置文件：<br>cp ../hexo.config.yml _config.yml<br>覆盖 Archer 主题默认配置文件：<br>cp ../hexo.config-theme.archer.yml themes/archer/_config.yml<br>加入定制的页面布局：<br>cp ../post-footer.ejs themes/archer/layout/_partial/post-footer.ejs</p>
-</li>
-<li><h2 id="安装-Hexo-站点："><a href="#安装-Hexo-站点：" class="headerlink" title="安装 Hexo 站点："></a>安装 Hexo 站点：</h2><p>npm install<br>使用hexo new [layout] &lt;title&gt;命令来创建一个文章，也可以手动把写好的文章拷贝到源目录(/docs/_posts/)中。<br>执行 hexo generate</p>
-</li>
-</ul>
-<ul>
-<li><h2 id="git-and-hexo"><a href="#git-and-hexo" class="headerlink" title="git and hexo"></a>git and hexo</h2><pre><code>git config --global core.autocrlf false
-useradd git
-passwd git // 设置密码
-su git // 这步很重要，不切换用户后面会很麻烦
-cd /home/git/
-mkdir -p projects/blog // 项目存在的真实目录
-mkdir repos &amp;&amp; cd repos
-git init --bare blog.git // 创建一个裸露的仓库
-cd blog.git/hooks
-vi post-receive // 创建hook钩子函数，输入了内容如下（原理可以参考上面的链接）
-#!/bin/sh
-git --work-tree=/home/git/projects/blog --git-dir=/home/git/repos/blog.git checkout -f
-chmod +x post-receive
-exit // 退出到 root 登录
-chown -R git:git /home/git/repos/blog.git // 添加权限
-cat /etc/shells // 查看`git-shell`是否在登录方式里面，有则跳过
-which git-shell // 查看是否安装
-vi /etc/shells</code></pre><pre><code>git clone git@47.102.85.59:/home/git/repos/blog.git
-ssh-copy-id -i /home/lithium/.ssh/id_rsa.pub git@47.102.85.59
-ssh git@47.102.85.59</code></pre></li>
-<li><h2 id="动漫图片"><a href="#动漫图片" class="headerlink" title="动漫图片"></a>动漫图片</h2><p>npm install –save hexo-helper-live2d<br>npm install –save live2d-widget-model-shizuku</p>
-</li>
-<li><h2 id="google-analysis"><a href="#google-analysis" class="headerlink" title="google analysis"></a>google analysis</h2><pre><code># &lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
-# &lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-147411470-2&quot;&gt;&lt;/script&gt;
-# &lt;script&gt;
-#   window.dataLayer = window.dataLayer || [];
-#   function gtag(){dataLayer.push(arguments);}
-#   gtag(&#39;js&#39;, new Date());
-#
-#   gtag(&#39;config&#39;, &#39;UA-147411470-2&#39;);
-# &lt;/script&gt;</code></pre></li>
-<li><h2 id="设置hexo推送多个仓库"><a href="#设置hexo推送多个仓库" class="headerlink" title="设置hexo推送多个仓库"></a>设置hexo推送多个仓库</h2><pre><code>deploy:
-type: git
-message: [message]
-repo:
-  github: &lt;repository url&gt;,[branch]
-  gitcafe: &lt;repository url&gt;,[branch]</code></pre></li>
-</ul>
+                <!-- col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text -->
+<!-- coverPostsCount > 0 && theme.cover.showPrevNext -->
+<p>在写博客的时候需要将图片上传到服务器,很显然如果一张图片未经压缩有时会达到2-3M,严重影响访问者的加载速度. 所以我写了一个脚本放在博客根目录,能够历遍文件夹下的所以图片并将大于指定大小的图片进行压缩.</p>
+<pre class="line-numbers language-shell"><code class="language-shell">#!/bin/bash
+
+SPATH=./
+maxsize=921600 #900KB
+AFTERFIX=""
+
+COMPRESS () {
+        imgpath=$1
+        filesize=`ls -l $imgpath | awk '{ print $5 }'`
+        echo $filesize
+        if [ $filesize -ge $maxsize ]
+            then
+              echo compressing $file
+              afterfix=${filename##*.}
+              name=${filename%.*}
+              convert -quality 80% $imgpath $imgpath
+              # convert -quality 80% $imgpath "${name}s.${afterfix}"
+              echo compressed $imgpath
+            else
+              echo skiped $imgpath
+        fi
+      }
+
+
+echo "begin"
+filelist=`find $1 -regex ".*/.*.jpg" -o -regex ".*/.*.png"`
+for file in $filelist
+ do
+  if [ -f $file ]
+   then
+    COMPRESS $file
+  fi
+done
+echo "finished"
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -490,7 +471,7 @@ repo:
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Tue Sep 10 2019 12:57:01 GMT+0800',
+    id: 'Sat Sep 14 2019 23:03:28 GMT+0800',
     owner: 'lithiumice',
     repo: 'lithiumice.github.io',
     oauth: {
@@ -518,26 +499,25 @@ gitment.render('gitment-content');
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/install-nodebb/">
+                <a href="/qt5-issues/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Install Nodebb">
+                        <img src="/medias/featureimages/03.jpg" class="responsive-img" alt="QT5 Issues">
                         
-                        <span class="card-title">Install Nodebb</span>
+                        <span class="card-title">QT5 Issues</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            For Centosyum -y install epel-release //for centos 7
-yum -y groupinstall &quot;Development Tools&quot;
-yum -y install gi
+                            qt6 libraries errorsstrings /usr/lib64/libstdc++.so.6 | grep GLIBC
+echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-10
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
                         </span>
                         <span class="publish-author">
                             
@@ -554,35 +534,26 @@ yum -y install gi
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/docker-command-translation/">
+                <a href="/shell-intro/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/29.jpg" class="responsive-img" alt="Docker Command Translation">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="Shell Intro">
                         
-                        <span class="card-title">Docker Command Translation</span>
+                        <span class="card-title">Shell Intro</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            useful command  docker run -d -p 5000:5000 training/webapp python app.py
-  docker logs -f bf08b7f2cd89(ID)
-  docker run 
+                            wget 命令wget -O filename-limit-rate-c 断电续传-b 后台wget –user-agent=–tries=10wget -i filelist.txtwget –mirror –reject-gif -Q 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-08
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
                             </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/翻译Wiki/" class="post-category" target="_blank">
-                                    翻译Wiki
-                                </a>
-                            
                             
                         </span>
                     </div>
@@ -730,6 +701,13 @@ yum -y install gi
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">

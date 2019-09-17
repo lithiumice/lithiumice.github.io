@@ -372,14 +372,14 @@ extension=sodium.so &amp;gt;&amp;gt;">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    454
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
                 
@@ -398,12 +398,35 @@ extension=sodium.so &amp;gt;&amp;gt;">
                 <h3 id="for-php-gt-7-2"><a href="#for-php-gt-7-2" class="headerlink" title="for php &gt; 7.2"></a>for php &gt; 7.2</h3><pre><code>pecl install libsodium
 extension=sodium.so</code></pre><h2 id="install-php"><a href="#install-php" class="headerlink" title="install php"></a>install php</h2><pre><code>pecl install libsodium
 extension=sodium.so &gt;&gt; php.ini
-php -a //interactive shell</code></pre><h2 id="don’t-show-error-information"><a href="#don’t-show-error-information" class="headerlink" title="don’t show error information"></a>don’t show error information</h2><pre><code>vim /etc/php.ini
+php -a //interactive shell
+
+$ sudo add-apt-repository ppa:ondrej/php
+$ sudo apt-get update
+$ sudo apt-get upgrade php
+$ sudo apt-get install php7.2-（*）
+$ sudo apt-get install php7.2-mbstring php7.2-mysql
+
+sudo pacman -S php-apache php-cgi php-fpm php-gd  php-embed php-intl php-imap  php-redis php-snmp //basic
+pacman -Qi php-fpm</code></pre><h2 id="don’t-show-error-information"><a href="#don’t-show-error-information" class="headerlink" title="don’t show error information"></a>don’t show error information</h2><pre><code>vim /etc/php.ini
 error_reporting = E_ALL
 display_errors = On
 
 error_reporting(-1);
-ini_set(&#39;display_errors&#39;, 1);</code></pre><h2 id="prevent-SQL-inject"><a href="#prevent-SQL-inject" class="headerlink" title="prevent SQL inject"></a>prevent SQL inject</h2><p>just use code like below:</p>
+ini_set(&#39;display_errors&#39;, 1);
+$img = imagecreatefromjpeg(&quot;myimage.jpg&quot;);   // load the image-to-be-saved
+
+// 50 is quality; change from 0 (worst quality,smaller file) - 100 (best quality)
+imagejpeg($img,&quot;myimage_new.jpg&quot;,50);
+
+unlink(&quot;myimage.jpg&quot;);
+
+$url=&#39;http://www.baidu.com/&#39;;
+$html = file_get_contents($url);
+//print_r($http_response_header);
+ec($html);
+printhr();
+printarr($http_response_header);
+printhr();</code></pre><h2 id="prevent-SQL-inject"><a href="#prevent-SQL-inject" class="headerlink" title="prevent SQL inject"></a>prevent SQL inject</h2><p>just use code like below:</p>
 <pre><code>$mysqli=new mysqli(&quot;localhost&quot;,&quot;mysql_user&quot;,&quot;mysql_pwd&quot;);
 if (mysqli_connect_errno())
 {
@@ -441,7 +464,21 @@ tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.
 use       (\u) Use another database. Takes database name as argument.
 charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.
 warnings  (\W) Show warnings after every statement.
-nowarning (\w) Don&#39;t show warnings after every statement.</code></pre>
+nowarning (\w) Don&#39;t show warnings after every statement.</code></pre><h2 id="服务器php设置"><a href="#服务器php设置" class="headerlink" title="服务器php设置"></a>服务器php设置</h2><pre><code>location / {
+    try_files $uri $uri/ /index.php?$query_string;
+}
+#或者
+location / {
+    if (!-d $request_filename){
+        set $rule_0 1$rule_0;
+    }
+    if (!-f $request_filename){
+        set $rule_0 2$rule_0;
+    }
+    if ($rule_0 = &quot;21&quot;){
+        rewrite ^/(.*)$ /index.php?/$1 last;
+    }
+}</code></pre>
             </div>
             <hr />
 
@@ -551,7 +588,8 @@ yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录一下我使用Linux遇到的有用或者无用但是美妙的软件sublime-text-dev-3code vscodevmwarevirtualboxremminaoctopideepin.qq.officedeepin-thunderspee
+                            Arch Linuxdeepin.qq.officedeepin-thunderspeeddeepin-boot-makeroctopicode
+记录一下我使用Linux遇到的有用或者无用但是美妙的软件sublime-text-dev-3v
                         
                     </div>
                     <div class="publish-info">
@@ -720,7 +758,7 @@ yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">6.8k</span>
+            <span class="white-color">7.8k</span>
             
 
             <br>

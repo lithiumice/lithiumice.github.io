@@ -2,6 +2,83 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/btpanel-andoid-dev/</loc>
+    
+    <lastmod>2019-09-17T12:29:25.235Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/learn-php/</loc>
+    
+    <lastmod>2019-09-17T12:29:08.605Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/linux-usb-ethernet-driver/</loc>
+    
+    <lastmod>2019-09-17T12:28:42.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/php-picture/</loc>
+    
+    <lastmod>2019-09-17T11:21:11.322Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/some-informations/</loc>
+    
+    <lastmod>2019-09-17T06:12:13.361Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/qt5-issues/</loc>
+    
+    <lastmod>2019-09-17T06:12:13.331Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/install-opencv-on-linux/</loc>
+    
+    <lastmod>2019-09-17T06:12:13.331Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/learn-android/</loc>
+    
+    <lastmod>2019-09-17T06:12:13.331Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/using-hexo/</loc>
+    
+    <lastmod>2019-09-17T06:12:13.331Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/software-on-linux/</loc>
+    
+    <lastmod>2019-09-17T05:21:29.897Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/arch-install-snap/</loc>
+    
+    <lastmod>2019-09-17T04:54:42.739Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/learn-mysql/</loc>
     
     <lastmod>2019-09-16T15:43:43.820Z</lastmod>
@@ -9,23 +86,9 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/learn-php/</loc>
-    
-    <lastmod>2019-09-16T15:36:18.118Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/get-random-poems-from-phpserver/</loc>
     
     <lastmod>2019-09-16T15:11:38.060Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/qt5-issues/</loc>
-    
-    <lastmod>2019-09-16T14:32:58.027Z</lastmod>
     
   </url>
   
@@ -44,16 +107,9 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/compress-pic-shell-pi-liang-ya-suo-tu-pian-jiao-ben/</loc>
+    <loc>https://hualin.online/compress-pic-patch-shell/</loc>
     
     <lastmod>2019-09-16T11:53:57.975Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/software-on-linux/</loc>
-    
-    <lastmod>2019-09-16T11:01:09.418Z</lastmod>
     
   </url>
   
@@ -107,14 +163,7 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/some-informations/</loc>
-    
-    <lastmod>2019-09-14T06:57:41.298Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/docker-pei-zhi-jing-xiang/</loc>
+    <loc>https://hualin.online/docker-config/</loc>
     
     <lastmod>2019-09-14T06:41:45.403Z</lastmod>
     
@@ -145,13 +194,6 @@
     <loc>https://hualin.online/watermark/</loc>
     
     <lastmod>2019-09-12T14:31:02.423Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/using-hexo/</loc>
-    
-    <lastmod>2019-09-12T14:22:34.628Z</lastmod>
     
   </url>
   
@@ -201,13 +243,6 @@
     <loc>https://hualin.online/friends/index.html</loc>
     
     <lastmod>2019-09-11T14:17:34.659Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/install-opencv-on-linux/</loc>
-    
-    <lastmod>2019-09-11T14:02:42.292Z</lastmod>
     
   </url>
   
