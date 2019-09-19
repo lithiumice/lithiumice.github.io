@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
-  <updated>2019-09-17T12:29:25.235Z</updated>
+  <updated>2019-09-19T13:22:36.652Z</updated>
   <id>https://hualin.online/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker Install</title>
+    <link href="https://hualin.online/docker-install/"/>
+    <id>https://hualin.online/docker-install/</id>
+    <published>2019-09-19T12:46:22.000Z</published>
+    <updated>2019-09-19T13:22:36.652Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="one-command"><a href="#one-command" class="headerlink" title="one command"></a>one command</h2><pre><code>sudo groupadd dockersudo usermod -aG docker $USERnewgrp dockersudo mkdir -p /etc/dockersudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39;{  &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;,&quot;http://hub-mirror.c.163.com&quot;,&quot;http://f1361db2.m.daocloud.io&quot;]}EOFsudo systemctl daemon-reloadsudo systemctl restart docker</code></pre><h2 id="in-centos"><a href="#in-centos" class="headerlink" title="in centos"></a>in centos</h2><pre><code>yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repoyum install -y yum-utils device-mapper-persistent-data lvm2yum list docker-ce --showduplicates | sort -ryum install docker-cesudo systemctl start dockersudo systemctl enable dockerdocker version</code></pre><h2 id="use-portainer-to-manage"><a href="#use-portainer-to-manage" class="headerlink" title="use portainer to manage"></a>use portainer to manage</h2><p>docker pull portainer/portainer:latest<br>docker volume create portainer_data<br>docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer(LINUX)<br>or docker run -d -p 8000:8000 -p 9000:9000 –name portainer –restart always -v \.\pipe\docker_engine:\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer(WIN)</p><h2 id="use-bt-panel"><a href="#use-bt-panel" class="headerlink" title="use bt panel"></a>use bt panel</h2><p>通过host模式运行宝塔镜像<br>docker run -tid –name baota –net=host –privileged=true –restart always -v ~/wwwroot:/www/wwwroot pch18/baota<br>通过bridge模式运行宝塔镜像<br>docker run -tid –name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 –privileged=true –restart always -v ~/wwwroot:/www/wwwroot pch18/baota<br>登陆地址 http://:8888 初始账号 username 初始密码 password</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;one-command&quot;&gt;&lt;a href=&quot;#one-command&quot; class=&quot;headerlink&quot; title=&quot;one command&quot;&gt;&lt;/a&gt;one command&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;sudo groupadd docker
+sudo
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux C51</title>
+    <link href="https://hualin.online/linux-c51/"/>
+    <id>https://hualin.online/linux-c51/</id>
+    <published>2019-09-19T08:49:51.000Z</published>
+    <updated>2019-09-19T09:36:32.390Z</updated>
+    
+    <content type="html"><![CDATA[<p>sudo apt-get install<br>MCU8051 SDCC:“Smell Devic C Compiler” //use C99<br>yay -S mcu8051ide</p><p>sudo apt-get sdcc sdcc-doc<br>objcopy -I ihex -O binary file.hex file.bin<br>dmesg | tail<br>kSTCISP</p><p>pl2303 usb to r232</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;sudo apt-get install&lt;br&gt;MCU8051 SDCC:“Smell Devic C Compiler” //use C99&lt;br&gt;yay -S mcu8051ide&lt;/p&gt;
+&lt;p&gt;sudo apt-get sdcc
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>BTpanel Andoid Dev</title>
@@ -118,9 +168,9 @@
     <link href="https://hualin.online/learn-android/"/>
     <id>https://hualin.online/learn-android/</id>
     <published>2019-09-17T04:39:17.000Z</published>
-    <updated>2019-09-17T06:12:13.331Z</updated>
+    <updated>2019-09-19T13:25:17.583Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Android开发常用开源库"><a href="#Android开发常用开源库" class="headerlink" title="Android开发常用开源库"></a>Android开发常用开源库</h2><p>Glide.with(fragment)<br>    .load(url)<br>    .into(imageView);</p><p>implementation ‘com.github.bumptech.glide:glide:4.9.0’</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Android开发常用开源库"><a href="#Android开发常用开源库" class="headerlink" title="Android开发常用开源库"></a>Android开发常用开源库</h2><p>Glide.with(fragment)<br>    .load(url)<br>    .into(imageView);</p><p>implementation ‘com.github.bumptech.glide:glide:4.9.0’</p><h2 id="invoke-virtual-method-…-on-null-reference"><a href="#invoke-virtual-method-…-on-null-reference" class="headerlink" title="invoke virtual method … on null reference"></a>invoke virtual method … on null reference</h2><p>在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:</p><pre><code>View v = inflater.inflate(R.layout.fragment, container, false);listView = v.findViewById(R.id.list_view);MyDialog myDialog = new MyDialog(getContext());myDialog.show();</code></pre><h3 id="获取当前Activity和Context"><a href="#获取当前Activity和Context" class="headerlink" title="获取当前Activity和Context"></a>获取当前Activity和Context</h3><p>public MyLocationListener(View view){<br>    this.view=view;<br>}<br>View cv = getWindow().getDecorView();<br>getActivity().getApplicationContext()</p><h3 id="CoordinatorLayout-layout-anchor-不正常"><a href="#CoordinatorLayout-layout-anchor-不正常" class="headerlink" title="CoordinatorLayout layout_anchor 不正常"></a>CoordinatorLayout layout_anchor 不正常</h3><p>automatically offset a view to place it below the AppBarLayout. It only works with an AppBarLayout<br>app:layout_behavior=”@string/appbar_scrolling_view_behavior”</p><h3 id="在fragment-view中添加baidumap的mapview方法"><a href="#在fragment-view中添加baidumap的mapview方法" class="headerlink" title="在fragment view中添加baidumap的mapview方法"></a>在fragment view中添加baidumap的mapview方法</h3><p>SDKInitializer.initialize(getActivity().getApplicationContext());<br>View view=inflater.inflate(R.layout.fragment_gallery,container,false);<br>mapView=view.findViewById(R.id.bmapview);<br>mapView.onCreate(getContext(),savedInstanceState);</p>]]></content>
     
     <summary type="html">
     
@@ -239,9 +289,9 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/software-on-linux/"/>
     <id>https://hualin.online/software-on-linux/</id>
     <published>2019-09-16T10:56:33.000Z</published>
-    <updated>2019-09-17T05:21:29.897Z</updated>
+    <updated>2019-09-19T13:41:23.609Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><p>deepin.qq.office<br>deepin-thunderspeed<br>deepin-boot-maker<br>octopi<br>code</p><h3 id="记录一下我使用Linux遇到的有用或者无用但是美妙的软件"><a href="#记录一下我使用Linux遇到的有用或者无用但是美妙的软件" class="headerlink" title="记录一下我使用Linux遇到的有用或者无用但是美妙的软件"></a>记录一下我使用Linux遇到的有用或者无用但是美妙的软件</h3><p>sublime-text-dev-3<br>vscode<br>vmware<br>virtualbox<br>remmina<br>baidupan<br>genymotion<br>netease-cloud-music<br>google-chrome<br>goldendict<br>redshift<br>wps-office<br>youdao-note<br>atom<br>gparted<br>robot3t<br>sequeler<br>sql workbench<br>studio3t<br>ratpoison<br>openbox<br>qt5 qtcreator<br>redis<br>mongodb<br>dokcer<br>tmux<br>docky<br>dbKoda<br>apt-fast<br>topgrade<br>tmux终端工具<br>stacer系统管理工具<br>oh-my-zsh终端模拟器<br>SmartGit仓库管理可视化工具<br>Docky<br>Peek<br>Inkscape<br>gimp<br>WebTorrent、FrostWire<br>dbKoda mongodb非关系数据库GUI工具<br>apt-fast<br>topgrade一个命令更新linux里面的所有软件</p><h3 id="chrome-extension"><a href="#chrome-extension" class="headerlink" title="chrome extension:"></a>chrome extension:</h3><p>infinity pro 标签页<br>Octotree github文件资源浏览树更方便地查看项目结构和页面跳转<br>Postman api test<br>SwitchyOmega<br>SimpRead - 简阅<br>Full Page Screen Capture<br>油猴tampermonkey<br>Checker Plus for Gmail</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><p>deepin.qq.office<br>deepin-thunderspeed<br>deepin-boot-maker<br>octopi<br>pacaur -S debtap //install deb on arch<br>sudo debtap -u (-q 略过除了编辑元数据之外的所有问题)<br>sudo pacman -U <package-name></package-name></p><h2 id="有用或者无用但是美妙的软件"><a href="#有用或者无用但是美妙的软件" class="headerlink" title="有用或者无用但是美妙的软件"></a>有用或者无用但是美妙的软件</h2><p>sudo dnf install -y rubygems<br>gem install lolcat<br>chafa /path/to/your/image</p><p>sudo apt-get install abiword<br>abiword –to=doc example.pdf</p><p>no more secrets <a href="https://github.com/bartobri/no-more-secrets.git" target="_blank" rel="noopener"></a></p><p>GPRename //just Rename</p><h2 id="美化软件"><a href="#美化软件" class="headerlink" title="美化软件"></a>美化软件</h2><p>Docky<br>ratpoison openbox //桌面平铺<br>gthumb<br>gwenview<br>mirage<br>shotwell<br>geeqie ++</p><h2 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h2><p>vmware virtualbox<br>remmina //远程连接<br>baidupan //不解释<br>genymotion //Android模拟器<br>netease-cloud-music<br>google-chrome<br>goldendict //词典<br>redshift //护眼<br>wps-office<br>youdao-note<br>gparted //分区<br>stacer系统管理工具<br>apt-fast //fast<br>Peek //GIF recorder<br>Inkscape //Vector drawer<br>gimp //pixel drawer<br>WebTorrent、FrostWire //downloader<br>topgrade一个命令更新linux里面的所有软件<br>VPN:ike kvpnc network-manager-l2tp</p><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><p>vim-gnome<br>SmartGit仓库管理可视化工具<br>tmux //终端分屏<br>oh-my-zsh 终端美化<br>atom //Markdown<br>vscode //VSCODE<br>sublime-text-dev-3<br>robot3t studio3t//Mongodb client<br>sequeler //MYSQL client<br>sql workbench //mysql client<br>qt5 qtcreator<br>dbKoda mongodb非关系数据库GUI工具</p><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><p>redis<br>mongodb<br>dokcer</p><h3 id="chrome-extension"><a href="#chrome-extension" class="headerlink" title="chrome extension:"></a>chrome extension:</h3><p>infinity pro 标签页<br>Octotree github文件资源浏览树更方便地查看项目结构和页面跳转<br>Postman api test<br>SwitchyOmega<br>SimpRead - 简阅<br>Full Page Screen Capture<br>油猴tampermonkey<br>Checker Plus for Gmail</p>]]></content>
     
     <summary type="html">
     
@@ -263,9 +313,9 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/qt5-issues/"/>
     <id>https://hualin.online/qt5-issues/</id>
     <published>2019-09-16T10:41:24.000Z</published>
-    <updated>2019-09-17T06:12:13.331Z</updated>
+    <updated>2019-09-19T09:36:32.390Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="qt6-libraries-errors"><a href="#qt6-libraries-errors" class="headerlink" title="qt6 libraries errors"></a>qt6 libraries errors</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBCecho &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.bashrcecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/bin&#39; &gt;&gt; sudo tee ~/.bashrcsource ~/.bashrc</code></pre><p>or</p><pre><code>echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; | sudo tee -a /etc/profileecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; | sudo tee -a /etc/profilesource /etc/profile</code></pre><p>cp /etc/skel/.profile</p><h2 id="as-for-zsh-bash"><a href="#as-for-zsh-bash" class="headerlink" title="as for zsh bash"></a>as for zsh bash</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBCecho &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.zshrcecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; &gt;&gt; sudo tee ~/.zshrcsource ~/.zshrc</code></pre><p>add a custom .conf file to /etc/ld.so.conf.d, for example<br>sudo gedit /etc/ld.so.conf.d/randomLibs.conf<br>inside the file you are supposed to write the complete path to the directory that contains all the libraries that you wish to add to the system, for example:</p><pre><code>/usr/local/qt5.13.0/5.13.0/gcc_64/lib/lib/x86_64-linux-gnu</code></pre><h2 id="update-qt-gcc-lib"><a href="#update-qt-gcc-lib" class="headerlink" title="update qt gcc lib"></a>update qt gcc lib</h2><pre><code>cp /home/gcc-5.2.0/gcc-temp/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.21 /usr/lib64cd /usr/lib64rm -rf libstdc++.so.6ln -s libstdc++.so.6.0.21 libstdc++.so.6</code></pre><pre><code>sudo rm -f /usr/plugins/imageformats/libqico.sosudo ln -s /usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so /usr/plugins/imageformats/libqico.soexport LD_PRELOAD=/usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so</code></pre><h2 id="lib-errors"><a href="#lib-errors" class="headerlink" title="lib errors"></a>lib errors</h2><pre><code>cat /etc/ld.so.confecho &quot;/usr/local/lib&quot; | sudo tee /etc/ld.so.confsudo ldconfig</code></pre><p>or</p><pre><code>$libfiles=`find /usr/local/qt5.13.0/5.13.0/gcc_64/`for libfile in $libfiles  do    filename=${$libfile}</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="qt6-libraries-errors"><a href="#qt6-libraries-errors" class="headerlink" title="qt6 libraries errors"></a>qt6 libraries errors</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBCecho &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.bashrcecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/bin&#39; &gt;&gt; sudo tee ~/.bashrcsource ~/.bashrc</code></pre><p>or</p><pre><code>echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; | sudo tee -a /etc/profileecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; | sudo tee -a /etc/profilesource /etc/profile</code></pre><p>cp /etc/skel/.profile</p><h2 id="as-for-zsh-bash"><a href="#as-for-zsh-bash" class="headerlink" title="as for zsh bash"></a>as for zsh bash</h2><pre><code>strings /usr/lib64/libstdc++.so.6 | grep GLIBCecho &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/gcc_64/lib/&#39; &gt;&gt; sudo tee ~/.zshrcecho &#39;export LD_LIBRARY_PATH=$LD_LIBRARY_PATH&#39; &gt;&gt; sudo tee ~/.zshrcsource ~/.zshrc</code></pre><p>add a custom .conf file to /etc/ld.so.conf.d, for example<br>sudo gedit /etc/ld.so.conf.d/randomLibs.conf<br>inside the file you are supposed to write the complete path to the directory that contains all the libraries that you wish to addcman to the system, for example:</p><pre><code>/usr/local/qt5.13.0/5.13.0/gcc_64/lib/lib/x86_64-linux-gnu</code></pre><h2 id="update-qt-gcc-lib"><a href="#update-qt-gcc-lib" class="headerlink" title="update qt gcc lib"></a>update qt gcc lib</h2><pre><code>cp /home/gcc-5.2.0/gcc-temp/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.21 /usr/lib64cd /usr/lib64rm -rf libstdc++.so.6ln -s libstdc++.so.6.0.21 libstdc++.so.6</code></pre><pre><code>sudo rm -f /usr/plugins/imageformats/libqico.sosudo ln -s /usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so /usr/plugins/imageformats/libqico.soexport LD_PRELOAD=/usr/local/Qt5.13.0/5.13.0/gcc_64/plugins/imageformats/libqico.so</code></pre><h2 id="lib-errors"><a href="#lib-errors" class="headerlink" title="lib errors"></a>lib errors</h2><pre><code>cat /etc/ld.so.confecho &quot;/usr/local/lib&quot; | sudo tee /etc/ld.so.confsudo ldconfig</code></pre><p>or</p><pre><code>$libfiles=`find /usr/local/qt5.13.0/5.13.0/gcc_64/`for libfile in $libfiles  do    filename=${$libfile}</code></pre>]]></content>
     
     <summary type="html">
     
@@ -370,24 +420,13 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
   </entry>
   
   <entry>
-    <title>Invoke Virtual Method ... on Null Reference</title>
+    <title></title>
     <link href="https://hualin.online/invoke-virtual-method-on-null-reference/"/>
     <id>https://hualin.online/invoke-virtual-method-on-null-reference/</id>
     <published>2019-09-14T06:59:23.000Z</published>
-    <updated>2019-09-14T15:01:42.959Z</updated>
-    
-    <content type="html"><![CDATA[<p>在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:</p><pre><code>View v = inflater.inflate(R.layout.fragment, container, false);listView = v.findViewById(R.id.list_view);MyDialog myDialog = new MyDialog(getContext());myDialog.show();</code></pre><h3 id="获取当前Activity和Context"><a href="#获取当前Activity和Context" class="headerlink" title="获取当前Activity和Context"></a>获取当前Activity和Context</h3><p>public MyLocationListener(View view){<br>    this.view=view;<br>}<br>View cv = getWindow().getDecorView();<br>getActivity().getApplicationContext()</p><h3 id="CoordinatorLayout-layout-anchor-不正常"><a href="#CoordinatorLayout-layout-anchor-不正常" class="headerlink" title="CoordinatorLayout layout_anchor 不正常"></a>CoordinatorLayout layout_anchor 不正常</h3><p>automatically offset a view to place it below the AppBarLayout. It only works with an AppBarLayout<br>app:layout_behavior=”@string/appbar_scrolling_view_behavior”</p><h3 id="在fragment-view中添加baidumap的mapview方法"><a href="#在fragment-view中添加baidumap的mapview方法" class="headerlink" title="在fragment view中添加baidumap的mapview方法"></a>在fragment view中添加baidumap的mapview方法</h3><p>SDKInitializer.initialize(getActivity().getApplicationContext());<br>View view=inflater.inflate(R.layout.fragment_gallery,container,false);<br>mapView=view.findViewById(R.id.bmapview);<br>mapView.onCreate(getContext(),savedInstanceState);</p>]]></content>
+    <updated>2019-09-19T13:25:17.433Z</updated>
     
     <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;View v = inflater.inflate(R.layout.fragment, container,
-        
-      
     
     </summary>
     
@@ -425,9 +464,9 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/some-informations/"/>
     <id>https://hualin.online/some-informations/</id>
     <published>2019-09-12T14:44:56.000Z</published>
-    <updated>2019-09-17T06:12:13.361Z</updated>
+    <updated>2019-09-19T09:36:32.397Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="百度云资料"><a href="#百度云资料" class="headerlink" title="百度云资料"></a>百度云资料</h2><p>个人整理的编程、大学资料、文学等的书籍<br>存在百度云里，可自行转存<br><a href="https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA" target="_blank" rel="noopener">https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA</a> 提取码: mc5d <a href="https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA" target="_blank" rel="noopener">https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA</a> 提取码: ty5e</p><h2 id="图标库"><a href="#图标库" class="headerlink" title="图标库"></a>图标库</h2><ul><li>阿里巴巴图标库 <a href="http://www.iconfont.cn" target="_blank" rel="noopener">http://www.iconfont.cn</a></li><li>icon8 <a href="https://icons8.com" target="_blank" rel="noopener">https://icons8.com</a></li><li>easyicon <a href="http://www.easyicon.net" target="_blank" rel="noopener">http://www.easyicon.net</a></li><li>iconpng <a href="http://iconpng.com" target="_blank" rel="noopener">http://iconpng.com</a></li><li>iconninja <a href="http://iconninja.com" target="_blank" rel="noopener">http://iconninja.com</a></li><li>Roundicons.com <a href="http://Roundicons.com" target="_blank" rel="noopener">http://Roundicons.com</a></li><li>undraw <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">https://undraw.co/illustrations</a></li><li>instantlogosearch <a href="http://instantlogosearch.com/" target="_blank" rel="noopener">http://instantlogosearch.com/</a></li><li>logomaker <a href="https://logomakr.com/" target="_blank" rel="noopener">https://logomakr.com/</a></li><li>flaticon <a href="https://www.flaticon.com/" target="_blank" rel="noopener">https://www.flaticon.com/</a></li></ul><h2 id="搜索网站"><a href="#搜索网站" class="headerlink" title="搜索网站"></a>搜索网站</h2><ul><li><p>Bing 国际版：<a href="https://cn.bing.com/" target="_blank" rel="noopener">https://cn.bing.com/</a></p></li><li><p>DuckDuckGo：<a href="https://duckduckgo.com/" target="_blank" rel="noopener">https://duckduckgo.com/</a> 保护你的隐私</p></li><li><p>Stack Overflow：<a href="https://stackoverflow.com/" target="_blank" rel="noopener">https://stackoverflow.com/</a> 程序员的问题基本都可以在这里得到解决</p></li><li><p>Gitlogs：<a href="https://www.gitlogs.com/" target="_blank" rel="noopener">https://www.gitlogs.com/</a><br>Gitlogs 是专门针对 GitHub 项目的搜索引擎，我们通过他可以快速找到想要项目。</p></li><li><p>jiumo search 鸠摩搜书：<a href="https://www.jiumodiary.com/。" target="_blank" rel="noopener">https://www.jiumodiary.com/。</a><br>可以用来找一些技术文档手册，很多在百度网盘里。</p></li><li><p>Ebooke：<a href="https://ebookee.org/" target="_blank" rel="noopener">https://ebookee.org/</a><br>Ebookee 是一个基于互联网并提供免费电子图书下载的搜索引擎网站。</p></li><li><p>Iconfinder图标搜索：<a href="https://www.iconfinder.com/" target="_blank" rel="noopener">https://www.iconfinder.com/</a><br>用来查找 logo 图片。</p></li><li><p>TinEye：<a href="https://www.tineye.com" target="_blank" rel="noopener">https://www.tineye.com</a><br>用图片来检索图片，我们可以上传图片或输入图片的 URL 来检索。</p></li><li><p>SemanticScholar：<a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">https://www.semanticscholar.org/</a><br>SemanticScholar 是一个免费学术搜索引擎，其检索结果来自于期刊、学术会议资料或者是学术机构的文献。</p></li><li><p>LibreStock：<a href="https://librestock.com/" target="_blank" rel="noopener">https://librestock.com/</a><br>LibreStock 上可以检索一些优质的高清图片。</p></li><li><p>CC Search：<a href="https://ccsearch.creativecommons.org/" target="_blank" rel="noopener">https://ccsearch.creativecommons.org/</a><br>CC Search 上搜索到的图片资源都是无版权的，我们可以免费的使用。</p></li><li><p>搜索论文等 <a href="https://libgen.is/" target="_blank" rel="noopener">https://libgen.is/</a></p></li></ul><h2 id="搭建图床服务器"><a href="#搭建图床服务器" class="headerlink" title="搭建图床服务器"></a>搭建图床服务器</h2><pre><code>https://github.com/helloxz/imgurl.gitGithub：https://github.com/178146582/Fantasy-fieldGithub：https://github.com/wisp-x/lsky-pro</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="百度云资料"><a href="#百度云资料" class="headerlink" title="百度云资料"></a>百度云资料</h2><p>个人整理的编程、大学资料、文学等的书籍<br>存在百度云里，可自行转存<br><a href="https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA" target="_blank" rel="noopener">https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA</a> 提取码: mc5d <a href="https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA" target="_blank" rel="noopener">https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA</a> 提取码: ty5e</p><h2 id="图标库"><a href="#图标库" class="headerlink" title="图标库"></a>图标库</h2><ul><li>阿里巴巴图标库 <a href="http://www.iconfont.cn" target="_blank" rel="noopener">http://www.iconfont.cn</a></li><li>icon8 <a href="https://icons8.com" target="_blank" rel="noopener">https://icons8.com</a></li><li>easyicon <a href="http://www.easyicon.net" target="_blank" rel="noopener">http://www.easyicon.net</a></li><li>iconpng <a href="http://iconpng.com" target="_blank" rel="noopener">http://iconpng.com</a></li><li>iconninja <a href="http://iconninja.com" target="_blank" rel="noopener">http://iconninja.com</a></li><li>Roundicons.com <a href="http://Roundicons.com" target="_blank" rel="noopener">http://Roundicons.com</a></li><li>undraw <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">https://undraw.co/illustrations</a></li><li>instantlogosearch <a href="http://instantlogosearch.com/" target="_blank" rel="noopener">http://instantlogosearch.com/</a></li><li>logomaker <a href="https://logomakr.com/" target="_blank" rel="noopener">https://logomakr.com/</a></li><li>flaticon <a href="https://www.flaticon.com/" target="_blank" rel="noopener">https://www.flaticon.com/</a></li></ul><h2 id="搜索网站"><a href="#搜索网站" class="headerlink" title="搜索网站"></a>搜索网站</h2><ul><li><p>Bing 国际版：<a href="https://cn.bing.com/" target="_blank" rel="noopener">https://cn.bing.com/</a></p></li><li><p>DuckDuckGo：<a href="https://duckduckgo.com/" target="_blank" rel="noopener">https://duckduckgo.com/</a> 保护你的隐私</p></li><li><p>Stack Overflow：<a href="https://stackoverflow.com/" target="_blank" rel="noopener">https://stackoverflow.com/</a> 程序员的问题基本都可以在这里得到解决</p></li><li><p>Gitlogs：<a href="https://www.gitlogs.com/" target="_blank" rel="noopener">https://www.gitlogs.com/</a><br>Gitlogs 是专门针对 GitHub 项目的搜索引擎，我们通过他可以快速找到想要项目。</p></li><li><p>jiumo search 鸠摩搜书：<a href="https://www.jiumodiary.com/。" target="_blank" rel="noopener">https://www.jiumodiary.com/。</a><br>可以用来找一些技术文档手册，很多在百度网盘里。</p></li><li><p>Ebooke：<a href="https://ebookee.org/" target="_blank" rel="noopener">https://ebookee.org/</a><br>Ebookee 是一个基于互联网并提供免费电子图书下载的搜索引擎网站。</p></li><li><p>Iconfinder图标搜索：<a href="https://www.iconfinder.com/" target="_blank" rel="noopener">https://www.iconfinder.com/</a><br>用来查找 logo 图片。</p></li><li><p>TinEye：<a href="https://www.tineye.com" target="_blank" rel="noopener">https://www.tineye.com</a><br>用图片来检索图片，我们可以上传图片或输入图片的 URL 来检索。</p></li><li><p>SemanticScholar：<a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">https://www.semanticscholar.org/</a><br>SemanticScholar 是一个免费学术搜索引擎，其检索结果来自于期刊、学术会议资料或者是学术机构的文献。</p></li><li><p>LibreStock：<a href="https://librestock.com/" target="_blank" rel="noopener">https://librestock.com/</a><br>LibreStock 上可以检索一些优质的高清图片。</p></li><li><p>CC Search：<a href="https://ccsearch.creativecommons.org/" target="_blank" rel="noopener">https://ccsearch.creativecommons.org/</a><br>CC Search 上搜索到的图片资源都是无版权的，我们可以免费的使用。</p></li><li><p>搜索论文等 <a href="https://libgen.is/" target="_blank" rel="noopener">https://libgen.is/</a></p></li></ul><h2 id="搭建图床服务器"><a href="#搭建图床服务器" class="headerlink" title="搭建图床服务器"></a>搭建图床服务器</h2><pre><code>https://github.com/helloxz/imgurl.gitGithub：https://github.com/178146582/Fantasy-fieldGithub：https://github.com/wisp-x/lsky-pro</code></pre><h2 id="网页模板"><a href="#网页模板" class="headerlink" title="网页模板"></a>网页模板</h2><p>Material Design Lite Google官方提供的框架<br>Materialize 构建响应式应用和网站的前端框架, 类似bootstrap, SASS 版本<br>Materual-UI React组件 两套独立的风格可以选择-黑色和亮色<br>MUI CSS 轻量级<br>Polymer Google的另一款产品<br>Ionic Material Ionic混合式手机应用框架的扩展库<br>Material Foundation 有一套独立的组件可以快速的搭建基础元素。<br>Surface 只有一个CSS文件，非常轻量<br>Essence 基于React和React Native的CSS框架<br>LumX 实现响应式的web应用<br>Paper Theme for Bootstrap 模拟Material Design ，对使用bootstrap的人来说是个不错的选择<br>Material Design for Bootstrap 为Bootstrap而生 ， 增加了一些新的样式和一些JavaScript，还有一些jQuery的插件。<br>Angular Material 支持AngularJS<br>Material 完美的将Bootstrap和MDL融合在一起<br>Phonon 致力于hybrid移动应用开发<br>Framework7 构建hybrid这类应用</p><h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><p><a href="https://www.mdui.org/" target="_blank" rel="noopener">https://www.mdui.org/</a><br><a href="https://materializecss.com/" target="_blank" rel="noopener">https://materializecss.com/</a><br><a href="https://www.uplabs.com/" target="_blank" rel="noopener">https://www.uplabs.com/</a><br><a href="https://github.com/angular/material" target="_blank" rel="noopener">https://github.com/angular/material</a><br><a href="https://material-ui.com/zh/" target="_blank" rel="noopener">https://material-ui.com/zh/</a></p>]]></content>
     
     <summary type="html">
     
@@ -470,54 +509,6 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     
     
       <category term="随感 杂感" scheme="https://hualin.online/tags/%E9%9A%8F%E6%84%9F-%E6%9D%82%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux Skills</title>
-    <link href="https://hualin.online/linux-skills/"/>
-    <id>https://hualin.online/linux-skills/</id>
-    <published>2019-09-12T14:31:18.000Z</published>
-    <updated>2019-09-12T14:46:52.384Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="使用命令压缩图片"><a href="#使用命令压缩图片" class="headerlink" title="使用命令压缩图片"></a>使用命令压缩图片</h2><p>安装<code>sudo pacman -S imagemagick</code><br>支持JPG, BMP, PCX, GIF, PNG, TIFF, XPM和XWD等</p><p>1.转换格式<code>convert 1.jpg 1.png</code><br>2.-resize 1080x780<br>3.-sample 50%x50%<br>4.-rotate 272<br>5.-fill black -pointsize 60 -front helvetica -draw ‘hello’ //front use Ghostscript<br>5.-quality 0-100</p><h3 id="批量转换"><a href="#批量转换" class="headerlink" title="批量转换"></a>批量转换</h3><p><code>for %f in (*.jpg) do convert &quot;%f&quot; &quot;%~nf.png&quot;</code><br><code>for %f in (*.jpg) do convertv -quality 70 &quot;%f&quot; &quot;%~nf.jpg&quot;</code><br><code>convert -quality 70 *.jpg</code><br>composite加水印</p><h2 id="Linux-设置swap分区"><a href="#Linux-设置swap分区" class="headerlink" title="Linux 设置swap分区"></a>Linux 设置swap分区</h2><pre><code>dd if=/dev/zero of=/mnt/swap bs=1m count=1024 #1Gmkswap /mnt/swapswapon /mnt/swaphostnamectl set-hostname mail.ewomail.cnhttps://github.com/gyxuehu/EwoMail.gitsh ./start.sh ewomail.cn -f</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;使用命令压缩图片&quot;&gt;&lt;a href=&quot;#使用命令压缩图片&quot; class=&quot;headerlink&quot; title=&quot;使用命令压缩图片&quot;&gt;&lt;/a&gt;使用命令压缩图片&lt;/h2&gt;&lt;p&gt;安装&lt;code&gt;sudo pacman -S
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Watermark</title>
-    <link href="https://hualin.online/watermark/"/>
-    <id>https://hualin.online/watermark/</id>
-    <published>2019-09-12T14:30:25.000Z</published>
-    <updated>2019-09-12T14:31:02.423Z</updated>
-    
-    <content type="html"><![CDATA[<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># -*- coding: utf-8 -*-</span><span class="token keyword">import</span> sys<span class="token keyword">import</span> glob<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image<span class="token keyword">from</span> PIL <span class="token keyword">import</span> ImageDraw<span class="token keyword">from</span> PIL <span class="token keyword">import</span> ImageFont<span class="token keyword">def</span> <span class="token function">watermark</span><span class="token punctuation">(</span>post_name<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">if</span> post_name <span class="token operator">==</span> <span class="token string">'all'</span><span class="token punctuation">:</span>        post_name <span class="token operator">=</span> <span class="token string">'*'</span>    dir_name <span class="token operator">=</span> <span class="token string">'source/_posts/'</span> <span class="token operator">+</span> post_name <span class="token operator">+</span> <span class="token string">'/*'</span>    <span class="token keyword">for</span> files <span class="token keyword">in</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span>dir_name<span class="token punctuation">)</span><span class="token punctuation">:</span>        im <span class="token operator">=</span> Image<span class="token punctuation">.</span>open<span class="token punctuation">(</span>files<span class="token punctuation">)</span>        <span class="token keyword">if</span> len<span class="token punctuation">(</span>im<span class="token punctuation">.</span>getbands<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>            im <span class="token operator">=</span> im<span class="token punctuation">.</span>convert<span class="token punctuation">(</span><span class="token string">'RGB'</span><span class="token punctuation">)</span>            <span class="token keyword">print</span><span class="token punctuation">(</span>files<span class="token punctuation">)</span>        font <span class="token operator">=</span> ImageFont<span class="token punctuation">.</span>truetype<span class="token punctuation">(</span><span class="token string">'STSONG.TTF'</span><span class="token punctuation">,</span> max<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> int<span class="token punctuation">(</span>im<span class="token punctuation">.</span>size<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>        draw <span class="token operator">=</span> ImageDraw<span class="token punctuation">.</span>Draw<span class="token punctuation">(</span>im<span class="token punctuation">)</span>        draw<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">(</span>im<span class="token punctuation">.</span>size<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> im<span class="token punctuation">.</span>size<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>                  u<span class="token string">'@lithiumice'</span><span class="token punctuation">,</span> fill<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> font<span class="token operator">=</span>font<span class="token punctuation">)</span>        im<span class="token punctuation">.</span>save<span class="token punctuation">(</span>files<span class="token punctuation">)</span><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>    <span class="token keyword">if</span> len<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span>        watermark<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token keyword">else</span><span class="token punctuation">:</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'[usage] &lt;input>'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre class=&quot;line-numbers language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot; spellcheck=&quot;true&quot;&gt;# -*- coding: utf-8
-        
-      
-    
-    </summary>
-    
     
   </entry>
   

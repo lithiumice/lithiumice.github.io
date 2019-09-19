@@ -7,8 +7,10 @@
     <meta name="keywords" content="Linux Skills, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="使用命令压缩图片安装sudo pacman -S imagemagick支持JPG, BMP, PCX, GIF, PNG, TIFF, XPM和XWD等
-1.转换格式convert 1.jpg 1.png2.-resize 1080x78">
+    <meta name="description" content="tipstail -f file | grep --line-buffered pattern
+sudo growpart /dev/xvda 1
+sudo resize2fs /dev/xvda1
+sudo timedatectl set">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -371,14 +373,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    136
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
                 
@@ -394,7 +396,29 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="使用命令压缩图片"><a href="#使用命令压缩图片" class="headerlink" title="使用命令压缩图片"></a>使用命令压缩图片</h2><p>安装<code>sudo pacman -S imagemagick</code><br>支持JPG, BMP, PCX, GIF, PNG, TIFF, XPM和XWD等</p>
+                <h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><pre><code>tail -f file | grep --line-buffered pattern
+sudo growpart /dev/xvda 1
+sudo resize2fs /dev/xvda1
+sudo timedatectl set-timezone Asia/Shanghai
+sudo apt-get install python3-pip build-essential libssl-dev libffi-dev python3-dev
+tar --exclude=&#39;./folder&#39; --exclude=&#39;./upload/folder2&#39; -zcvf /backup/filename.tgz .
+mongodump --authenticationDatabase admin
+firewall-cmd --permanent --zone=public --add-rich-rule=&#39;rule family=&quot;ipv4&quot; source address=&quot;特定IP&quot; port protocol=&quot;tcp&quot; port=&quot;特定端口&quot; accept&#39;
+tree -I &#39;__pycache__|pyc|Logs&#39; //过滤
+find . -name &quot;*.py&quot; | xargs wc -l //统计代码行数
+pip3.6 --proxy http://代理IP:端口 install -r requirements.txt
+
+为Git设置代理：
+git config --global http.proxy http://代理IP:端口
+git config --global http.sslverify &quot;false&quot;
+
+vim /etc/apt/apt.conf.d/01turnkey
+Acquire::http::Proxy &quot;http://your.proxy.here:port/&quot;;
+
+使用rsync通过SSH从服务器拉取数据：
+rsync -avzP [email protected]:Projects/sample.csv ~/sample.csv
+rsync -avzP -e &quot;ssh -i ~/sshkey.pem&quot; [email protected]:Projects/sample.csv ~/sample.csv
+</code></pre><h2 id="使用命令压缩图片"><a href="#使用命令压缩图片" class="headerlink" title="使用命令压缩图片"></a>使用命令压缩图片</h2><p>安装<code>sudo pacman -S imagemagick</code><br>支持JPG, BMP, PCX, GIF, PNG, TIFF, XPM和XWD等</p>
 <p>1.转换格式<code>convert 1.jpg 1.png</code><br>2.-resize 1080x780<br>3.-sample 50%x50%<br>4.-rotate 272<br>5.-fill black -pointsize 60 -front helvetica -draw ‘hello’ //front use Ghostscript<br>5.-quality 0-100</p>
 <h3 id="批量转换"><a href="#批量转换" class="headerlink" title="批量转换"></a>批量转换</h3><p><code>for %f in (*.jpg) do convert &quot;%f&quot; &quot;%~nf.png&quot;</code><br><code>for %f in (*.jpg) do convertv -quality 70 &quot;%f&quot; &quot;%~nf.jpg&quot;</code><br><code>convert -quality 70 *.jpg</code><br>composite加水印</p>
 <h2 id="Linux-设置swap分区"><a href="#Linux-设置swap分区" class="headerlink" title="Linux 设置swap分区"></a>Linux 设置swap分区</h2><pre><code>dd if=/dev/zero of=/mnt/swap bs=1m count=1024 #1G
@@ -403,7 +427,45 @@ swapon /mnt/swap
 
 hostnamectl set-hostname mail.ewomail.cn
 https://github.com/gyxuehu/EwoMail.git
-sh ./start.sh ewomail.cn -f</code></pre>
+sh ./start.sh ewomail.cn -f</code></pre><h2 id="clean-space"><a href="#clean-space" class="headerlink" title="clean space"></a>clean space</h2><p>sudo du -sh /var/cache/apt<br>sudo dpkg –list ‘linux-image*’<br>du -sh ~/.cache/thumbnails<br>sudo apt-get install gtkorphan<br>use fslint or fdupes</p>
+<pre><code>set -eu
+snap list --all | awk &#39;/disabled/{print $1, $3}&#39; |
+    while read snapname revision; do
+        snap remove &quot;$snapname&quot; --revision=&quot;$revision&quot;
+    done
+    ```
+## more</code></pre><p>Exec=env LANG=he_IL.UTF-8 abiword %U<br>lsdesktopf –list gtk zh_TW,zh_CN,en_GB<br>gendesk -n –pkgname “$pkgname” –pkgdesc “$pkgdesc”<br>install -Dm644 “$pkgname.desktop” “$pkgdir/usr/share/applications/$pkgname.desktop”<br> icotool -x <icon name>.ico<br> $ find /path/to/source/package -regex “.*.(svg|png|xpm|gif|ico)$”</icon></p>
+<pre><code>
+## 终端快捷键
+Ctrl+L 清屏
+Ctrl+C 结束当前命令
+Ctrl+A 光标移到行首
+Ctrl+E 光标移到行尾
+Ctrl+U 删除光标前内容
+Ctrl+D 退出当前终端
+
+
+
+## find命令</code></pre><p>find ./ -name “name<em>“<br>find / -type f -size +10M -exec ls -lh {} \;<br>find . -name “[A-Za-b]</em>“ -print<br>find -L . 跟随所以符号链接<br>-regex “.<em>/[0-9]</em>/.c”<br>-ipath,-iregex,-iwholename,-iname 对大小写不敏感<br>-size ‘M’:for Megabytes (units of 1048576 bytes)<br>-exec ls -l {} \;<br>-atime/天，-amin/分 ：用户最近一次访问时间。<br>-mtime/天，-mmin/分：文件最后一次修改时间。<br>-ctime/天，-cmin/分 ：文件数据元最后一次修改时间<br>-type f:file d:dir l:linkfile s:socket b:block c:charDevice p:pipfile<br>字符设备:可以顺序读取(字符寻址) 块设备512B:可随机访问<br>-regex不是匹配文件名，而是匹配完整的文件名（包括路径）<br>-ok 确认<br>-perm mode 完全匹配 /mode 任意匹配<br>-printf<br>%p: 输出文件名，包括路径名<br>%f: 输出文件名，不包括路径名<br>%m: 以8进制方式输出文件的权限<br>%g: 输出文件所属的组<br>%h: 输出文件所在的目录名<br>%u: 输出文件的属主名</p>
+<pre><code>
+## rename 命令</code></pre><p>1、删除所有的 .bak 后缀：<br>rename ‘s/.bak$//‘ *.bak</p>
+<p>2、把 .jpe 文件后缀修改为 .jpg：<br>rename ‘s/.jpe$/.jpg/‘ *.jpe</p>
+<p>3、把所有文件的文件名改为小写：<br>rename ‘y/A-Z/a-z/‘ *</p>
+<p>4、将 abcd.jpg 重命名为 abcd_efg.jpg：<br>for var in *.jpg; do mv “$var” “${var%.jpg}_efg.jpg”; done</p>
+<p>5、将 abcd_efg.jpg 重命名为 abcd_lmn.jpg：<br>for var in *.jpg; do mv “$var” “${var%_efg.jpg}_lmn.jpg”; done</p>
+<p>6、把文件名中所有小写字母改为大写字母：<br>for var in <code>ls</code>; do mv -f “$var” <code>echo &quot;$var&quot; |tr a-z A-Z</code>; done</p>
+<p>7、把格式 <em>_?.jpg 的文件改为 </em>_0?.jpg：<br>for var in <code>ls *_?.jpg</code>; do mv “$var” <code>echo &quot;$var&quot; |awk -F &#39;_&#39; &#39;{print $1 &quot;_0&quot; $2}&#39;</code>; done</p>
+<p>8、把文件名的前三个字母变为 vzomik：<br>for var in <code>ls</code>; do mv -f “$var” <code>echo &quot;$var&quot; |sed &#39;s/^.../vzomik/&#39;</code>; done</p>
+<p>9、把文件名的后四个字母变为 vzomik：<br>for var in <code>ls</code>; do mv -f “$var” <code>echo &quot;$var&quot; |sed &#39;s/....$/vzomik/&#39;</code>; done</p>
+<ol start="10">
+<li>把.txt变成.txt_bak 的后缀<br>ls *.txt|xargs -n1 -i{} mv {} {}_bak<br>xargs -n1 –i{} 类似for循环，-n1意思是一个一个对象的去处理，-i{} 把前面的对象使用{}取代，mv {} {}_bak 相当于 mv 1.txt 1.txt_bak</li>
+</ol>
+<p>find ./*.txt -exec mv {} {}_bak \;  </p>
+<pre><code>shell file:</code></pre><p>for file in $(ls $dir | grep .$oldext)<br>        do<br>        name=$(ls $file | cut -d. -f1)<br>        mv $file ${name}.$newext<br>        done</p>
+<pre><code>
+
+## 基本语法</code></pre><p>var=<code>ls</code><br>for file in $var<br>do<br>echo $file<br>done<br>readonly var<br>unset var<br>echo ${var[@]}<br>echo ${var[<em>]}<br>[$a -eq $b]<br>val=<code>expr $a + $b</code><br>val=`expr 9 \</em> $b`<br>read a b c d</p>
+<pre><code></code></pre>
             </div>
             <hr />
 
@@ -695,7 +757,7 @@ from PIL import ImageFont
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">7.8k</span>
+            <span class="white-color">9.5k</span>
             
 
             <br>

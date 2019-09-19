@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/software-on-linux/</loc>
+    
+    <lastmod>2019-09-19T13:41:23.609Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/linux-skills/</loc>
+    
+    <lastmod>2019-09-19T13:37:46.921Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/docker-command-translation/</loc>
+    
+    <lastmod>2019-09-19T13:25:17.583Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/learn-android/</loc>
+    
+    <lastmod>2019-09-19T13:25:17.583Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/invoke-virtual-method-on-null-reference/</loc>
+    
+    <lastmod>2019-09-19T13:25:17.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/docker-install/</loc>
+    
+    <lastmod>2019-09-19T13:22:36.652Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/some-informations/</loc>
+    
+    <lastmod>2019-09-19T09:36:32.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/qt5-issues/</loc>
+    
+    <lastmod>2019-09-19T09:36:32.390Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/linux-c51/</loc>
+    
+    <lastmod>2019-09-19T09:36:32.390Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/btpanel-andoid-dev/</loc>
     
     <lastmod>2019-09-17T12:29:25.235Z</lastmod>
@@ -30,28 +93,7 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/some-informations/</loc>
-    
-    <lastmod>2019-09-17T06:12:13.361Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/qt5-issues/</loc>
-    
-    <lastmod>2019-09-17T06:12:13.331Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/install-opencv-on-linux/</loc>
-    
-    <lastmod>2019-09-17T06:12:13.331Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/learn-android/</loc>
     
     <lastmod>2019-09-17T06:12:13.331Z</lastmod>
     
@@ -61,13 +103,6 @@
     <loc>https://hualin.online/using-hexo/</loc>
     
     <lastmod>2019-09-17T06:12:13.331Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/software-on-linux/</loc>
-    
-    <lastmod>2019-09-17T05:21:29.897Z</lastmod>
     
   </url>
   
@@ -128,13 +163,6 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/invoke-virtual-method-on-null-reference/</loc>
-    
-    <lastmod>2019-09-14T15:01:42.959Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/shell-intro/</loc>
     
     <lastmod>2019-09-14T10:31:46.687Z</lastmod>
@@ -177,13 +205,6 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/linux-skills/</loc>
-    
-    <lastmod>2019-09-12T14:46:52.384Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/some-thoughts/</loc>
     
     <lastmod>2019-09-12T14:45:37.004Z</lastmod>
@@ -205,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/docker-command-translation/</loc>
-    
-    <lastmod>2019-09-12T14:14:02.797Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/contact/index.html</loc>
     
     <lastmod>2019-09-12T11:26:14.058Z</lastmod>
@@ -226,14 +240,14 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/archives/index.html</loc>
+    <loc>https://hualin.online/tags/index.html</loc>
     
     <lastmod>2019-09-12T09:39:37.436Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hualin.online/tags/index.html</loc>
+    <loc>https://hualin.online/archives/index.html</loc>
     
     <lastmod>2019-09-12T09:39:37.436Z</lastmod>
     

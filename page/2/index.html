@@ -255,6 +255,76 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/qt5-issues/" target="_blank">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/03.jpg" class="responsive-img" alt="QT5 Issues">
+                            
+                            <span class="card-title">QT5 Issues</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                            qt6 libraries errorsstrings /usr/lib64/libstdc++.so.6 | grep GLIBC
+echo &#39;LD_LIBRARY_PATH=/usr/local/qt5.13.0/5.13.0/
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
+                            </span>
+                            <span class="publish-author">
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/compress-pic-patch-shell/" target="_blank">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Compress PIC Shell 批量压缩图片脚本">
+                            
+                            <span class="card-title">Compress PIC Shell 批量压缩图片脚本</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                            
+
+在写博客的时候需要将图片上传到服务器,很显然如果一张图片未经压缩有时会达到2-3M,严重影响访问者的加载速度. 所以我写了一个脚本放在博客根目录,能够历遍文件夹下的所以图片并将大于指定大小的图片进行压缩.
+#!/bin/bash
+
+SP
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-14
+                            </span>
+                            <span class="publish-author">
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/shell-intro/" target="_blank">
                         <div class="card-image">
                             
@@ -341,18 +411,16 @@ hexo g –debug
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/09.jpg" class="responsive-img" alt="Invoke Virtual Method ... on Null Reference">
+                            <img src="/medias/featureimages/01.jpg" class="responsive-img" alt="">
                             
-                            <span class="card-title">Invoke Virtual Method ... on Null Reference</span>
+                            <span class="card-title"></span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:
-View v = inflater.inflate(R.layout.fragment, container, false);
-lis
+                            
                             
                         </div>
                         <div class="publish-info">
@@ -505,8 +573,10 @@ lis
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            使用命令压缩图片安装sudo pacman -S imagemagick支持JPG, BMP, PCX, GIF, PNG, TIFF, XPM和XWD等
-1.转换格式convert 1.jpg 1.png2.-resize 1080x78
+                            tipstail -f file | grep --line-buffered pattern
+sudo growpart /dev/xvda 1
+sudo resize2fs /dev/xvda1
+sudo timedatectl set
                             
                         </div>
                         <div class="publish-info">
@@ -626,77 +696,6 @@ sudo
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/use-nvm/" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/07.jpg" class="responsive-img" alt="Use Nvm">
-                            
-                            <span class="card-title">Use Nvm</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            先卸载系统的nodesudo rm /usr/local/bin/npm
-sudo rm /usr/local/share/man/man1/node.1
-sudo rm /usr/local/lib/dtrace/node.d
-sudo 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-11
-                            </span>
-                            <span class="publish-author">
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/install-opencv-on-linux/" target="_blank">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/03.jpg" class="responsive-img" alt="Install Opencv on Linux">
-                            
-                            <span class="card-title">Install Opencv on Linux</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                            Linux 安装编译 opencv对于Arch Linuxsudo pacman -Sy
-sudo pacman -S cmake
-sudo pacman -S opencv
-set(OpenCV_DIR PATH_TO_BUILD)
-sy
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-11
-                            </span>
-                            <span class="publish-author">
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
 
@@ -734,7 +733,7 @@ sy
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">7.8k</span>
+            <span class="white-color">9.5k</span>
             
 
             <br>
