@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
-  <updated>2019-09-19T13:22:36.652Z</updated>
+  <updated>2019-09-19T13:50:36.228Z</updated>
   <id>https://hualin.online/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Carbon Code</title>
+    <link href="https://hualin.online/carbon-code/"/>
+    <id>https://hualin.online/carbon-code/</id>
+    <published>2019-09-19T13:50:00.000Z</published>
+    <updated>2019-09-19T13:50:36.228Z</updated>
+    
+    <content type="html"><![CDATA[<html><body><iframe src="https://carbon.now.sh/embed?bg=rgba(74%2C144%2C226%2C1)&t=material&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=86px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2523include%2520%253Cstdio.h%253E%250A%250Aint%2520main()%257B%250A%2520%2520while(1)%257B%250A%2520%2520%2520%2520printf(%2522I%2520just%2520do%2520not%2520want%2520to%2520work.%2522)%253B%250A%2520%2520%257D%250A%2520%2520return%25201%253B%250A%257D" style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"></iframe><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;html&gt;
+&lt;body&gt;
+&lt;iframe
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Docker Install</title>
@@ -482,33 +508,6 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     
     
       <category term="资料" scheme="https://hualin.online/tags/%E8%B5%84%E6%96%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Some Thoughts</title>
-    <link href="https://hualin.online/some-thoughts/"/>
-    <id>https://hualin.online/some-thoughts/</id>
-    <published>2019-09-12T14:44:37.000Z</published>
-    <updated>2019-09-12T14:45:37.004Z</updated>
-    
-    <content type="html"><![CDATA[<p>从很久以前开始，看完了一本书，一部动漫，一部电影，无论它的结局是喜悦还是悲伤的，我总会感到怅然若失，就像告别了一个挚友，经历了一段波澜起伏的人生，因而突发一种沧桑感，经历了一个不愿醒来的梦境，梦醒时却发觉自己仍在原地。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;从很久以前开始，看完了一本书，一部动漫，一部电影，无论它的结局是喜悦还是悲伤的，我总会感到怅然若失，就像告别了一个挚友，经历了一段波澜起伏的人生，因而突发一种沧桑感，经历了一个不愿醒来的梦境，梦醒时却发觉自己仍在原地。&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-    
-      <category term="随感 杂感" scheme="https://hualin.online/tags/%E9%9A%8F%E6%84%9F-%E6%9D%82%E6%84%9F/"/>
     
   </entry>
   

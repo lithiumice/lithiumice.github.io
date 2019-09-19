@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hualin.online/carbon-code/</loc>
+    <lastmod>2019-09-19</lastmod>
+  </url>  <url>
+    <loc>https://hualin.online/sqmap-simple-intro/</loc>
+    <lastmod>2019-09-19</lastmod>
+  </url>  <url>
     <loc>https://hualin.online/software-on-linux/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
@@ -56,9 +62,6 @@
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
     <loc>https://hualin.online/bt-linux/</loc>
-    <lastmod>2019-09-16</lastmod>
-  </url>  <url>
-    <loc>https://hualin.online/sqmap-simple-intro/</loc>
     <lastmod>2019-09-16</lastmod>
   </url>  <url>
     <loc>https://hualin.online/compress-pic-patch-shell/</loc>

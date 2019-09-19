@@ -4,11 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Get Random Poems From Phpserver, lithiumice huaring cquer github blog">
+    <meta name="keywords" content="Carbon Code, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="最全中华古诗词数据库唐宋两朝近一万四千古诗人, 接近5.5万首唐诗加26万宋诗. 两宋时期1564位词人，21050首词地址: https://github.com/chinese-poetry/chinese-poetry
-转换脚本古诗词">
+    <meta name="description" content="
+
+
+
+L2Dwidget.init({&#34;pluginRootPath&#34;:&#34;live2dw/&#34;,&#34;pluginJsPath&#34;:&#34;lib/&#34;,&#34;pluginModelPath&#34;:&#34;assets/&#34;,&#34;tagMode&#34;:false,&#34;log&#34;:">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Get Random Poems From Phpserver | Codes of huaring</title>
+    <title>Carbon Code | Codes of huaring</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -229,13 +232,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Get Random Poems From Phpserver
+                        Carbon Code
                     </div>
                 </div>
             </div>
@@ -357,7 +360,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-16
+                    2019-09-19
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -371,7 +374,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    288
+                    33
                 </div>
                 
 
@@ -394,48 +397,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="最全中华古诗词数据库"><a href="#最全中华古诗词数据库" class="headerlink" title="最全中华古诗词数据库"></a>最全中华古诗词数据库</h2><p>唐宋两朝近一万四千古诗人, 接近5.5万首唐诗加26万宋诗. 两宋时期1564位词人，21050首词<br>地址: <a href="https://github.com/chinese-poetry/chinese-poetry" target="_blank" rel="noopener">https://github.com/chinese-poetry/chinese-poetry</a></p>
-<h2 id="转换脚本"><a href="#转换脚本" class="headerlink" title="转换脚本"></a>转换脚本</h2><p>古诗词、唐诗宋词转换成mysql sql 文件的PHP脚本<br>地址: <a href="https://github.com/woodylan/chinese-poetry-to-mysql-tool" target="_blank" rel="noopener">https://github.com/woodylan/chinese-poetry-to-mysql-tool</a></p>
-<h2 id="使用的服务器端代码"><a href="#使用的服务器端代码" class="headerlink" title="使用的服务器端代码"></a>使用的服务器端代码</h2><pre><code>&lt;?php
-    //函数：用于把数据封装为 JSON 格式
-    function echoJSON($withStatus,$andMessage){
-        $data = array(&#39;status&#39; =&gt; $withStatus, &#39;message&#39; =&gt; $andMessage);
-        $jsonstring = json_encode($data);
-        header(&#39;Content-Type: application/json&#39;);
-        echo $jsonstring;
-    }
-    $user = &#39;poetry&#39;;
-    $password = &#39;123qwe&#39;;
-    $db = &#39;poetry&#39;;
-    $host = &#39;localhost&#39;;
-    $port = 3306;
-    $con=mysqli_init();
-    $is_success = mysqli_real_connect(
-                                   $con,
-                                   $host,
-                                   $user,
-                                   $password,
-                                   $db,
-                                   $port
-                                   );
-    if(!$is_success){echoJSON(false,&quot;Connect Error: &quot; . mysqli_connect_error());}
-    $id = $_GET[&quot;id&quot;];
-    if(true || is_numeric($id)){
-      $sql=&quot;SELECT *
-      FROM poems AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM poems)-(SELECT MIN(id) FROM poems))+(SELECT MIN(id) FROM poems)) AS id) AS t2
-      WHERE t1.id &gt;= t2.id
-      ORDER BY t1.id LIMIT 1;&quot;;
-      $result = mysqli_query($con,$sql);
-      $row = mysqli_fetch_array($result);
-      $data = array(&#39;status&#39; =&gt; true, &#39;title&#39; =&gt; $row[&quot;title&quot;], &#39;author&#39; =&gt; $row[&quot;author&quot;], &#39;content&#39; =&gt; $row[&quot;content&quot;]);
-      $jsonstring = json_encode($data);
-      header(&#39;Content-Type: application/json&#39;);
-      echo $jsonstring;
-    }else{
-      echoJSON(false,&quot;unsupported id&quot;);
-    }
-    mysqli_close($link);
-?&gt;</code></pre>
+                <html>
+<body>
+<iframe src="https://carbon.now.sh/embed?bg=rgba(74%2C144%2C226%2C1)&t=material&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=86px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2523include%2520%253Cstdio.h%253E%250A%250Aint%2520main()%257B%250A%2520%2520while(1)%257B%250A%2520%2520%2520%2520printf(%2522I%2520just%2520do%2520not%2520want%2520to%2520work.%2522)%253B%250A%2520%2520%257D%250A%2520%2520return%25201%253B%250A%257D" style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin">
+</iframe>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
+
             </div>
             <hr />
 
@@ -470,7 +438,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Mon Sep 16 2019 23:05:42 GMT+0800',
+    id: 'Thu Sep 19 2019 21:50:00 GMT+0800',
     owner: 'lithiumice',
     repo: 'lithiumice.github.io',
     oauth: {
@@ -494,35 +462,40 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/learn-android/">
+                <a href="/carbon-code/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/03.jpg" class="responsive-img" alt="Learn Android">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Carbon Code">
                         
-                        <span class="card-title">Learn Android</span>
+                        <span class="card-title">Carbon Code</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Android开发常用开源库Glide.with(fragment)    .load(url)    .into(imageView);
-implementation ‘com.github.bumptech.glide:glide:4.
+                            
+
+
+
+L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-19
+                            </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -533,24 +506,28 @@ implementation ‘com.github.bumptech.glide:glide:4.
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/learn-mysql/">
+                <a href="/docker-install/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/08.jpg" class="responsive-img" alt="Learn Mysql">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Docker Install">
                         
-                        <span class="card-title">Learn Mysql</span>
+                        <span class="card-title">Docker Install</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            show variables like port;set name utf8;source test.sqlmysqldump -u dbuser -p dbname &gt; dbname.sqlmysql -uabc_f -p abc 
+                            one commandsudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+sudo mkdir -p /etc/docker
+sudo tee /etc/dock
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-19
                             </span>
                         <span class="publish-author">
                             
