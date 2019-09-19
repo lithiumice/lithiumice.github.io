@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Codes of huaring</title>
+  <title>LITHIUMICE</title>
   
   <subtitle>LITHIUMICE</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
-  <updated>2019-09-19T13:50:36.228Z</updated>
+  <updated>2019-09-19T14:07:05.767Z</updated>
   <id>https://hualin.online/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://hualin.online/carbon-code/"/>
     <id>https://hualin.online/carbon-code/</id>
     <published>2019-09-19T13:50:00.000Z</published>
-    <updated>2019-09-19T13:50:36.228Z</updated>
+    <updated>2019-09-19T14:07:05.767Z</updated>
     
-    <content type="html"><![CDATA[<html><body><iframe src="https://carbon.now.sh/embed?bg=rgba(74%2C144%2C226%2C1)&t=material&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=86px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2523include%2520%253Cstdio.h%253E%250A%250Aint%2520main()%257B%250A%2520%2520while(1)%257B%250A%2520%2520%2520%2520printf(%2522I%2520just%2520do%2520not%2520want%2520to%2520work.%2522)%253B%250A%2520%2520%257D%250A%2520%2520return%25201%253B%250A%257D" style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"></iframe><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>]]></content>
+    <content type="html"><![CDATA[<h2 id="预览"><a href="#预览" class="headerlink" title="预览:"></a>预览:</h2><html><body><iframe src="https://carbon.now.sh/embed?bg=rgba(74%2C144%2C226%2C1)&t=material&wt=none&l=auto&ds=true&dsyoff=20px&dsblur=86px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Fira%20Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2523include%2520%253Cstdio.h%253E%250A%250Aint%2520main()%257B%250A%2520%2520while(1)%257B%250A%2520%2520%2520%2520printf(%2522I%2520just%2520do%2520not%2520want%2520to%2520work.%2522)%253B%250A%2520%2520%257D%250A%2520%2520return%25201%253B%250A%257D" style="transform:scale(0.7); width:1024px; height:473px; border:0; overflow:hidden;" sandbox="allow-scripts allow-same-origin"></iframe><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html><h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码:"></a>源代码:</h2><pre><code>&lt;iframe  src=&quot;https://carbon.now.sh/embed?  bg=rgba(74%2C144%2C226%2C1)  &amp;t=material&amp;wt=none&amp;l=auto&amp;ds=true&amp;  dsyoff=20px&amp;dsblur=86px  &amp;wc=true&amp;wa=true&amp;pv=56px&amp;ph=56px&amp;ln=false  &amp;fl=1&amp;fm=Fira%20Code&amp;  fs=14px&amp;lh=152%25&amp;si=false&amp;es=2x&amp;wm=false&amp;code=yourcode&quot;  style=&quot;transform:scale(0.7);  width:1024px;  height:473px;  border:0; overflow:hidden;&quot;  sandbox=&quot;allow-scripts allow-same-origin&quot;&gt;&lt;/iframe&gt;</code></pre>]]></content>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
       
         
         
-          &lt;html&gt;
+          &lt;h2 id=&quot;预览&quot;&gt;&lt;a href=&quot;#预览&quot; class=&quot;headerlink&quot; title=&quot;预览:&quot;&gt;&lt;/a&gt;预览:&lt;/h2&gt;&lt;html&gt;
 &lt;body&gt;
 &lt;iframe
         
@@ -464,7 +464,7 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/docker-config/"/>
     <id>https://hualin.online/docker-config/</id>
     <published>2019-09-14T06:38:53.000Z</published>
-    <updated>2019-09-14T06:41:45.403Z</updated>
+    <updated>2019-09-19T13:58:15.771Z</updated>
     
     <content type="html"><![CDATA[<h2 id="常用的加速地址"><a href="#常用的加速地址" class="headerlink" title="常用的加速地址"></a>常用的加速地址</h2><p><a href="http://f1361db2.m.daocloud.io" target="_blank" rel="noopener">http://f1361db2.m.daocloud.io</a><br><a href="https://hub.daocloud.io/" target="_blank" rel="noopener">https://hub.daocloud.io/</a><br><a href="https://c.163.com/hub#/m/home/" target="_blank" rel="noopener">https://c.163.com/hub#/m/home/</a><br><a href="https://registry.docker-cn.com" target="_blank" rel="noopener">https://registry.docker-cn.com</a><br><a href="http://hub-mirror.c.163.com" target="_blank" rel="noopener">http://hub-mirror.c.163.com</a><br><a href="https://3laho3y3.mirror.aliyuncs.com" target="_blank" rel="noopener">https://3laho3y3.mirror.aliyuncs.com</a><br><a href="http://f1361db2.m.daocloud.io" target="_blank" rel="noopener">http://f1361db2.m.daocloud.io</a><br><a href="https://mirror.ccs.tencentyun.com" target="_blank" rel="noopener">https://mirror.ccs.tencentyun.com</a></p><h2 id="使用shell命令配置"><a href="#使用shell命令配置" class="headerlink" title="使用shell命令配置"></a>使用shell命令配置</h2><pre class="line-numbers language-shell"><code class="language-shell">#!/bin/bashsudo mkdir -p /etc/dockersudo tee /etc/docker/daemon.json <<-'EOF'{  "registry-mirrors"["https://wl4i5g2z.mirror.aliyuncs.com"]"live-restore": true}EOFsudo systemctl daemon-reloadsudo systemctl restart docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="直接修改service文件"><a href="#直接修改service文件" class="headerlink" title="直接修改service文件"></a>直接修改service文件</h2><pre><code>vim /usr/lib/systemd/system/docker.service# 在dockerd后面加参数ExecStart=/usr/bin/dockerd --registry-mirror=&lt;your accelerate address&gt;sudo systemctl daemon-reloadsudo systemctl restart docker</code></pre>]]></content>
     

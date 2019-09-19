@@ -4,6 +4,9 @@
     <loc>https://hualin.online/carbon-code/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
+    <loc>https://hualin.online/docker-config/</loc>
+    <lastmod>2019-09-19</lastmod>
+  </url>  <url>
     <loc>https://hualin.online/sqmap-simple-intro/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
@@ -80,9 +83,6 @@
     <lastmod>2019-09-14</lastmod>
   </url>  <url>
     <loc>https://hualin.online/atom-usage/</loc>
-    <lastmod>2019-09-14</lastmod>
-  </url>  <url>
-    <loc>https://hualin.online/docker-config/</loc>
     <lastmod>2019-09-14</lastmod>
   </url>  <url>
     <loc>https://hualin.online/install-nodebb/</loc>
