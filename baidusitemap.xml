@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hualin.online/learn-android/</loc>
+    <lastmod>2019-09-22</lastmod>
+  </url>  <url>
+    <loc>https://hualin.online/software-on-linux/</loc>
+    <lastmod>2019-09-20</lastmod>
+  </url>  <url>
+    <loc>https://hualin.online/linux-skills/</loc>
+    <lastmod>2019-09-20</lastmod>
+  </url>  <url>
     <loc>https://hualin.online/carbon-code/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
@@ -10,16 +19,7 @@
     <loc>https://hualin.online/sqmap-simple-intro/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/software-on-linux/</loc>
-    <lastmod>2019-09-19</lastmod>
-  </url>  <url>
-    <loc>https://hualin.online/linux-skills/</loc>
-    <lastmod>2019-09-19</lastmod>
-  </url>  <url>
     <loc>https://hualin.online/docker-command-translation/</loc>
-    <lastmod>2019-09-19</lastmod>
-  </url>  <url>
-    <loc>https://hualin.online/learn-android/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
     <loc>https://hualin.online/invoke-virtual-method-on-null-reference/</loc>

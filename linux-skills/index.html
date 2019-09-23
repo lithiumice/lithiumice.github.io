@@ -7,10 +7,11 @@
     <meta name="keywords" content="Linux Skills, lithiumice huaring cquer github blog">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
-    <meta name="description" content="tipstail -f file | grep --line-buffered pattern
-sudo growpart /dev/xvda 1
-sudo resize2fs /dev/xvda1
-sudo timedatectl set">
+    <meta name="description" content="tipsip addr show wlp3s0
+sudo netstat -lntup | grep &amp;quot;:80&amp;quot;
+sudo ss -lntu
+sudo lsof -i :80
+ sudo nmap -n -PN -sT ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -202,8 +203,82 @@ sudo timedatectl set">
             </a>
         </li>
         
+
+        <li>
+            <a href="http://cnblog.cn/lithium" class="waves-effect waves-light">
+                <i class="fad fa-hand-point-right"></i>
+            </a>
+        </li>
+
         
     </ul>
+    <!-- <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                友链
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-link"></i>
+                
+                留言
+            </a>
+        </li>
+        
+        
+    </ul> -->
 </div>
 
 
@@ -373,14 +448,14 @@ sudo timedatectl set">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
                 
@@ -396,7 +471,12 @@ sudo timedatectl set">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><pre><code>tail -f file | grep --line-buffered pattern
+                <h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><pre><code>ip addr show wlp3s0
+sudo netstat -lntup | grep &quot;:80&quot;
+sudo ss -lntu
+sudo lsof -i :80
+ sudo nmap -n -PN -sT -sU -p- localhost
+tail -f file | grep --line-buffered pattern
 sudo growpart /dev/xvda 1
 sudo resize2fs /dev/xvda1
 sudo timedatectl set-timezone Asia/Shanghai
@@ -406,19 +486,23 @@ mongodump --authenticationDatabase admin
 firewall-cmd --permanent --zone=public --add-rich-rule=&#39;rule family=&quot;ipv4&quot; source address=&quot;特定IP&quot; port protocol=&quot;tcp&quot; port=&quot;特定端口&quot; accept&#39;
 tree -I &#39;__pycache__|pyc|Logs&#39; //过滤
 find . -name &quot;*.py&quot; | xargs wc -l //统计代码行数
-pip3.6 --proxy http://代理IP:端口 install -r requirements.txt
+regex 匹配换行符 .*[.\n]+.* or /(.+)/is or [\r][\n] or (\s\S) or Pattern.compile(&quot;regex&quot;,Pattern.DOTALL);
+regex 匹配一行 (.+) 所有英文 [ -~] 非英文[^-~]
+使用rsync通过SSH从服务器拉取数据：
+rsync -avzP -e &quot;ssh -i ~/sshkey.pem&quot; [email protected]:Projects/sample.csv ~/sample.csv
+使用rsync备份服务器数据:
+rsync -avzP -e &quot;ssh -i ~/.ssh/id_rsa&quot; root@47.102.85.59:/www/wwwroot/WebPage ./
+上传文件:
+rsync -avzP -e &quot;ssh -i ~/.ssh/id_rsa&quot; ./ root@47.102.85.59:/www/wwwroot/WebPage
+scp ~/Pictures/wlop/* root@47.102.85.59:/www/wwwroot/</code></pre><h2 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h2><pre><code>Pip:
+pip3.6 --proxy http://proxy:port install -r requirements.txt
 
 为Git设置代理：
-git config --global http.proxy http://代理IP:端口
+git config --global http.proxy http://proxy:port
 git config --global http.sslverify &quot;false&quot;
 
 vim /etc/apt/apt.conf.d/01turnkey
-Acquire::http::Proxy &quot;http://your.proxy.here:port/&quot;;
-
-使用rsync通过SSH从服务器拉取数据：
-rsync -avzP [email protected]:Projects/sample.csv ~/sample.csv
-rsync -avzP -e &quot;ssh -i ~/sshkey.pem&quot; [email protected]:Projects/sample.csv ~/sample.csv
-</code></pre><h2 id="使用命令压缩图片"><a href="#使用命令压缩图片" class="headerlink" title="使用命令压缩图片"></a>使用命令压缩图片</h2><p>安装<code>sudo pacman -S imagemagick</code><br>支持JPG, BMP, PCX, GIF, PNG, TIFF, XPM和XWD等</p>
+Acquire::http::Proxy &quot;http://your.proxy.here:port/&quot;;</code></pre><h2 id="使用命令压缩图片"><a href="#使用命令压缩图片" class="headerlink" title="使用命令压缩图片"></a>使用命令压缩图片</h2><p>安装<code>sudo pacman -S imagemagick</code><br>支持JPG, BMP, PCX, GIF, PNG, TIFF, XPM和XWD等</p>
 <p>1.转换格式<code>convert 1.jpg 1.png</code><br>2.-resize 1080x780<br>3.-sample 50%x50%<br>4.-rotate 272<br>5.-fill black -pointsize 60 -front helvetica -draw ‘hello’ //front use Ghostscript<br>5.-quality 0-100</p>
 <h3 id="批量转换"><a href="#批量转换" class="headerlink" title="批量转换"></a>批量转换</h3><p><code>for %f in (*.jpg) do convert &quot;%f&quot; &quot;%~nf.png&quot;</code><br><code>for %f in (*.jpg) do convertv -quality 70 &quot;%f&quot; &quot;%~nf.jpg&quot;</code><br><code>convert -quality 70 *.jpg</code><br>composite加水印</p>
 <h2 id="Linux-设置swap分区"><a href="#Linux-设置swap分区" class="headerlink" title="Linux 设置swap分区"></a>Linux 设置swap分区</h2><pre><code>dd if=/dev/zero of=/mnt/swap bs=1m count=1024 #1G
@@ -757,7 +841,7 @@ from PIL import ImageFont
             &copy; 2019 lithiumice | huaring. All rights reserved.
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.6k</span>
+            <span class="white-color">13k</span>
             
 
             <br>
