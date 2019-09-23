@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/btpanel-andoid-dev/</loc>
+    
+    <lastmod>2019-09-23T04:34:22.348Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/learn-android/</loc>
     
-    <lastmod>2019-09-22T04:10:22.561Z</lastmod>
+    <lastmod>2019-09-23T04:34:22.348Z</lastmod>
     
   </url>
   
@@ -82,13 +89,6 @@
     <loc>https://hualin.online/linux-c51/</loc>
     
     <lastmod>2019-09-19T09:36:32.390Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/btpanel-andoid-dev/</loc>
-    
-    <lastmod>2019-09-17T12:29:25.235Z</lastmod>
     
   </url>
   
