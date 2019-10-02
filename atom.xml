@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
-  <updated>2019-09-19T14:07:05.767Z</updated>
+  <updated>2019-09-30T14:47:04.937Z</updated>
   <id>https://hualin.online/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Greendao</title>
+    <link href="https://hualin.online/greendao/"/>
+    <id>https://hualin.online/greendao/</id>
+    <published>2019-09-30T14:37:18.000Z</published>
+    <updated>2019-09-30T14:47:04.937Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><p>@Entity（）括号内可加入更详细的设置，如：<br>nameInDb =“TABLE_NAME” ——&gt; 声明该表的表名，默认取类名<br>createInDb = true ——&gt; 是否创建表，默认为true<br>generateConstructors = true ——&gt; 是否生成含所有参数的构造函数，默认为true<br>generateGettersSetters = true ——&gt; 是否生成getter/setter，默认为true</p><p>@Id（）括号可加入autoincrement = true表明自增长<br>@Property(nameInDb = “URL”) 用来声明某变量在表中的实际字段<br>@Transient 用来声明某变量不被映射到数据表中<br>@ToOne(joinProperty = “fk_schoolId”)<br> @ToMany(referencedJoinProperty = “fk_schoolId”)<br> @ToMany<br>    @JoinEntity(<br>            entity = StudentWithCourse.class,<br>            sourceProperty = “sId”,<br>            targetProperty = “cId”<br>    )</p><h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>mUserDao.insertInTx(listUserCollect);<br>mUserDao.insertOrReplace(userCollect);//单个数据 通过主键判断<br>mUserDao.deleteByKey(l);<br>mUserDao.deleteAll();<br>mUserDao.deleteInTx(listUserCollect）;<br>  mMovieCollectDao.queryBuilder().where(MovieCollectDao.Properties.Title.eq(“肖申克的救赎”)).unique(); //.list()<br>  .like(“我的%”) //开头<br>  .orderAsc(MovieCollectDao.Properties.Year)<br>  daoSession .clear(); //cache</p><h2 id="migrate-helper"><a href="#migrate-helper" class="headerlink" title="migrate helper"></a>migrate helper</h2><pre><code>public class MyOpenHelper extends DaoMaster.OpenHelper {    public MyOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory) {        super(context, name, factory);    }    @Override    public void onUpgrade(Database db, int oldVersion, int newVersion) {        //把需要管理的数据库表DAO作为最后一个参数传入到方法中        MigrationHelper.migrate(db, new MigrationHelper.ReCreateAllTableListener() {            @Override            public void onCreateAllTables(Database db, boolean ifNotExists) {                DaoMaster.createAllTables(db, ifNotExists);            }            @Override            public void onDropAllTables(Database db, boolean ifExists) {                DaoMaster.dropAllTables(db, ifExists);            }        },  MovieCollectDao.class);    }}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;注解&quot;&gt;&lt;a href=&quot;#注解&quot; class=&quot;headerlink&quot; title=&quot;注解&quot;&gt;&lt;/a&gt;注解&lt;/h2&gt;&lt;p&gt;@Entity（）括号内可加入更详细的设置，如：&lt;br&gt;nameInDb =“TABLE_NAME” ——&amp;gt;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Fussion App</title>
+    <link href="https://hualin.online/fussion-app/"/>
+    <id>https://hualin.online/fussion-app/</id>
+    <published>2019-09-30T14:31:31.000Z</published>
+    <updated>2019-09-30T14:47:04.937Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>//网页即将加载if(网页链接:find&quot;url/.&quot;)then  停止加载()  进入子页面(&quot;游览&quot;,{链接=网页链接})end//加载本地网页(&quot;file:///android_asset/drawable/index.html&quot;)//如何调用浏览器打开当前页面？import &quot;android.content.Intent&quot;import &quot;android.net.Uri&quot;url=&quot;https://www.lanzous.com/b251218&quot;viewIntent = Intent(&quot;android.intent.action.VIEW&quot;,Uri.parse(url))activity.startActivity(viewIntent)--浏览器打开链接//收到新标题设置顶栏标题(webView.title)//项目点击事件进入子页面(&quot;子页面名&quot;,{链接=&quot;url&quot;,标题=&quot;标题名&quot;})//去头部留白document.body.style.paddingTop=0//显示或隐藏悬浮按钮--显示悬浮按钮fltBtn.setVisibility(View.VISIBLE)--隐藏悬浮按钮fltBtn.setVisibility(View.GONE)注:fltBtn为悬浮按钮的ID，不需要更改。//悬浮点击事件加载Js([[document.getElementsByClassName(&quot;apk_topbar_btn&quot;)[0].parentElement.onclick()]])//悬浮选择点击事件pop=PopupMenu(activity,fltBtn)menu=pop.Menumenu.add(&quot;选项一&quot;).onMenuItemClick=function(a)进入子页面(&quot;子页面名&quot;,{链接=&quot;url1&quot;..webView.getUrl()})endmenu.add(&quot;选项二&quot;).onMenuItemClick=function(a)进入子页面(&quot;子页面名&quot;,{链接=&quot;url2&quot;..webView.getUrl()})endpop.show()//设置屏幕方向import &quot;android.content.pm.ActivityInfo&quot;activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);//视频解析播放加载网页(&quot;vip解析url&quot;..webView.getUrl());--横屏activity.setRequestedOrientation(0);--竖屏activity.setRequestedOrientation(1);//各控件IDsearchEdtTxt       搜索栏toolbar.parent        顶栏toolbar             标题栏titleTvw            顶栏标题webView           浏览器fltBtn              悬浮按钮 pager             滑动窗体popmenu_position     菜单栏sidebar             侧滑栏显示图标pgsBar             进度条sideLvw           侧滑图标menu_button       菜单图标menuBtn          侧滑栏图标//开启和关闭侧滑--打开侧滑drawerLayout.openDrawer(3)--关闭侧滑drawerLayout.closeDrawer(3)--均放在点击事件--自定义底栏点击事件index=1--底栏项目序号bmBarLin.getChildAt(index-1).onClick=function()--点击事件end--自定义标签栏点击事件local index=1--标签栏项目序号tabBar.getChildAt(index-1).onClick=function() --点击事件end-- 多页面搜索 ---- By: QQ3local urls={&quot;https://www.google.com/search?q=%s&quot;,&quot;https://m.baidu.com/s?wd=%s&quot;,&quot;https://m.so.com/s?q=%s&quot;,&quot;http://cn.bing.com/search?q=%s&quot;,&quot;http://m.chinaso.com/page/search.htm?keys=%s&quot;,&quot;https://m.sogou.com/web/searchList.jsp?keyword=%s&quot;,&quot;https://m.sm.cn/s?q=%s&quot;}searchEdtTxt.setOnEditorActionListener{  onEditorAction=function(view,action,event)    local text=tostring(view.text)    if text~=nil and text~=&quot;&quot; then      searchEdtTxt.setHint(text)      local URLEncodeer=import&quot;java.net.URLEncoder&quot;      for index in pairs(urls) do        if allWebView[index] and urls[index]~=nil and urls[index]~=&quot;&quot; then          local url=tostring(urls[index]):format(URLEncoder.encode(text))          if pager.getCurrentItem()+1==index then            task(100,function()allWebView[index].loadUrl(url)end)--解决当前页面无法加载（与默认搜索事件冲突被覆盖）的问题          else            allWebView[index].loadUrl(url)          end        end      end    else      SearchEdtTxt.setHint(&quot;&quot;)    end  end}网页顶栏及头部空白物理遮盖javascript:if(document.getElementsByTagName(&#39;BODY&#39;)[0].scrollTop&lt;46){      document.getElementsByTagName(&#39;BODY&#39;)[0].scrollTop=46;    } else {      return false;    }浮动广告查杀脚本var d=document;var s=d.createElement(&#39;script&#39;);s.setAttribute(&#39;src&#39;, &#39;https://greasyfork.org/scripts/7410-jskillad/code/jsKillAD.user.js&#39;);d.head.appendChild(s);清除缓存第一部分//自定义事件 &gt; 程序启动function clr()    import &quot;java.io.File&quot;  items={&quot;浏览记录&quot;,&quot;缓存文件&quot;}  多选对话框=AlertDialog.Builder(this)  .setTitle(&quot;清除记录&quot;)    .setPositiveButton(&quot;确定&quot;,function()    if clearhistory==1 and clearall==1 then      File(lstads).delete()      File(lstwebads).delete()      lst={}      lstweb={}      os.execute(&quot;pm clear &quot;..activity.getPackageName())    elseif clearhistory==0 and clearall==1 then      os.execute(&quot;pm clear &quot;..activity.getPackageName())    elseif clearhistory==1 and clearall==0 then      File(lstads).delete()      File(lstwebads).delete()      lst={}      lstweb={}    else return nil    end  end)  .setMultiChoiceItems(items, nil,{ onClick=function(v,p)           if p==0 then clearhistory=1      end          if p==1 then clearall=1      end    end})  多选对话框.show();  clearhistory=0  clearall=0end第二部分 填入点击事件clr()</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;//网页即将加载
+if(网页链接:find&amp;quot;url/.&amp;quot;)then
+  停止加载()
+ 
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Carbon Code</title>
@@ -194,9 +245,9 @@ sudo
     <link href="https://hualin.online/learn-android/"/>
     <id>https://hualin.online/learn-android/</id>
     <published>2019-09-17T04:39:17.000Z</published>
-    <updated>2019-09-23T04:34:22.348Z</updated>
+    <updated>2019-09-30T14:47:04.937Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="set-navigationView"><a href="#set-navigationView" class="headerlink" title="set navigationView"></a>set navigationView</h2><p>ViewGroup.LayoutParams params = navigationView_main.getLayoutParams();<br>       params.width = getResources().getDisplayMetrics().widthPixels * 1 / 2;<br>       navigationView_main.setLayoutParams(params);</p><h2 id="linux-ddms"><a href="#linux-ddms" class="headerlink" title="linux ddms"></a>linux ddms</h2><p>/home/skart/ide/android/sdk/tools/lib/monitor-x86_64<br>/home/skart/ide/android/sdk/platform-tools<br>sudo chmod +x hprof-conv</p><h2 id="get-fragment"><a href="#get-fragment" class="headerlink" title="get fragment"></a>get fragment</h2><p>mFirstFragment=getSupportFragmentManager();<br>mFragment=mFirstFragment.findFragmentById(R.id.animation_view);</p><h2 id="lines"><a href="#lines" class="headerlink" title="lines"></a>lines</h2><p><view android:layout_width="fill_parent" android:layout_height="1px" android:background="@android:color/darker_gray"></view></p><h2 id="android-os-NetworkOnMainThreadException"><a href="#android-os-NetworkOnMainThreadException" class="headerlink" title="android.os.NetworkOnMainThreadException"></a>android.os.NetworkOnMainThreadException</h2><p>if (android.os.Build.VERSION.SDK_INT &gt; 9) {<br>  StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();<br>  StrictMode.setThreadPolicy(policy);<br>}</p><h2 id="more"><a href="#more" class="headerlink" title="more"></a>more</h2><p>keytool -importkeystore -srckeystore /home/lithium/myJks.jks -destkeystore /home/lithium/myJks.jks -deststoretype pkcs12</p><h2 id="Android-API-23-InetAddressUtils-replacement"><a href="#Android-API-23-InetAddressUtils-replacement" class="headerlink" title="Android API-23: InetAddressUtils replacement"></a>Android API-23: InetAddressUtils replacement</h2><uses-library android:name="org.apache.http.legacy" android:required="false">import java.net.Inet4Address;android { useLibrary 'org.apache.http.legacy' }if(!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet4Address) {<h2 id="Android开发常用开源库"><a href="#Android开发常用开源库" class="headerlink" title="Android开发常用开源库"></a>Android开发常用开源库</h2><p>Glide.with(fragment)<br>    .load(url)<br>    .into(imageView);</p><p>implementation ‘com.github.bumptech.glide:glide:4.9.0’<br>implementation ‘de.hdodenhof:circleimageview:3.0.1’<br> implementation ‘com.github.AppIntro:AppIntro:5.1.0’ //for androidx maven { url ‘<a href="https://jitpack.io&#39;" target="_blank" rel="noopener">https://jitpack.io&#39;</a> }<br> implementation (‘com.github.AppIntro:AppIntro:5.1.0’){<br>       exclude group: “org.jetbrains”, module: “annotations”<br>   }<br>implementation ‘com.airbnb.android:lottie:$lottieVersion’<br> compile ‘com.github.daniel-stoneuk:material-about-library:2.4.2’</p><h2 id="invoke-virtual-method-…-on-null-reference"><a href="#invoke-virtual-method-…-on-null-reference" class="headerlink" title="invoke virtual method … on null reference"></a>invoke virtual method … on null reference</h2><p>在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:</p><pre><code>View v = inflater.inflate(R.layout.fragment, container, false);listView = v.findViewById(R.id.list_view);MyDialog myDialog = new MyDialog(getContext());myDialog.show();</code></pre><h3 id="获取当前Activity和Context"><a href="#获取当前Activity和Context" class="headerlink" title="获取当前Activity和Context"></a>获取当前Activity和Context</h3><p>public MyLocationListener(View view){<br>    this.view=view;<br>}<br>View cv = getWindow().getDecorView();<br>getActivity().getApplicationContext()</p><h2 id="String-to-int"><a href="#String-to-int" class="headerlink" title="String to int"></a>String to int</h2><p>Resources res = TouchDeomActivity.this.getResources();<br>         int titleid=res.getIdentifier(title,//需要转换的资源名称<br>                “string”,        //资源类型<br>                  “com.spring.sky.cycle.touch”);//R类所在的包名</p><p>String a=context.getString(resId);</p><h2 id="ClassCastException-androidx-appcompat-widget-Toolbar-cannot-be-cast-to-android-widget-Toolbar"><a href="#ClassCastException-androidx-appcompat-widget-Toolbar-cannot-be-cast-to-android-widget-Toolbar" class="headerlink" title="ClassCastException: androidx.appcompat.widget.Toolbar cannot be cast to android.widget.Toolbar"></a>ClassCastException: androidx.appcompat.widget.Toolbar cannot be cast to android.widget.Toolbar</h2><p>import androidx.appcompat.widget.Toolbar<br>import androidx.appcompat.app.ActionBar;</p><p>View headerLayout =<br>navigationView.inflateHeaderView(R.layout.navigation_header);<br>panel = headerLayout.findViewById(R.id.viewId);</p><h3 id="CoordinatorLayout-layout-anchor-不正常"><a href="#CoordinatorLayout-layout-anchor-不正常" class="headerlink" title="CoordinatorLayout layout_anchor 不正常"></a>CoordinatorLayout layout_anchor 不正常</h3><p>automatically offset a view to place it below the AppBarLayout. It only works with an AppBarLayout<br>app:layout_behavior=”@string/appbar_scrolling_view_behavior”</p><h3 id="get-file"><a href="#get-file" class="headerlink" title="get file"></a>get file</h3><pre><code>Intent intent = new Intent(Intent.ACTION_GET_CONTENT);                intent.setType(&quot;file/*&quot;);                startActivityForResult(intent, code);文件的路径是通过data.getData().getPath()</code></pre><h3 id="在fragment-view中添加baidumap的mapview方法"><a href="#在fragment-view中添加baidumap的mapview方法" class="headerlink" title="在fragment view中添加baidumap的mapview方法"></a>在fragment view中添加baidumap的mapview方法</h3><p>SDKInitializer.initialize(getActivity().getApplicationContext());<br>View view=inflater.inflate(R.layout.fragment_gallery,container,false);<br>mapView=view.findViewById(R.id.bmapview);<br>mapView.onCreate(getContext(),savedInstanceState);</p></uses-library>]]></content>
+    <content type="html"><![CDATA[<p>##more<br> android.os.Build.DEVICE<br>compile ‘jp.wasabeef:glide-transformations:2.0.1’<br>greendao { schemaVersion 1 }<br>greendao { schemaVersion 2 }<br><a href="http://47.102.85.59:8000/api/poetry/" target="_blank" rel="noopener">http://47.102.85.59:8000/api/poetry/</a> {<br>    exclude group: ‘com.intellij’, module: ‘annotations’<br>}</p><h2 id="set-navigationView"><a href="#set-navigationView" class="headerlink" title="set navigationView"></a>set navigationView</h2><p>ViewGroup.LayoutParams params = navigationView_main.getLayoutParams();<br>       params.width = getResources().getDisplayMetrics().widthPixels * 1 / 2;<br>       navigationView_main.setLayoutParams(params);</p><h2 id="linux-ddms"><a href="#linux-ddms" class="headerlink" title="linux ddms"></a>linux ddms</h2><p>/home/skart/ide/android/sdk/tools/lib/monitor-x86_64<br>/home/skart/ide/android/sdk/platform-tools<br>sudo chmod +x hprof-conv</p><h2 id="get-fragment"><a href="#get-fragment" class="headerlink" title="get fragment"></a>get fragment</h2><p>mFirstFragment=getSupportFragmentManager();<br>mFragment=mFirstFragment.findFragmentById(R.id.animation_view);</p><h2 id="lines"><a href="#lines" class="headerlink" title="lines"></a>lines</h2><p><view android:layout_width="fill_parent" android:layout_height="1px" android:background="@android:color/darker_gray"></view></p><h2 id="android-os-NetworkOnMainThreadException"><a href="#android-os-NetworkOnMainThreadException" class="headerlink" title="android.os.NetworkOnMainThreadException"></a>android.os.NetworkOnMainThreadException</h2><p>if (android.os.Build.VERSION.SDK_INT &gt; 9) {<br>  StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();<br>  StrictMode.setThreadPolicy(policy);<br>}</p><h2 id="more"><a href="#more" class="headerlink" title="more"></a>more</h2><p>keytool -importkeystore -srckeystore /home/lithium/myJks.jks -destkeystore /home/lithium/myJks.jks -deststoretype pkcs12</p><h2 id="Android-API-23-InetAddressUtils-replacement"><a href="#Android-API-23-InetAddressUtils-replacement" class="headerlink" title="Android API-23: InetAddressUtils replacement"></a>Android API-23: InetAddressUtils replacement</h2><uses-library android:name="org.apache.http.legacy" android:required="false">import java.net.Inet4Address;android { useLibrary 'org.apache.http.legacy' }if(!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet4Address) {<h2 id="Android开发常用开源库"><a href="#Android开发常用开源库" class="headerlink" title="Android开发常用开源库"></a>Android开发常用开源库</h2><p>Glide.with(fragment)<br>    .load(url)<br>    .into(imageView);</p><p>implementation ‘com.github.bumptech.glide:glide:4.9.0’<br>implementation ‘de.hdodenhof:circleimageview:3.0.1’<br> implementation ‘com.github.AppIntro:AppIntro:5.1.0’ //for androidx maven { url ‘<a href="https://jitpack.io&#39;" target="_blank" rel="noopener">https://jitpack.io&#39;</a> }<br> implementation (‘com.github.AppIntro:AppIntro:5.1.0’){<br>       exclude group: “org.jetbrains”, module: “annotations”<br>   }<br>implementation ‘com.airbnb.android:lottie:$lottieVersion’<br> compile ‘com.github.daniel-stoneuk:material-about-library:2.4.2’</p><h2 id="invoke-virtual-method-…-on-null-reference"><a href="#invoke-virtual-method-…-on-null-reference" class="headerlink" title="invoke virtual method … on null reference"></a>invoke virtual method … on null reference</h2><p>在fragment中调用显示布局文件,需要先获得View对象,然后才能使用findViewById方法:</p><pre><code>View v = inflater.inflate(R.layout.fragment, container, false);listView = v.findViewById(R.id.list_view);MyDialog myDialog = new MyDialog(getContext());myDialog.show();</code></pre><h3 id="获取当前Activity和Context"><a href="#获取当前Activity和Context" class="headerlink" title="获取当前Activity和Context"></a>获取当前Activity和Context</h3><p>public MyLocationListener(View view){<br>    this.view=view;<br>}<br>View cv = getWindow().getDecorView();<br>getActivity().getApplicationContext()</p><h2 id="String-to-int"><a href="#String-to-int" class="headerlink" title="String to int"></a>String to int</h2><p>Resources res = TouchDeomActivity.this.getResources();<br>         int titleid=res.getIdentifier(title,//需要转换的资源名称<br>                “string”,        //资源类型<br>                  “com.spring.sky.cycle.touch”);//R类所在的包名</p><p>String a=context.getString(resId);</p><h2 id="ClassCastException-androidx-appcompat-widget-Toolbar-cannot-be-cast-to-android-widget-Toolbar"><a href="#ClassCastException-androidx-appcompat-widget-Toolbar-cannot-be-cast-to-android-widget-Toolbar" class="headerlink" title="ClassCastException: androidx.appcompat.widget.Toolbar cannot be cast to android.widget.Toolbar"></a>ClassCastException: androidx.appcompat.widget.Toolbar cannot be cast to android.widget.Toolbar</h2><p>import androidx.appcompat.widget.Toolbar<br>import androidx.appcompat.app.ActionBar;</p><p>View headerLayout =<br>navigationView.inflateHeaderView(R.layout.navigation_header);<br>panel = headerLayout.findViewById(R.id.viewId);</p><h3 id="CoordinatorLayout-layout-anchor-不正常"><a href="#CoordinatorLayout-layout-anchor-不正常" class="headerlink" title="CoordinatorLayout layout_anchor 不正常"></a>CoordinatorLayout layout_anchor 不正常</h3><p>automatically offset a view to place it below the AppBarLayout. It only works with an AppBarLayout<br>app:layout_behavior=”@string/appbar_scrolling_view_behavior”</p><h3 id="get-file"><a href="#get-file" class="headerlink" title="get file"></a>get file</h3><pre><code>Intent intent = new Intent(Intent.ACTION_GET_CONTENT);                intent.setType(&quot;file/*&quot;);                startActivityForResult(intent, code);文件的路径是通过data.getData().getPath()</code></pre><h3 id="在fragment-view中添加baidumap的mapview方法"><a href="#在fragment-view中添加baidumap的mapview方法" class="headerlink" title="在fragment view中添加baidumap的mapview方法"></a>在fragment view中添加baidumap的mapview方法</h3><p>SDKInitializer.initialize(getActivity().getApplicationContext());<br>View view=inflater.inflate(R.layout.fragment_gallery,container,false);<br>mapView=view.findViewById(R.id.bmapview);<br>mapView.onCreate(getContext(),savedInstanceState);</p></uses-library>]]></content>
     
     <summary type="html">
     
@@ -204,7 +255,7 @@ sudo
       
         
         
-          &lt;h2 id=&quot;set-navigationView&quot;&gt;&lt;a href=&quot;#set-navigationView&quot; class=&quot;headerlink&quot; title=&quot;set navigationView&quot;&gt;&lt;/a&gt;set
+          &lt;p&gt;##more&lt;br&gt; android.os.Build.DEVICE&lt;br&gt;compile ‘jp.wasabeef:glide-transformations:2.0.1’&lt;br&gt;greendao { schemaVersion 1 }&lt;br&gt;greendao {
         
       
     
@@ -456,58 +507,6 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Docker 配置镜像</title>
-    <link href="https://hualin.online/docker-config/"/>
-    <id>https://hualin.online/docker-config/</id>
-    <published>2019-09-14T06:38:53.000Z</published>
-    <updated>2019-09-19T13:58:15.771Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="常用的加速地址"><a href="#常用的加速地址" class="headerlink" title="常用的加速地址"></a>常用的加速地址</h2><p><a href="http://f1361db2.m.daocloud.io" target="_blank" rel="noopener">http://f1361db2.m.daocloud.io</a><br><a href="https://hub.daocloud.io/" target="_blank" rel="noopener">https://hub.daocloud.io/</a><br><a href="https://c.163.com/hub#/m/home/" target="_blank" rel="noopener">https://c.163.com/hub#/m/home/</a><br><a href="https://registry.docker-cn.com" target="_blank" rel="noopener">https://registry.docker-cn.com</a><br><a href="http://hub-mirror.c.163.com" target="_blank" rel="noopener">http://hub-mirror.c.163.com</a><br><a href="https://3laho3y3.mirror.aliyuncs.com" target="_blank" rel="noopener">https://3laho3y3.mirror.aliyuncs.com</a><br><a href="http://f1361db2.m.daocloud.io" target="_blank" rel="noopener">http://f1361db2.m.daocloud.io</a><br><a href="https://mirror.ccs.tencentyun.com" target="_blank" rel="noopener">https://mirror.ccs.tencentyun.com</a></p><h2 id="使用shell命令配置"><a href="#使用shell命令配置" class="headerlink" title="使用shell命令配置"></a>使用shell命令配置</h2><pre class="line-numbers language-shell"><code class="language-shell">#!/bin/bashsudo mkdir -p /etc/dockersudo tee /etc/docker/daemon.json <<-'EOF'{  "registry-mirrors"["https://wl4i5g2z.mirror.aliyuncs.com"]"live-restore": true}EOFsudo systemctl daemon-reloadsudo systemctl restart docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="直接修改service文件"><a href="#直接修改service文件" class="headerlink" title="直接修改service文件"></a>直接修改service文件</h2><pre><code>vim /usr/lib/systemd/system/docker.service# 在dockerd后面加参数ExecStart=/usr/bin/dockerd --registry-mirror=&lt;your accelerate address&gt;sudo systemctl daemon-reloadsudo systemctl restart docker</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;常用的加速地址&quot;&gt;&lt;a href=&quot;#常用的加速地址&quot; class=&quot;headerlink&quot; title=&quot;常用的加速地址&quot;&gt;&lt;/a&gt;常用的加速地址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://f1361db2.m.daocloud.io&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="docker linux" scheme="https://hualin.online/tags/docker-linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Some Informations</title>
-    <link href="https://hualin.online/some-informations/"/>
-    <id>https://hualin.online/some-informations/</id>
-    <published>2019-09-12T14:44:56.000Z</published>
-    <updated>2019-09-19T09:36:32.397Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="百度云资料"><a href="#百度云资料" class="headerlink" title="百度云资料"></a>百度云资料</h2><p>个人整理的编程、大学资料、文学等的书籍<br>存在百度云里，可自行转存<br><a href="https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA" target="_blank" rel="noopener">https://pan.baidu.com/s/1CPx9pbOlVSYdFYNxH3dTmA</a> 提取码: mc5d <a href="https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA" target="_blank" rel="noopener">https://pan.baidu.com/s/1wAzs6cNdvPH34LnRC-8lKA</a> 提取码: ty5e</p><h2 id="图标库"><a href="#图标库" class="headerlink" title="图标库"></a>图标库</h2><ul><li>阿里巴巴图标库 <a href="http://www.iconfont.cn" target="_blank" rel="noopener">http://www.iconfont.cn</a></li><li>icon8 <a href="https://icons8.com" target="_blank" rel="noopener">https://icons8.com</a></li><li>easyicon <a href="http://www.easyicon.net" target="_blank" rel="noopener">http://www.easyicon.net</a></li><li>iconpng <a href="http://iconpng.com" target="_blank" rel="noopener">http://iconpng.com</a></li><li>iconninja <a href="http://iconninja.com" target="_blank" rel="noopener">http://iconninja.com</a></li><li>Roundicons.com <a href="http://Roundicons.com" target="_blank" rel="noopener">http://Roundicons.com</a></li><li>undraw <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">https://undraw.co/illustrations</a></li><li>instantlogosearch <a href="http://instantlogosearch.com/" target="_blank" rel="noopener">http://instantlogosearch.com/</a></li><li>logomaker <a href="https://logomakr.com/" target="_blank" rel="noopener">https://logomakr.com/</a></li><li>flaticon <a href="https://www.flaticon.com/" target="_blank" rel="noopener">https://www.flaticon.com/</a></li></ul><h2 id="搜索网站"><a href="#搜索网站" class="headerlink" title="搜索网站"></a>搜索网站</h2><ul><li><p>Bing 国际版：<a href="https://cn.bing.com/" target="_blank" rel="noopener">https://cn.bing.com/</a></p></li><li><p>DuckDuckGo：<a href="https://duckduckgo.com/" target="_blank" rel="noopener">https://duckduckgo.com/</a> 保护你的隐私</p></li><li><p>Stack Overflow：<a href="https://stackoverflow.com/" target="_blank" rel="noopener">https://stackoverflow.com/</a> 程序员的问题基本都可以在这里得到解决</p></li><li><p>Gitlogs：<a href="https://www.gitlogs.com/" target="_blank" rel="noopener">https://www.gitlogs.com/</a><br>Gitlogs 是专门针对 GitHub 项目的搜索引擎，我们通过他可以快速找到想要项目。</p></li><li><p>jiumo search 鸠摩搜书：<a href="https://www.jiumodiary.com/。" target="_blank" rel="noopener">https://www.jiumodiary.com/。</a><br>可以用来找一些技术文档手册，很多在百度网盘里。</p></li><li><p>Ebooke：<a href="https://ebookee.org/" target="_blank" rel="noopener">https://ebookee.org/</a><br>Ebookee 是一个基于互联网并提供免费电子图书下载的搜索引擎网站。</p></li><li><p>Iconfinder图标搜索：<a href="https://www.iconfinder.com/" target="_blank" rel="noopener">https://www.iconfinder.com/</a><br>用来查找 logo 图片。</p></li><li><p>TinEye：<a href="https://www.tineye.com" target="_blank" rel="noopener">https://www.tineye.com</a><br>用图片来检索图片，我们可以上传图片或输入图片的 URL 来检索。</p></li><li><p>SemanticScholar：<a href="https://www.semanticscholar.org/" target="_blank" rel="noopener">https://www.semanticscholar.org/</a><br>SemanticScholar 是一个免费学术搜索引擎，其检索结果来自于期刊、学术会议资料或者是学术机构的文献。</p></li><li><p>LibreStock：<a href="https://librestock.com/" target="_blank" rel="noopener">https://librestock.com/</a><br>LibreStock 上可以检索一些优质的高清图片。</p></li><li><p>CC Search：<a href="https://ccsearch.creativecommons.org/" target="_blank" rel="noopener">https://ccsearch.creativecommons.org/</a><br>CC Search 上搜索到的图片资源都是无版权的，我们可以免费的使用。</p></li><li><p>搜索论文等 <a href="https://libgen.is/" target="_blank" rel="noopener">https://libgen.is/</a></p></li></ul><h2 id="搭建图床服务器"><a href="#搭建图床服务器" class="headerlink" title="搭建图床服务器"></a>搭建图床服务器</h2><pre><code>https://github.com/helloxz/imgurl.gitGithub：https://github.com/178146582/Fantasy-fieldGithub：https://github.com/wisp-x/lsky-pro</code></pre><h2 id="网页模板"><a href="#网页模板" class="headerlink" title="网页模板"></a>网页模板</h2><p>Material Design Lite Google官方提供的框架<br>Materialize 构建响应式应用和网站的前端框架, 类似bootstrap, SASS 版本<br>Materual-UI React组件 两套独立的风格可以选择-黑色和亮色<br>MUI CSS 轻量级<br>Polymer Google的另一款产品<br>Ionic Material Ionic混合式手机应用框架的扩展库<br>Material Foundation 有一套独立的组件可以快速的搭建基础元素。<br>Surface 只有一个CSS文件，非常轻量<br>Essence 基于React和React Native的CSS框架<br>LumX 实现响应式的web应用<br>Paper Theme for Bootstrap 模拟Material Design ，对使用bootstrap的人来说是个不错的选择<br>Material Design for Bootstrap 为Bootstrap而生 ， 增加了一些新的样式和一些JavaScript，还有一些jQuery的插件。<br>Angular Material 支持AngularJS<br>Material 完美的将Bootstrap和MDL融合在一起<br>Phonon 致力于hybrid移动应用开发<br>Framework7 构建hybrid这类应用</p><h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><p><a href="https://www.mdui.org/" target="_blank" rel="noopener">https://www.mdui.org/</a><br><a href="https://materializecss.com/" target="_blank" rel="noopener">https://materializecss.com/</a><br><a href="https://www.uplabs.com/" target="_blank" rel="noopener">https://www.uplabs.com/</a><br><a href="https://github.com/angular/material" target="_blank" rel="noopener">https://github.com/angular/material</a><br><a href="https://material-ui.com/zh/" target="_blank" rel="noopener">https://material-ui.com/zh/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;百度云资料&quot;&gt;&lt;a href=&quot;#百度云资料&quot; class=&quot;headerlink&quot; title=&quot;百度云资料&quot;&gt;&lt;/a&gt;百度云资料&lt;/h2&gt;&lt;p&gt;个人整理的编程、大学资料、文学等的书籍&lt;br&gt;存在百度云里，可自行转存&lt;br&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="资料" scheme="https://hualin.online/tags/%E8%B5%84%E6%96%99/"/>
     
   </entry>
   
