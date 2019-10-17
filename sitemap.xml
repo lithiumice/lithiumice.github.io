@@ -2,9 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hualin.online/software-on-linux/</loc>
+    
+    <lastmod>2019-10-17T02:03:15.290Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/readme/</loc>
+    
+    <lastmod>2019-10-17T02:02:50.304Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/atom-usage/</loc>
+    
+    <lastmod>2019-10-14T10:30:08.939Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/learn-markdown/</loc>
+    
+    <lastmod>2019-10-11T05:31:39.942Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/android-java-adb/</loc>
+    
+    <lastmod>2019-10-11T05:31:16.464Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/android-dialog-fragment/</loc>
+    
+    <lastmod>2019-10-10T09:31:22.880Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/android-learn/</loc>
+    
+    <lastmod>2019-10-10T09:30:59.010Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hualin.online/baidu_verify_hErE7B9Hur.html</loc>
     
     <lastmod>2019-10-01T01:31:49.600Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hualin.online/fussion-app/</loc>
+    
+    <lastmod>2019-09-30T14:47:04.937Z</lastmod>
     
   </url>
   
@@ -23,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/fussion-app/</loc>
-    
-    <lastmod>2019-09-30T14:47:04.937Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/btpanel-andoid-dev/</loc>
     
     <lastmod>2019-09-23T04:34:22.348Z</lastmod>
@@ -38,13 +87,6 @@
   
   <url>
     <loc>https://hualin.online/linux-skills/</loc>
-    
-    <lastmod>2019-09-20T16:22:01.947Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/software-on-linux/</loc>
     
     <lastmod>2019-09-20T16:22:01.947Z</lastmod>
     
@@ -191,13 +233,6 @@
   </url>
   
   <url>
-    <loc>https://hualin.online/learn-markdown/</loc>
-    
-    <lastmod>2019-09-14T15:07:23.338Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hualin.online/shell-intro/</loc>
     
     <lastmod>2019-09-14T10:31:46.687Z</lastmod>
@@ -215,13 +250,6 @@
     <loc>https://hualin.online/use-nvm/</loc>
     
     <lastmod>2019-09-14T09:59:15.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hualin.online/atom-usage/</loc>
-    
-    <lastmod>2019-09-14T09:59:10.200Z</lastmod>
     
   </url>
   

@@ -1,3 +1,6 @@
+https://hualin.online/android-java-adb/
+https://hualin.online/android-dialog-fragment/
+https://hualin.online/android-learn/
 https://hualin.online/greendao/
 https://hualin.online/fussion-app/
 https://hualin.online/carbon-code/
@@ -28,6 +31,7 @@ https://hualin.online/sqmap-simple-intro/
 https://hualin.online/use-nvm/
 https://hualin.online/install-opencv-on-linux/
 https://hualin.online/apache-php-config/
+https://hualin.online/readme/
 https://hualin.online/install-nodebb/
 https://hualin.online/using-hexo/
 https://hualin.online/docker-command-translation/

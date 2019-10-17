@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
-  <updated>2019-09-30T14:47:04.937Z</updated>
+  <updated>2019-10-11T05:31:16.464Z</updated>
   <id>https://hualin.online/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android Java Adb</title>
+    <link href="https://hualin.online/android-java-adb/"/>
+    <id>https://hualin.online/android-java-adb/</id>
+    <published>2019-10-11T05:28:31.000Z</published>
+    <updated>2019-10-11T05:31:16.464Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="jar-sign"><a href="#jar-sign" class="headerlink" title="jar sign"></a>jar sign</h2><p>keytool -genkeypair -alias roland.keystore -keyalg RSA -validity 500000 -keystore roland.keystore</p><p>jarsigner -verbose -keystore roland.keystore -signedjar test_signed.apk test.apk roland.keystore</p><p>jarsigner -verbose -keystore feelyou.keystore -storepass feelyou.info -signedjar signed.apk -digestalg SHA1 -sigalg MD5withRSA unsigned.apk feelyou</p><h2 id="adb-commmands"><a href="#adb-commmands" class="headerlink" title="adb commmands"></a>adb commmands</h2><p>adb install -r apk路径。<br>adb shell rm system/app/OutdoorMeter/OutdoorMeter.apk<br>adb shell rm -rf data/data/com.example.package/<br>adb reboot</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;jar-sign&quot;&gt;&lt;a href=&quot;#jar-sign&quot; class=&quot;headerlink&quot; title=&quot;jar sign&quot;&gt;&lt;/a&gt;jar sign&lt;/h2&gt;&lt;p&gt;keytool -genkeypair -alias roland.keystore
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android Dialog Fragment</title>
+    <link href="https://hualin.online/android-dialog-fragment/"/>
+    <id>https://hualin.online/android-dialog-fragment/</id>
+    <published>2019-10-10T09:31:22.000Z</published>
+    <updated>2019-10-10T09:31:22.880Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android Learn</title>
+    <link href="https://hualin.online/android-learn/"/>
+    <id>https://hualin.online/android-learn/</id>
+    <published>2019-10-10T07:55:53.000Z</published>
+    <updated>2019-10-10T09:30:59.010Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="float-menu-button"><a href="#float-menu-button" class="headerlink" title="float menu button"></a>float menu button</h2><pre><code>/** * 打开动画 */private void showAnimation() {    // 获取子view的个数，进行遍历    for (int i = 0; i &lt; rlMenuWrap.getChildCount(); i++) {        // 获取到相应的子view        final View child = rlMenuWrap.getChildAt(i);        // 关闭按钮和背景进行跳过        if (child.getId() == R.id.fab_close_more_menu || child.getId() == R.id.rl_bg) {            continue;        }        // 先暂时隐藏        child.setVisibility(View.INVISIBLE);        mHandler.postDelayed(new Runnable() {            @Override            public void run() {                //显示菜单                child.setVisibility(View.VISIBLE);                // Y轴位移动画 从800移动到当前位置                ValueAnimator fadeAnim = ObjectAnimator.ofFloat(child, &quot;translationY&quot;, 600, 0);                //动画时长                fadeAnim.setDuration(200);                // 自定义差值器                KickBackAnimator kickAnimator = new KickBackAnimator();                //设置速度                kickAnimator.setDuration(100);                // 设置差值器                fadeAnim.setEvaluator(kickAnimator);                //开始动画                fadeAnim.start();            }        }, i * 60);// 根据下标延迟执行动画    }}public class KickBackAnimator implements TypeEvaluator&lt;Float&gt; {    private final float s = 1.70158f;    float mDuration = 0f;    public void setDuration(float duration) {        mDuration = duration;    }    public Float evaluate(float fraction, Float startValue, Float endValue) {        float t = mDuration * fraction;        float b = startValue.floatValue();        float c = endValue.floatValue() - startValue.floatValue();        float d = mDuration;        float result = calculate(t, b, c, d);        return result;    }    public Float calculate(float t, float b, float c, float d) {        return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;    }}/** * 关闭动画 * */private void closeAnimation() {    // 获取所有的子view    for (int i = 0; i &lt; rlMenuWrap.getChildCount(); i++) {        final View child = rlMenuWrap.getChildAt(i);        // 判断  关闭按钮和背景不进入动画        if (child.getId() == R.id.fab_close_more_menu || child.getId() == R.id.rl_bg) {            continue;        }        mHandler.postDelayed(new Runnable() {            @Override            public void run() {                // 显示                child.setVisibility(View.VISIBLE);                // Y轴位移动画 从当前位置到600                ValueAnimator fadeAnim = ObjectAnimator.ofFloat(child, &quot;translationY&quot;, 0, 600);                fadeAnim.setDuration(200);                KickBackAnimator kickAnimator = new KickBackAnimator();                kickAnimator.setDuration(100);                fadeAnim.setEvaluator(kickAnimator);                fadeAnim.start();                fadeAnim.addListener(new BaseAnimatorListener() {                    @Override                    public void onAnimationEnd(Animator animation) {                        // 动画完成后隐藏menu                        child.setVisibility(View.INVISIBLE);                    }                });            }        }, (rlMenuWrap.getChildCount() - i - 1) * 30);// 设置和打开相反的延迟时长        //第0个        if (i == 0) {            mHandler.postDelayed(new Runnable() {                @Override                public void run() {                    // 隐藏menu                    rlMoreMenuRoot.setVisibility(View.GONE);                }            }, (rlMenuWrap.getChildCount() - i) * 30 + 80);        }    }}/** * 旋转菜单按钮 */private void rotationActionMenu(int from, int to) {    ValueAnimator fadeAnim = ObjectAnimator.ofFloat(fabCloseMoreMenu, &quot;rotation&quot;, from, to);    fadeAnim.setDuration(300);    KickBackAnimator kickAnimator = new KickBackAnimator();    kickAnimator.setDuration(150);    fadeAnim.setEvaluator(kickAnimator);    fadeAnim.start();}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;float-menu-button&quot;&gt;&lt;a href=&quot;#float-menu-button&quot; class=&quot;headerlink&quot; title=&quot;float menu button&quot;&gt;&lt;/a&gt;float menu
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Greendao</title>
@@ -366,9 +428,9 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
     <link href="https://hualin.online/software-on-linux/"/>
     <id>https://hualin.online/software-on-linux/</id>
     <published>2019-09-16T10:56:33.000Z</published>
-    <updated>2019-09-20T16:22:01.947Z</updated>
+    <updated>2019-10-17T02:03:15.290Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><p>deepin.qq.office<br>deepin-thunderspeed<br>deepin-boot-maker<br>octopi<br>pacaur -S debtap //install deb on arch<br>sudo debtap -u (-q 略过除了编辑元数据之外的所有问题)<br>sudo pacman -U <package-name></package-name></p><h2 id="有用或者无用但是美妙的软件"><a href="#有用或者无用但是美妙的软件" class="headerlink" title="有用或者无用但是美妙的软件"></a>有用或者无用但是美妙的软件</h2><p>sudo dnf install -y rubygems<br>gem install lolcat<br>chafa /path/to/your/image</p><p>sudo apt-get install abiword<br>abiword –to=doc example.pdf</p><p>no more secrets <a href="https://github.com/bartobri/no-more-secrets.git" target="_blank" rel="noopener"></a></p><p>GPRename //just Rename</p><h2 id="美化软件"><a href="#美化软件" class="headerlink" title="美化软件"></a>美化软件</h2><p>Docky<br>ratpoison openbox //桌面平铺<br>syncthing</p><p>图片查看器<br>gthumb<br>gwenview<br>mirage<br>shotwell<br>geeqie ++</p><p>文件管理器<br>nautilus<br>Nemo pcmamfm<br>midnight-commander ranger(cmd)<br>double commander //doublecmd-qt5<br>dolpin krusader //kde</p><p>搜索<br>mlocate find<br>catfish<br>fzf</p><h2 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h2><p>vmware virtualbox<br>remmina //远程连接<br>baidupan //不解释<br>genymotion //Android模拟器<br>netease-cloud-music<br>google-chrome<br>goldendict //词典<br>redshift //护眼<br>wps-office<br>youdao-note<br>gparted //分区<br>stacer系统管理工具<br>apt-fast //fast<br>Peek //GIF recorder<br>Inkscape //Vector drawer<br>gimp //pixel drawer<br>WebTorrent、FrostWire //downloader<br>topgrade一个命令更新linux里面的所有软件<br>VPN:ike kvpnc network-manager-l2tp</p><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><p>vim-gnome<br>SmartGit仓库管理可视化工具<br>tmux //终端分屏<br>oh-my-zsh 终端美化<br>atom //Markdown<br>vscode //VSCODE<br>sublime-text-dev-3<br>robot3t studio3t//Mongodb client<br>sequeler //MYSQL client<br>sql workbench //mysql client<br>qt5 qtcreator<br>dbKoda mongodb非关系数据库GUI工具</p><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><p>redis<br>mongodb<br>dokcer</p><h3 id="chrome-extension"><a href="#chrome-extension" class="headerlink" title="chrome extension:"></a>chrome extension:</h3><p>infinity pro 标签页<br>Octotree github文件资源浏览树更方便地查看项目结构和页面跳转<br>Postman api test<br>SwitchyOmega<br>SimpRead - 简阅<br>Full Page Screen Capture<br>油猴tampermonkey<br>Checker Plus for Gmail</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><p>deepin.qq.office<br>deepin-thunderspeed<br>deepin-boot-maker<br>octopi<br>pacaur -S debtap //install deb on arch<br>sudo debtap -u (-q 略过除了编辑元数据之外的所有问题)<br>sudo pacman -U <package-name></package-name></p><h2 id="有用或者无用但是美妙的软件"><a href="#有用或者无用但是美妙的软件" class="headerlink" title="有用或者无用但是美妙的软件"></a>有用或者无用但是美妙的软件</h2><p>sudo dnf install -y rubygems<br>gem install lolcat<br>chafa /path/to/your/image</p><p>sudo apt-get install abiword<br>abiword –to=doc example.pdf</p><p>no more secrets <a href="https://github.com/bartobri/no-more-secrets.git" target="_blank" rel="noopener"></a></p><p>GPRename //just Rename</p><h2 id="美化软件"><a href="#美化软件" class="headerlink" title="美化软件"></a>美化软件</h2><p>Docky<br>ratpoison openbox //桌面平铺<br>syncthing</p><p>图片查看器<br>gthumb<br>gwenview<br>mirage<br>shotwell<br>geeqie ++</p><p>文件管理器<br>nautilus<br>Nemo pcmamfm<br>midnight-commander ranger(cmd)<br>double commander //doublecmd-qt5<br>dolpin krusader //kde</p><p>搜索<br>mlocate find<br>catfish<br>fzf</p><h2 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h2><p>vmware virtualbox<br>remmina //远程连接<br>baidupan //不解释<br>genymotion //Android模拟器<br>netease-cloud-music<br>google-chrome<br>goldendict //词典<br>redshift //护眼<br>wps-office<br>youdao-note<br>gparted //分区<br>stacer系统管理工具<br>apt-fast //fast<br>Peek //GIF recorder<br>Inkscape //Vector drawer<br>gimp //pixel drawer<br>WebTorrent、FrostWire //downloader<br>topgrade一个命令更新linux里面的所有软件<br>VPN:ike kvpnc network-manager-l2tp<br>mendeley-desktop //shareing paper</p><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><p>vim-gnome<br>SmartGit仓库管理可视化工具<br>tmux //终端分屏<br>oh-my-zsh 终端美化<br>atom //Markdown<br>vscode //VSCODE<br>sublime-text-dev-3<br>robot3t studio3t//Mongodb client<br>sequeler //MYSQL client<br>sql workbench //mysql client<br>qt5 qtcreator<br>dbKoda mongodb非关系数据库GUI工具</p><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><p>redis<br>mongodb<br>dokcer</p><h3 id="chrome-extension"><a href="#chrome-extension" class="headerlink" title="chrome extension:"></a>chrome extension:</h3><p>infinity pro 标签页<br>Octotree github文件资源浏览树更方便地查看项目结构和页面跳转<br>Postman api test<br>SwitchyOmega<br>SimpRead - 简阅<br>Full Page Screen Capture<br>油猴tampermonkey<br>Checker Plus for Gmail</p>]]></content>
     
     <summary type="html">
     
@@ -428,82 +490,6 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
 &lt;!-- coverPostsCount &gt; 0 &amp;&amp; theme.cover.showPrevNext
         
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Shell Intro</title>
-    <link href="https://hualin.online/shell-intro/"/>
-    <id>https://hualin.online/shell-intro/</id>
-    <published>2019-09-14T10:28:24.000Z</published>
-    <updated>2019-09-14T10:31:46.687Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="wget-命令"><a href="#wget-命令" class="headerlink" title="wget 命令"></a>wget 命令</h3><p>wget -O filename<br>-limit-rate<br>-c 断电续传<br>-b 后台<br>wget –user-agent=<br>–tries=10<br>wget -i filelist.txt<br>wget –mirror –reject-gif -Q 5m -p –convert-links -P ./LOCAL URL<br>-r -A.pdf 下载指定格式</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;wget-命令&quot;&gt;&lt;a href=&quot;#wget-命令&quot; class=&quot;headerlink&quot; title=&quot;wget 命令&quot;&gt;&lt;/a&gt;wget 命令&lt;/h3&gt;&lt;p&gt;wget -O filename&lt;br&gt;-limit-rate&lt;br&gt;-c 断电续传&lt;br&gt;-b
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Learn Markdown</title>
-    <link href="https://hualin.online/learn-markdown/"/>
-    <id>https://hualin.online/learn-markdown/</id>
-    <published>2019-09-14T10:26:40.000Z</published>
-    <updated>2019-09-14T15:07:23.338Z</updated>
-    
-    <content type="html"><![CDATA[<table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr></tbody></table><p>-: 设置内容和标题栏居右对齐。<br>:- 设置内容和标题栏居左对齐。<br>:-: 设置内容和标题栏居中对齐。</p><p>hexo g –debug</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;表头&lt;/th&gt;
-&lt;th&gt;表头&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;单元格&lt;/td&gt;
-&lt;td&gt;单元格&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;单元格&lt;/td&gt;
-&lt;td&gt;单元格&lt;/td&gt;
-&lt;/tr&gt;
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://hualin.online/invoke-virtual-method-on-null-reference/"/>
-    <id>https://hualin.online/invoke-virtual-method-on-null-reference/</id>
-    <published>2019-09-14T06:59:23.000Z</published>
-    <updated>2019-09-19T13:25:17.433Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
