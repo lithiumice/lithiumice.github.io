@@ -31,8 +31,8 @@ https://hualin.online/sqmap-simple-intro/
 https://hualin.online/use-nvm/
 https://hualin.online/install-opencv-on-linux/
 https://hualin.online/apache-php-config/
-https://hualin.online/readme/
 https://hualin.online/install-nodebb/
+https://hualin.online/flymsg/
 https://hualin.online/using-hexo/
 https://hualin.online/docker-command-translation/
 https://hualin.online/dockermailserver/
