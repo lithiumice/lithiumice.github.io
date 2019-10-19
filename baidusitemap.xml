@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hualin.online/install-gitlab/</loc>
+    <lastmod>2019-10-19</lastmod>
+  </url>  <url>
     <loc>https://hualin.online/software-on-linux/</loc>
     <lastmod>2019-10-17</lastmod>
   </url>  <url>
@@ -25,10 +28,10 @@
     <loc>https://hualin.online/fussion-app/</loc>
     <lastmod>2019-09-30</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/greendao/</loc>
+    <loc>https://hualin.online/learn-android/</loc>
     <lastmod>2019-09-30</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/learn-android/</loc>
+    <loc>https://hualin.online/greendao/</loc>
     <lastmod>2019-09-30</lastmod>
   </url>  <url>
     <loc>https://hualin.online/btpanel-andoid-dev/</loc>
@@ -58,10 +61,10 @@
     <loc>https://hualin.online/some-informations/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/qt5-issues/</loc>
+    <loc>https://hualin.online/linux-c51/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/linux-c51/</loc>
+    <loc>https://hualin.online/qt5-issues/</loc>
     <lastmod>2019-09-19</lastmod>
   </url>  <url>
     <loc>https://hualin.online/learn-php/</loc>
@@ -73,10 +76,10 @@
     <loc>https://hualin.online/php-picture/</loc>
     <lastmod>2019-09-17</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/install-opencv-on-linux/</loc>
+    <loc>https://hualin.online/using-hexo/</loc>
     <lastmod>2019-09-17</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/using-hexo/</loc>
+    <loc>https://hualin.online/install-opencv-on-linux/</loc>
     <lastmod>2019-09-17</lastmod>
   </url>  <url>
     <loc>https://hualin.online/arch-install-snap/</loc>
@@ -97,10 +100,10 @@
     <loc>https://hualin.online/shell-intro/</loc>
     <lastmod>2019-09-14</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/telnet-usage/</loc>
+    <loc>https://hualin.online/use-nvm/</loc>
     <lastmod>2019-09-14</lastmod>
   </url>  <url>
-    <loc>https://hualin.online/use-nvm/</loc>
+    <loc>https://hualin.online/telnet-usage/</loc>
     <lastmod>2019-09-14</lastmod>
   </url>  <url>
     <loc>https://hualin.online/install-nodebb/</loc>

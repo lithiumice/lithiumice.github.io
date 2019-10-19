@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Install Gitlab</title>
+      <link href="/install-gitlab/"/>
+      <url>/install-gitlab/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Android Java Adb</title>
       <link href="/android-java-adb/"/>
       <url>/android-java-adb/</url>
@@ -229,7 +242,7 @@
       <link href="/software-on-linux/"/>
       <url>/software-on-linux/</url>
       
-        <content type="html"><![CDATA[<h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><p>deepin.qq.office<br>deepin-thunderspeed<br>deepin-boot-maker<br>octopi<br>pacaur -S debtap //install deb on arch<br>sudo debtap -u (-q 略过除了编辑元数据之外的所有问题)<br>sudo pacman -U <package-name></package-name></p><h2 id="有用或者无用但是美妙的软件"><a href="#有用或者无用但是美妙的软件" class="headerlink" title="有用或者无用但是美妙的软件"></a>有用或者无用但是美妙的软件</h2><p>sudo dnf install -y rubygems<br>gem install lolcat<br>chafa /path/to/your/image</p><p>sudo apt-get install abiword<br>abiword –to=doc example.pdf</p><p>no more secrets <a href="https://github.com/bartobri/no-more-secrets.git" target="_blank" rel="noopener"></a></p><p>GPRename //just Rename</p><h2 id="美化软件"><a href="#美化软件" class="headerlink" title="美化软件"></a>美化软件</h2><p>Docky<br>ratpoison openbox //桌面平铺<br>syncthing</p><p>图片查看器<br>gthumb<br>gwenview<br>mirage<br>shotwell<br>geeqie ++</p><p>文件管理器<br>nautilus<br>Nemo pcmamfm<br>midnight-commander ranger(cmd)<br>double commander //doublecmd-qt5<br>dolpin krusader //kde</p><p>搜索<br>mlocate find<br>catfish<br>fzf</p><h2 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h2><p>vmware virtualbox<br>remmina //远程连接<br>baidupan //不解释<br>genymotion //Android模拟器<br>netease-cloud-music<br>google-chrome<br>goldendict //词典<br>redshift //护眼<br>wps-office<br>youdao-note<br>gparted //分区<br>stacer系统管理工具<br>apt-fast //fast<br>Peek //GIF recorder<br>Inkscape //Vector drawer<br>gimp //pixel drawer<br>WebTorrent、FrostWire //downloader<br>topgrade一个命令更新linux里面的所有软件<br>VPN:ike kvpnc network-manager-l2tp<br>mendeley-desktop //shareing paper</p><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><p>vim-gnome<br>SmartGit仓库管理可视化工具<br>tmux //终端分屏<br>oh-my-zsh 终端美化<br>atom //Markdown<br>vscode //VSCODE<br>sublime-text-dev-3<br>robot3t studio3t//Mongodb client<br>sequeler //MYSQL client<br>sql workbench //mysql client<br>qt5 qtcreator<br>dbKoda mongodb非关系数据库GUI工具</p><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><p>redis<br>mongodb<br>dokcer</p><h3 id="chrome-extension"><a href="#chrome-extension" class="headerlink" title="chrome extension:"></a>chrome extension:</h3><p>infinity pro 标签页<br>Octotree github文件资源浏览树更方便地查看项目结构和页面跳转<br>Postman api test<br>SwitchyOmega<br>SimpRead - 简阅<br>Full Page Screen Capture<br>油猴tampermonkey<br>Checker Plus for Gmail</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="Arch-Linux"><a href="#Arch-Linux" class="headerlink" title="Arch Linux"></a>Arch Linux</h3><p>deepin.qq.office<br>deepin-thunderspeed<br>deepin-boot-maker<br>octopi<br>pacaur -S debtap //install deb on arch<br>sudo debtap -u (-q 略过除了编辑元数据之外的所有问题)<br>sudo pacman -U <package-name><br>matlab<br>gtkterm<br>gufw<br>kolorpaint</package-name></p><h2 id="有用或者无用但是美妙的软件"><a href="#有用或者无用但是美妙的软件" class="headerlink" title="有用或者无用但是美妙的软件"></a>有用或者无用但是美妙的软件</h2><p>sudo dnf install -y rubygems<br>gem install lolcat<br>chafa /path/to/your/image</p><p>sudo apt-get install abiword<br>abiword –to=doc example.pdf</p><p>no more secrets <a href="https://github.com/bartobri/no-more-secrets.git" target="_blank" rel="noopener"></a></p><p>GPRename //just Rename</p><h2 id="美化软件"><a href="#美化软件" class="headerlink" title="美化软件"></a>美化软件</h2><p>Docky<br>ratpoison openbox //桌面平铺<br>syncthing</p><p>图片查看器<br>gthumb<br>gwenview<br>mirage<br>shotwell<br>geeqie ++</p><p>文件管理器<br>nautilus<br>Nemo pcmamfm<br>midnight-commander ranger(cmd)<br>double commander //doublecmd-qt5<br>dolpin krusader //kde</p><p>搜索<br>mlocate find<br>catfish<br>fzf</p><h2 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h2><p>vmware virtualbox<br>remmina //远程连接<br>baidupan //不解释<br>genymotion //Android模拟器<br>netease-cloud-music<br>google-chrome<br>goldendict //词典<br>redshift //护眼<br>wps-office<br>youdao-note<br>gparted //分区<br>stacer系统管理工具<br>apt-fast //fast<br>Peek //GIF recorder<br>Inkscape //Vector drawer<br>gimp //pixel drawer<br>WebTorrent、FrostWire //downloader<br>topgrade一个命令更新linux里面的所有软件<br>VPN:ike kvpnc network-manager-l2tp<br>mendeley-desktop //shareing paper</p><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><p>vim-gnome<br>SmartGit仓库管理可视化工具<br>tmux //终端分屏<br>oh-my-zsh 终端美化<br>atom //Markdown<br>vscode //VSCODE<br>sublime-text-dev-3<br>robot3t studio3t//Mongodb client<br>sequeler //MYSQL client<br>sql workbench //mysql client<br>qt5 qtcreator<br>dbKoda mongodb非关系数据库GUI工具</p><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><p>redis<br>mongodb<br>dokcer</p><h3 id="chrome-extension"><a href="#chrome-extension" class="headerlink" title="chrome extension:"></a>chrome extension:</h3><p>infinity pro 标签页<br>Octotree github文件资源浏览树更方便地查看项目结构和页面跳转<br>Postman api test<br>SwitchyOmega<br>SimpRead - 简阅<br>Full Page Screen Capture<br>油猴tampermonkey<br>Checker Plus for Gmail</p>]]></content>
       
       
       
@@ -451,19 +464,6 @@
     
     
     <entry>
-      <title>Install Nodebb</title>
-      <link href="/install-nodebb/"/>
-      <url>/install-nodebb/</url>
-      
-        <content type="html"><![CDATA[<h2 id="For-Centos"><a href="#For-Centos" class="headerlink" title="For Centos"></a>For Centos</h2><pre><code>yum -y install epel-release //for centos 7yum -y groupinstall &quot;Development Tools&quot;yum -y install git redis ImageMagick npmcurl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash$ export NVM_DIR=&quot;$HOME/.nvm&quot;[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;source ~/.bash_profilenvm list-remotenvm install v0.12.7 # as of this writing check the result of the list-remote to see all choices//use v6.9.5 as stable$ export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node$ export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojssudo npm config set registry http://registry.npm.taobao.org/systemctl start redissystemctl enable rediscd /path/to/nodebb/install/locationgit clone -b v1.10.x https://github.com/NodeBB/NodeBB nodebbcd nodebb./nodebb setupfirewall-cmd --zone=public --add-port=4567/tcp --permanent//or  --add-service=httpfirewall-cmd --reload./nodebb start</code></pre><p>if you come across <strong>open ‘/opt/nodebb/node_modules/sharp/</strong>,then try:</p><pre><code>npm install./nodebb setup</code></pre><h2 id="For-arch"><a href="#For-arch" class="headerlink" title="For arch"></a>For arch</h2><pre><code> sudo pacman -S git nodejs npm redis imagemagick icu git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git nodebb cd nodebb ./nodebb setup ./nodebb start</code></pre><h2 id="proxy-reverse"><a href="#proxy-reverse" class="headerlink" title="proxy reverse"></a>proxy reverse</h2><pre><code>in httd.confLoadModule proxy_module /usr/lib/apache2/modules/mod_proxy.soLoadModule proxy_http_module /usr/lib/apache2/modules/mod_proxy_http.so&lt;VirtualHost *:80&gt;             DocumentRoot &quot;/home/test/tomcat/webapps/ROOT”             ServerName test.test.test             ProxyPass /    http://127.0.0.1:8080/        ProxyPassReverse /   http://127.0.0.1:8080/&lt;/VirtualHost&gt;in apache2.configurationInclude ports.confInclude httpd.confServerName 127.0.0.1sudo apache2ctl -k stopsudo apache2ctl -k start</code></pre><h2 id="nginx-ProxyPassReverse"><a href="#nginx-ProxyPassReverse" class="headerlink" title="nginx ProxyPassReverse"></a>nginx ProxyPassReverse</h2><pre><code>Insert the below lines into the location / {} segment:  ##########################################  server {      listen 80;      server_name www.xxx.com; # 你的域名     location / {          proxy_set_header X-Real-IP $remote_addr;          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;          proxy_set_header X-Forwarded-Proto $scheme;          proxy_set_header Host $http_host;          proxy_set_header X-NginX-Proxy true;          proxy_pass http://127.0.0.1:4567;          proxy_http_version 1.1;          proxy_set_header X-Real-IP $remote_addr;          proxy_set_header Host $host;          proxy_set_header Upgrade $http_upgrade;          proxy_set_header Connection &#39;upgrade&#39;;          proxy_cache_bypass $http_upgrade;          proxy_redirect off;          # Socket.IO Support          proxy_http_version 1.1;          proxy_set_header Upgrade $http_upgrade;          proxy_set_header Connection &quot;upgrade&quot;;      }      # 配置 502 页? 参考: 高级 - 配置 Nginx  }  ##########################################</code></pre><h2 id="use-forever-to-manage-NodeBB"><a href="#use-forever-to-manage-NodeBB" class="headerlink" title="use forever to manage NodeBB"></a>use <strong>forever</strong> to manage NodeBB</h2><p>npm install forever -g<br> forever start app.js</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Flymsg</title>
       <link href="/flymsg/"/>
       <url>/flymsg/</url>
@@ -477,6 +477,19 @@
             <tag> Android Java </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Install Nodebb</title>
+      <link href="/install-nodebb/"/>
+      <url>/install-nodebb/</url>
+      
+        <content type="html"><![CDATA[<h2 id="For-Centos"><a href="#For-Centos" class="headerlink" title="For Centos"></a>For Centos</h2><pre><code>yum -y install epel-release //for centos 7yum -y groupinstall &quot;Development Tools&quot;yum -y install git redis ImageMagick npmcurl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash$ export NVM_DIR=&quot;$HOME/.nvm&quot;[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;source ~/.bash_profilenvm list-remotenvm install v0.12.7 # as of this writing check the result of the list-remote to see all choices//use v6.9.5 as stable$ export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node$ export NVM_IOJS_ORG_MIRROR=http://npm.taobao.org/mirrors/iojssudo npm config set registry http://registry.npm.taobao.org/systemctl start redissystemctl enable rediscd /path/to/nodebb/install/locationgit clone -b v1.10.x https://github.com/NodeBB/NodeBB nodebbcd nodebb./nodebb setupfirewall-cmd --zone=public --add-port=4567/tcp --permanent//or  --add-service=httpfirewall-cmd --reload./nodebb start</code></pre><p>if you come across <strong>open ‘/opt/nodebb/node_modules/sharp/</strong>,then try:</p><pre><code>npm install./nodebb setup</code></pre><h2 id="For-arch"><a href="#For-arch" class="headerlink" title="For arch"></a>For arch</h2><pre><code> sudo pacman -S git nodejs npm redis imagemagick icu git clone -b v1.10.x https://github.com/NodeBB/NodeBB.git nodebb cd nodebb ./nodebb setup ./nodebb start</code></pre><h2 id="proxy-reverse"><a href="#proxy-reverse" class="headerlink" title="proxy reverse"></a>proxy reverse</h2><pre><code>in httd.confLoadModule proxy_module /usr/lib/apache2/modules/mod_proxy.soLoadModule proxy_http_module /usr/lib/apache2/modules/mod_proxy_http.so&lt;VirtualHost *:80&gt;             DocumentRoot &quot;/home/test/tomcat/webapps/ROOT”             ServerName test.test.test             ProxyPass /    http://127.0.0.1:8080/        ProxyPassReverse /   http://127.0.0.1:8080/&lt;/VirtualHost&gt;in apache2.configurationInclude ports.confInclude httpd.confServerName 127.0.0.1sudo apache2ctl -k stopsudo apache2ctl -k start</code></pre><h2 id="nginx-ProxyPassReverse"><a href="#nginx-ProxyPassReverse" class="headerlink" title="nginx ProxyPassReverse"></a>nginx ProxyPassReverse</h2><pre><code>Insert the below lines into the location / {} segment:  ##########################################  server {      listen 80;      server_name www.xxx.com; # 你的域名     location / {          proxy_set_header X-Real-IP $remote_addr;          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;          proxy_set_header X-Forwarded-Proto $scheme;          proxy_set_header Host $http_host;          proxy_set_header X-NginX-Proxy true;          proxy_pass http://127.0.0.1:4567;          proxy_http_version 1.1;          proxy_set_header X-Real-IP $remote_addr;          proxy_set_header Host $host;          proxy_set_header Upgrade $http_upgrade;          proxy_set_header Connection &#39;upgrade&#39;;          proxy_cache_bypass $http_upgrade;          proxy_redirect off;          # Socket.IO Support          proxy_http_version 1.1;          proxy_set_header Upgrade $http_upgrade;          proxy_set_header Connection &quot;upgrade&quot;;      }      # 配置 502 页? 参考: 高级 - 配置 Nginx  }  ##########################################</code></pre><h2 id="use-forever-to-manage-NodeBB"><a href="#use-forever-to-manage-NodeBB" class="headerlink" title="use forever to manage NodeBB"></a>use <strong>forever</strong> to manage NodeBB</h2><p>npm install forever -g<br> forever start app.js</p>]]></content>
+      
+      
       
     </entry>
     
