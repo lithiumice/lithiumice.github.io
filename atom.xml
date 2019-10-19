@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hualin.online/"/>
-  <updated>2019-10-19T16:21:24.121Z</updated>
+  <updated>2019-10-19T16:28:27.842Z</updated>
   <id>https://hualin.online/</id>
   
   <author>
@@ -21,9 +21,21 @@
     <link href="https://hualin.online/install-gitlab/"/>
     <id>https://hualin.online/install-gitlab/</id>
     <published>2019-10-19T16:21:24.000Z</published>
-    <updated>2019-10-19T16:21:24.121Z</updated>
+    <updated>2019-10-19T16:28:27.842Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>iptables -Fcurl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh &gt; rpm.shchmod +x rpm.sh./rpm.shyum install -y gitlab-ee//可以看下gitlab-ee包的内容，看到gitlab安装在/opt/gitlab目录下rpm -ql gitlab-ee | less/etc/gitlab/gitlab.rbexternal_url &#39;http://gitlab.ai-he.me&#39;nginx[&#39;listen_addresses&#39;] = [&#39;0.0.0.0&#39;, &#39;[::]&#39;]# 系统端口冲突，我把端口改为了82nginx[&#39;listen_port&#39;] = 82//重新配置gitlabsudo gitlab-ctl reconfigure//重启gitlabgitlab-ctl restart// 查看gitlab-ctl命令的帮助信息gitlab-ctl --help</code></pre>]]></content>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;iptables -F
+curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh &amp;gt; rpm.sh
+chmod +x
+        
+      
     
     </summary>
     
