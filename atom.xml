@@ -5,9 +5,9 @@
   <subtitle>LITHIUMICE</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://hualin.online/"/>
+  <link href="https://lithiumice.xyz/"/>
   <updated>2019-10-19T16:28:27.842Z</updated>
-  <id>https://hualin.online/</id>
+  <id>https://lithiumice.xyz/</id>
   
   <author>
     <name>lithiumice</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Install Gitlab</title>
-    <link href="https://hualin.online/install-gitlab/"/>
-    <id>https://hualin.online/install-gitlab/</id>
+    <link href="https://lithiumice.xyz/install-gitlab/"/>
+    <id>https://lithiumice.xyz/install-gitlab/</id>
     <published>2019-10-19T16:21:24.000Z</published>
     <updated>2019-10-19T16:28:27.842Z</updated>
     
@@ -44,8 +44,8 @@ chmod +x
   
   <entry>
     <title>Android Java Adb</title>
-    <link href="https://hualin.online/android-java-adb/"/>
-    <id>https://hualin.online/android-java-adb/</id>
+    <link href="https://lithiumice.xyz/android-java-adb/"/>
+    <id>https://lithiumice.xyz/android-java-adb/</id>
     <published>2019-10-11T05:28:31.000Z</published>
     <updated>2019-10-11T05:31:16.464Z</updated>
     
@@ -68,8 +68,8 @@ chmod +x
   
   <entry>
     <title>Android Dialog Fragment</title>
-    <link href="https://hualin.online/android-dialog-fragment/"/>
-    <id>https://hualin.online/android-dialog-fragment/</id>
+    <link href="https://lithiumice.xyz/android-dialog-fragment/"/>
+    <id>https://lithiumice.xyz/android-dialog-fragment/</id>
     <published>2019-10-10T09:31:22.000Z</published>
     <updated>2019-10-10T09:31:22.880Z</updated>
     
@@ -82,8 +82,8 @@ chmod +x
   
   <entry>
     <title>Android Learn</title>
-    <link href="https://hualin.online/android-learn/"/>
-    <id>https://hualin.online/android-learn/</id>
+    <link href="https://lithiumice.xyz/android-learn/"/>
+    <id>https://lithiumice.xyz/android-learn/</id>
     <published>2019-10-10T07:55:53.000Z</published>
     <updated>2019-10-10T09:30:59.010Z</updated>
     
@@ -106,8 +106,8 @@ chmod +x
   
   <entry>
     <title>Greendao</title>
-    <link href="https://hualin.online/greendao/"/>
-    <id>https://hualin.online/greendao/</id>
+    <link href="https://lithiumice.xyz/greendao/"/>
+    <id>https://lithiumice.xyz/greendao/</id>
     <published>2019-09-30T14:37:18.000Z</published>
     <updated>2019-09-30T14:47:04.937Z</updated>
     
@@ -130,8 +130,8 @@ chmod +x
   
   <entry>
     <title>Fussion App</title>
-    <link href="https://hualin.online/fussion-app/"/>
-    <id>https://hualin.online/fussion-app/</id>
+    <link href="https://lithiumice.xyz/fussion-app/"/>
+    <id>https://lithiumice.xyz/fussion-app/</id>
     <published>2019-09-30T14:31:31.000Z</published>
     <updated>2019-09-30T14:47:04.937Z</updated>
     
@@ -157,8 +157,8 @@ if(网页链接:find&amp;quot;url/.&amp;quot;)then
   
   <entry>
     <title>Carbon Code</title>
-    <link href="https://hualin.online/carbon-code/"/>
-    <id>https://hualin.online/carbon-code/</id>
+    <link href="https://lithiumice.xyz/carbon-code/"/>
+    <id>https://lithiumice.xyz/carbon-code/</id>
     <published>2019-09-19T13:50:00.000Z</published>
     <updated>2019-09-19T14:07:05.767Z</updated>
     
@@ -183,8 +183,8 @@ if(网页链接:find&amp;quot;url/.&amp;quot;)then
   
   <entry>
     <title>Docker Install</title>
-    <link href="https://hualin.online/docker-install/"/>
-    <id>https://hualin.online/docker-install/</id>
+    <link href="https://lithiumice.xyz/docker-install/"/>
+    <id>https://lithiumice.xyz/docker-install/</id>
     <published>2019-09-19T12:46:22.000Z</published>
     <updated>2019-09-19T13:22:36.652Z</updated>
     
@@ -208,8 +208,8 @@ sudo
   
   <entry>
     <title>Linux C51</title>
-    <link href="https://hualin.online/linux-c51/"/>
-    <id>https://hualin.online/linux-c51/</id>
+    <link href="https://lithiumice.xyz/linux-c51/"/>
+    <id>https://lithiumice.xyz/linux-c51/</id>
     <published>2019-09-19T08:49:51.000Z</published>
     <updated>2019-09-19T09:36:32.390Z</updated>
     
@@ -233,8 +233,8 @@ sudo
   
   <entry>
     <title>BTpanel Andoid Dev</title>
-    <link href="https://hualin.online/btpanel-andoid-dev/"/>
-    <id>https://hualin.online/btpanel-andoid-dev/</id>
+    <link href="https://lithiumice.xyz/btpanel-andoid-dev/"/>
+    <id>https://lithiumice.xyz/btpanel-andoid-dev/</id>
     <published>2019-09-17T11:23:38.000Z</published>
     <updated>2019-09-23T04:34:22.348Z</updated>
     
@@ -257,8 +257,8 @@ sudo
   
   <entry>
     <title>Php Picture</title>
-    <link href="https://hualin.online/php-picture/"/>
-    <id>https://hualin.online/php-picture/</id>
+    <link href="https://lithiumice.xyz/php-picture/"/>
+    <id>https://lithiumice.xyz/php-picture/</id>
     <published>2019-09-17T10:15:23.000Z</published>
     <updated>2019-09-17T11:21:11.322Z</updated>
     
@@ -281,8 +281,8 @@ sudo
   
   <entry>
     <title>Linux Usb Ethernet Driver</title>
-    <link href="https://hualin.online/linux-usb-ethernet-driver/"/>
-    <id>https://hualin.online/linux-usb-ethernet-driver/</id>
+    <link href="https://lithiumice.xyz/linux-usb-ethernet-driver/"/>
+    <id>https://lithiumice.xyz/linux-usb-ethernet-driver/</id>
     <published>2019-09-17T06:54:12.000Z</published>
     <updated>2019-09-17T12:28:42.781Z</updated>
     
@@ -305,8 +305,8 @@ sudo
   
   <entry>
     <title>Arch Install Snap</title>
-    <link href="https://hualin.online/arch-install-snap/"/>
-    <id>https://hualin.online/arch-install-snap/</id>
+    <link href="https://lithiumice.xyz/arch-install-snap/"/>
+    <id>https://lithiumice.xyz/arch-install-snap/</id>
     <published>2019-09-17T04:45:11.000Z</published>
     <updated>2019-09-17T04:54:42.739Z</updated>
     
@@ -330,8 +330,8 @@ sudo
   
   <entry>
     <title>Learn Android</title>
-    <link href="https://hualin.online/learn-android/"/>
-    <id>https://hualin.online/learn-android/</id>
+    <link href="https://lithiumice.xyz/learn-android/"/>
+    <id>https://lithiumice.xyz/learn-android/</id>
     <published>2019-09-17T04:39:17.000Z</published>
     <updated>2019-09-30T14:47:04.937Z</updated>
     
@@ -354,8 +354,8 @@ sudo
   
   <entry>
     <title>Get Random Poems From Phpserver</title>
-    <link href="https://hualin.online/get-random-poems-from-phpserver/"/>
-    <id>https://hualin.online/get-random-poems-from-phpserver/</id>
+    <link href="https://lithiumice.xyz/get-random-poems-from-phpserver/"/>
+    <id>https://lithiumice.xyz/get-random-poems-from-phpserver/</id>
     <published>2019-09-16T15:05:42.000Z</published>
     <updated>2019-09-16T15:11:38.060Z</updated>
     
@@ -378,8 +378,8 @@ sudo
   
   <entry>
     <title>Learn Mysql</title>
-    <link href="https://hualin.online/learn-mysql/"/>
-    <id>https://hualin.online/learn-mysql/</id>
+    <link href="https://lithiumice.xyz/learn-mysql/"/>
+    <id>https://lithiumice.xyz/learn-mysql/</id>
     <published>2019-09-16T14:55:00.000Z</published>
     <updated>2019-09-16T15:43:43.820Z</updated>
     
@@ -402,8 +402,8 @@ sudo
   
   <entry>
     <title>BT Linux</title>
-    <link href="https://hualin.online/bt-linux/"/>
-    <id>https://hualin.online/bt-linux/</id>
+    <link href="https://lithiumice.xyz/bt-linux/"/>
+    <id>https://lithiumice.xyz/bt-linux/</id>
     <published>2019-09-16T13:10:50.000Z</published>
     <updated>2019-09-16T13:17:18.549Z</updated>
     
@@ -427,8 +427,8 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
   
   <entry>
     <title>Learn Php</title>
-    <link href="https://hualin.online/learn-php/"/>
-    <id>https://hualin.online/learn-php/</id>
+    <link href="https://lithiumice.xyz/learn-php/"/>
+    <id>https://lithiumice.xyz/learn-php/</id>
     <published>2019-09-16T13:06:34.000Z</published>
     <updated>2019-09-17T12:29:08.605Z</updated>
     
@@ -451,8 +451,8 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
   
   <entry>
     <title>Software on Linux</title>
-    <link href="https://hualin.online/software-on-linux/"/>
-    <id>https://hualin.online/software-on-linux/</id>
+    <link href="https://lithiumice.xyz/software-on-linux/"/>
+    <id>https://lithiumice.xyz/software-on-linux/</id>
     <published>2019-09-16T10:56:33.000Z</published>
     <updated>2019-10-17T08:56:51.664Z</updated>
     
@@ -475,8 +475,8 @@ yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/
   
   <entry>
     <title>QT5 Issues</title>
-    <link href="https://hualin.online/qt5-issues/"/>
-    <id>https://hualin.online/qt5-issues/</id>
+    <link href="https://lithiumice.xyz/qt5-issues/"/>
+    <id>https://lithiumice.xyz/qt5-issues/</id>
     <published>2019-09-16T10:41:24.000Z</published>
     <updated>2019-09-19T09:36:32.390Z</updated>
     
